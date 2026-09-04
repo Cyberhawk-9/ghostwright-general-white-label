@@ -1,0 +1,217 @@
+================================================================================
+                         WEBFORGE ADMIN FEATURES GUIDE
+================================================================================
+
+This document outlines all admin features available in WebForge. To access 
+these features, you must first log in as an admin.
+
+--------------------------------------------------------------------------------
+                              GETTING STARTED
+--------------------------------------------------------------------------------
+
+1. LOGGING IN
+   - Navigate to /admin
+   - Enter your admin credentials:
+     - Default Email: owen@cyberhawk.dev
+     - Default Passcode: 14AdMi14 DK!
+   - Or set custom credentials via environment variables:
+     - ADMIN_EMAIL
+     - ADMIN_PASSWORD
+   - After successful login, two buttons appear in the bottom-right corner:
+     - Pink button (left): Sign Out
+     - Blue button (right): Settings/Admin Tools
+
+--------------------------------------------------------------------------------
+                           ADMIN TOOLBAR BUTTONS
+--------------------------------------------------------------------------------
+
+SIGN OUT (Pink Button) // Whenever pink is used, it means the color: #B41BE3
+- Click to initiate sign out process
+- You must type "sign-out" to confirm
+- This logs you out and redirects to the homepage
+
+SETTINGS (Blue Button) // Whenever cyan is used, it means the color: #06A0C7
+- Opens the Admin Tools dialog (centered on screen)
+- Contains access to all editing features
+
+--------------------------------------------------------------------------------
+                            VISUAL EDITOR MODE
+--------------------------------------------------------------------------------
+
+Enable via: Settings > Enable Visual Editor
+
+When active, a cyan banner appears at the top: "Visual Editor Active"
+
+SELECTING ELEMENTS
+- Click and drag to draw a dotted rectangle around elements
+- ONLY LEAF ELEMENTS are selected (text, images, buttons, links)
+- Container elements (sections, main, header, footer) are NOT selected
+- Elements must be FULLY INSIDE the selection box to be selected
+- The selection box stays at the size you draw it (does not shrink)
+- Selected elements show a cyan dashed outline
+
+MULTI-SELECT & GROUP MOVE
+- Draw a box around multiple elements to select them all
+- All elements fully inside the box are selected together
+- Drag the selection box itself to move ALL selected elements as a group
+- Position changes save automatically to Supabase (permanent, global)
+
+MOVING ELEMENTS
+- Select an element first
+- Click and drag the selected element to move it
+- Only the selected element moves (not its background or container)
+- Position saves automatically to Supabase
+
+COPY & PASTE
+- Select an element, then right-click > Copy (or Ctrl+C)
+- Right-click anywhere else > Paste (or Ctrl+V)
+- Pasted elements can be moved independently
+
+--------------------------------------------------------------------------------
+                          ACTION MENU (NEW)
+--------------------------------------------------------------------------------
+
+When you select an element, an ACTION MENU appears in the BOTTOM-RIGHT corner
+(above the admin buttons). This menu shows different options based on what
+element you selected:
+
+FOR TEXT ELEMENTS (p, h1-h6, span, li):
+- Edit Text: Makes text editable inline, click outside to save
+
+FOR IMAGES:
+- Replace Image: Opens file picker to select new image
+
+FOR LINKS/BUTTONS:
+- Edit Link: Opens link editor popup to change URL
+
+FOR ALL ELEMENTS:
+- Spacing (Margins/Padding): Opens spacing panel
+- Visual Styling: Opens alignment/visibility panel
+
+--------------------------------------------------------------------------------
+                          EDITING MODES (SEPARATED)
+--------------------------------------------------------------------------------
+
+Each editing feature is now SEPARATE - you choose ONE at a time:
+
+1. TEXT EDITING
+   - Click "Edit Text" in action menu
+   - OR double-click any text element
+   - Text becomes editable inline
+   - Click outside or press Tab to save
+   - Text changes persist to Supabase (permanent, global)
+
+2. IMAGE REPLACEMENT
+   - Click "Replace Image" in action menu
+   - File picker opens to select new image
+   - OR drag & drop image file onto any existing image
+   - New image replaces old and saves to Supabase
+
+3. LINK EDITING
+   - Click "Edit Link" in action menu
+   - Popup appears in bottom-right corner
+   - Enter new URL (supports https://, /, #, mailto:, tel:)
+   - Press Enter or click Save to apply
+   - Link changes persist to Supabase
+
+4. SPACING (Margins/Padding)
+   - Click "Spacing (Margins/Padding)" in action menu
+   - Panel appears in bottom-right corner
+   - Edit margin: Top, Right, Bottom, Left (in pixels)
+   - Edit padding: Top, Right, Bottom, Left (in pixels)
+   - Changes apply in real-time and save to Supabase
+
+5. VISUAL STYLING
+   - Click "Visual Styling" in action menu
+   - Panel appears in bottom-right corner
+   - Text Alignment: Left, Center, Right, Justify
+   - Visibility: Visible or Hidden
+   - Changes apply in real-time and save to Supabase
+
+--------------------------------------------------------------------------------
+                        ALL POPUPS - FIXED POSITION
+--------------------------------------------------------------------------------
+
+ALL admin popups now appear in the SAME LOCATION:
+- Position: Fixed to BOTTOM-RIGHT corner
+- Location: Just ABOVE the admin buttons (Sign Out / Settings)
+- This includes:
+  - Action Menu
+  - Context Menu (Copy/Paste)
+  - Link Editor
+  - Spacing Panel
+  - Visual Styling Panel
+
+This makes editing predictable - you always know where to look!
+
+--------------------------------------------------------------------------------
+                           DATA PERSISTENCE
+--------------------------------------------------------------------------------
+
+All changes are saved to:
+1. Supabase database (PRIMARY - permanent, global, all users see changes)
+2. localStorage (CACHE - fast local backup)
+
+Supabase table: editor_data
+- Stores: positions, images, links, properties, text
+
+Changes persist across:
+- Page refreshes
+- Browser sessions
+- Different users
+- Different devices
+- PERMANENTLY - changes are global and forever
+
+To reset all changes, you must delete data from the Supabase database.
+
+--------------------------------------------------------------------------------
+                              KEYBOARD SHORTCUTS
+--------------------------------------------------------------------------------
+
+Visual Editor Mode:
+- Escape: Deselect / close panel / go back
+- Delete: Remove selected element
+- Ctrl+C: Copy selected element
+- Ctrl+V: Paste clipboard content
+- Enter (in link editor): Save link
+
+--------------------------------------------------------------------------------
+                              TIPS & NOTES
+--------------------------------------------------------------------------------
+
+- All popups appear in the bottom-right corner above the buttons
+- The Visual Editor prevents accidental link/button clicks while editing
+- Background elements stay in place when moving foreground elements
+- Selection only picks leaf elements, not whole sections
+- Draw a larger box to select multiple elements, then drag to move all
+- Each editing feature is separate - pick one action at a time
+- All changes sync to Supabase = everyone sees your edits immediately
+
+--------------------------------------------------------------------------------
+                       ADMIN FEATURES SUMMARY
+--------------------------------------------------------------------------------
+
+1. Visual Editor Mode
+   - Draw rectangle to select leaf elements only (not containers)
+   - Selection box stays at drawn size
+   - Multi-select and group move supported
+   - Drag selected elements to new positions
+   - Right-click context menu for copy/paste
+
+2. Action Menu (Bottom-Right)
+   - Edit Text (text elements only)
+   - Replace Image (images only)
+   - Edit Link (links/buttons only)
+   - Spacing (Margins/Padding)
+   - Visual Styling (Alignment/Visibility)
+
+3. All Popups Fixed Position
+   - Always bottom-right, above admin buttons
+   - Consistent, predictable location
+
+4. All Changes Auto-Save to Supabase
+   - Permanent, global persistence
+   - All users see changes immediately
+   - localStorage used as local cache
+
+================================================================================
