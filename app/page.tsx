@@ -7,9 +7,31 @@ import { CTASection } from "@/components/home/cta-section"
 import { InlineContactForm } from "@/components/inline-contact-form"
 import { FAQBanner } from "@/components/faq-banner"
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://cyberhawk.dev/#business",
+      name: "Cyberhawk",
+      url: "https://cyberhawk.dev/",
+      description: "Premium custom-coded websites for service-based businesses.",
+      areaServed: "United States",
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cyberhawk.dev/#organization",
+      name: "Cyberhawk",
+      url: "https://cyberhawk.dev/",
+    },
+  ],
+}
+
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      <div className="flex flex-col min-h-screen">
       <HeroSection />
       <div className="w-full">
         <ValuePillars />
@@ -20,6 +42,7 @@ export default function Home() {
         <InlineContactForm />
       </div>
       <FAQBanner />
-    </div>
+      </div>
+    </>
   )
 }

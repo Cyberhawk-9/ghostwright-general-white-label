@@ -7,7 +7,6 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { NewsletterPopup } from "@/components/newsletter-popup"
-import { AdminToolbar } from "@/components/admin-toolbar"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,6 +19,7 @@ const sora = Sora({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cyberhawk.dev"),
   title: "Cyberhawk - Custom Websites for Service-Based Businesses | Only $99",
   description:
     "Premium custom-coded websites for service-based businesses. Modern, fast, SEO-ready sites built from scratch. No templates. Pay $99 upon completion, then just $20/month for hosting, SSL, and updates.",
@@ -90,7 +90,6 @@ export default function RootLayout({
           <SiteFooter />
         </div>
         <NewsletterPopup />
-        <AdminToolbar />
         <Analytics />
         <script
           dangerouslySetInnerHTML={{

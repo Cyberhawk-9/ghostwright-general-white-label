@@ -1,4 +1,10 @@
+import type { Metadata } from "next"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Recommended Tools and Discounts | Cyberhawk",
+  description: "Explore tools and services Cyberhawk recommends for building, designing, hosting, and growing a business online.",
+}
 import Image from "next/image"
 import { ExternalLink, Gift } from 'lucide-react'
 import { Button } from "@/components/ui/button"

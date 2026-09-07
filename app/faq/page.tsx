@@ -1,4 +1,10 @@
+import type { Metadata } from "next"
 import { ContactForm } from "@/components/contact-form"
+
+export const metadata: Metadata = {
+  title: "Website FAQ | Cyberhawk",
+  description: "Answers to common questions about Cyberhawk's custom-coded websites, pricing, hosting, SEO, and support.",
+}
 import { InlineContactForm } from "@/components/inline-contact-form"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 

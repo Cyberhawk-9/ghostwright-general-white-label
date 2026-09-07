@@ -40,8 +40,8 @@ export function HeroSection() {
   return (
     <>
       <section className="relative h-[90vh] min-h-[600px] w-full overflow-hidden bg-background">
-        {/* Background Carousel */}
-        {heroImages.map((src, index) => (
+        {/* Background Carousel disabled intentionally. Keep the image list and markup below for an easy visual revert. */}
+        {false && heroImages.map((src, index) => (
           <div
             key={src}
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${

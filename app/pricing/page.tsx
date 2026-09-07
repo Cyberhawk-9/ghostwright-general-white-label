@@ -1,4 +1,10 @@
+import type { Metadata } from "next"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Custom Website Pricing | Cyberhawk",
+  description: "Get a premium custom-coded website for $99 upon completion, then $20/month for hosting and updates.",
+}
 import { Check } from "lucide-react"
 import { InlineContactForm } from "@/components/inline-contact-form"
 
