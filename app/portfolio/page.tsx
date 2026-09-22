@@ -8,14 +8,6 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 const portfolioSites = [
   {
-    id: "hrgistics",
-    name: "HRgistics",
-    type: "HR Consulting",
-    description: "Professional HR consulting and workforce management solutions for businesses of all sizes.",
-    url: "https://hrgistics.com",
-    color: "#1a3a5c",
-  },
-  {
     id: "lone-star-septic",
     name: "Lone Star Septic",
     type: "Septic Services",
@@ -57,7 +49,6 @@ export default function PortfolioPage() {
   const card2Animation = useScrollAnimation()
   const card3Animation = useScrollAnimation()
   const card4Animation = useScrollAnimation()
-  const card5Animation = useScrollAnimation()
 
   const [selectedSite, setSelectedSite] = React.useState<(typeof portfolioSites)[0] | null>(null)
   const iframeRef = React.useRef<HTMLIFrameElement>(null)
@@ -72,7 +63,7 @@ export default function PortfolioPage() {
     document.body.style.overflow = "auto"
   }
 
-  const cardAnimations = [card1Animation, card2Animation, card3Animation, card4Animation, card5Animation]
+  const cardAnimations = [card1Animation, card2Animation, card3Animation, card4Animation]
 
   return (
     <div className="w-full bg-background">
