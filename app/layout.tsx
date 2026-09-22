@@ -20,9 +20,9 @@ const sora = Sora({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cyberhawk.dev"),
-  title: "Cyberhawk - Custom Websites for Service-Based Businesses | Only $99",
+  title: "Cyberhawk | White-Label Website Fulfillment",
   description:
-    "Premium custom-coded websites for service-based businesses. Modern, fast, SEO-ready sites built from scratch. No templates. Pay $99 upon completion, then just $20/month for hosting, SSL, and updates.",
+    "Add premium websites to your contractor offering without hiring developers. Cyberhawk builds, hosts, and maintains everything behind the scenes.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
