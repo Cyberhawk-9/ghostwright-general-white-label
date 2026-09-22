@@ -9,12 +9,11 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "Pricing", href: "/pricing" },
+  { name: "How It Works", href: "/#how-it-works" },
+  { name: "White Label", href: "/#white-label" },
   { name: "Portfolio", href: "/portfolio" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: "Pricing", href: "/#pricing" },
+  { name: "FAQ", href: "/faq" },
 ]
 
 export function SiteHeader() {
@@ -80,7 +79,7 @@ export function SiteHeader() {
             className="ml-4 border-secondary text-secondary hover:bg-secondary hover:text-white transition-all duration-200 bg-transparent"
             asChild
           >
-            <Link href="/contact">Get Started</Link>
+            <Link href="/partner">Become a Partner</Link>
           </Button>
         </nav>
 
@@ -109,7 +108,7 @@ export function SiteHeader() {
                 className="mt-4 w-full border-secondary text-secondary hover:bg-secondary hover:text-white transition-all duration-200 bg-transparent"
                 asChild
               >
-                <Link href="/contact">Get Started</Link>
+                <Link href="/partner">Become a Partner</Link>
               </Button>
             </nav>
           </SheetContent>

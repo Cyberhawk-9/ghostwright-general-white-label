@@ -17,10 +17,11 @@ const EMAILJS_PUBLIC_KEY = "wyusSO1_kD6AYC62D"
 
 interface ContactFormProps {
   compact?: boolean
+  partner?: boolean
   onSuccess?: () => void
 }
 
-export function ContactForm({ compact = false, onSuccess }: ContactFormProps) {
+export function ContactForm({ compact = false, partner = false, onSuccess }: ContactFormProps) {
   const { toast } = useToast()
   const router = useRouter()
   const [isSubmitting, setIsSubmitting] = React.useState(false)
@@ -52,11 +53,11 @@ export function ContactForm({ compact = false, onSuccess }: ContactFormProps) {
       return
     }
     if (!siteReason || siteReason.length < 5) {
-      toast({ title: "Error", description: "Please describe why you need a site.", variant: "destructive" })
+      toast({ title: "Error", description: partner ? "Please tell us about your agency." : "Please describe why you need a site.", variant: "destructive" })
       return
     }
     if (!businessDescription || businessDescription.length < 10) {
-      toast({ title: "Error", description: "Please describe your business in more detail.", variant: "destructive" })
+      toast({ title: "Error", description: partner ? "Please describe the businesses you serve." : "Please describe your business in more detail.", variant: "destructive" })
       return
     }
 
@@ -123,13 +124,13 @@ export function ContactForm({ compact = false, onSuccess }: ContactFormProps) {
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="siteReason" className="text-sm font-medium leading-none">Why do you need a new site? *</label>
-            <Input id="siteReason" name="siteReason" required />
+<label htmlFor="siteReason" className="text-sm font-medium leading-none">{partner ? "Tell us about your agency *" : "Why do you need a new site? *"}</label>
+              <Input id="siteReason" name="siteReason" required placeholder={partner ? "Agency name and what you offer" : undefined} />
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="businessDescription" className="text-sm font-medium leading-none">Describe your business *</label>
-            <Textarea id="businessDescription" name="businessDescription" className="min-h-[100px]" required />
+            <label htmlFor="businessDescription" className="text-sm font-medium leading-none">{partner ? "What businesses do you serve? *" : "Describe your business *"}</label>
+            <Textarea id="businessDescription" name="businessDescription" className="min-h-[100px]" required placeholder={partner ? "Tell us about your contractor customers and monthly volume" : undefined} />
           </div>
 
           <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
@@ -139,7 +140,7 @@ export function ContactForm({ compact = false, onSuccess }: ContactFormProps) {
                 Sending...
               </>
             ) : (
-              "Send Message"
+              partner ? "Request Partner Info" : "Send Message"
             )}
           </Button>
         </form>
