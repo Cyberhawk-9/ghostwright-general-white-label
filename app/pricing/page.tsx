@@ -2,8 +2,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Custom Website Pricing | Cyberhawk",
-  description: "Get a premium custom-coded website for $99 upon completion, then $20/month for hosting and updates.",
+  title: "Partner Pricing | Cyberhawk",
+  description: "Straightforward wholesale pricing for agencies that want to offer premium websites under their own brand.",
 }
 import { Check } from "lucide-react"
 import { InlineContactForm } from "@/components/inline-contact-form"
@@ -12,8 +12,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const features = [
-  "$99 one-time upon completion",
-  "$20/month for hosting & updates",
+  "$149 one-time per website",
+  "$25/month per active website",
   "No contracts",
   "Cancel anytime",
   "Unlimited service pages",
@@ -31,10 +31,10 @@ export default function PricingPage() {
       {/* Hero */}
       <section className="container py-20 text-center">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-8">
-          <span className="text-primary">Simple, Affordable Pricing</span>
+          <span className="text-primary">Simple wholesale pricing</span>
         </h1>
         <p className="mt-8 text-xl text-muted-foreground max-w-2xl mx-auto">
-          No contracts. No hidden charges. Pay $99 upon completion, then just $20/month for hosting, SSL, and updates.
+          Give your clients polished websites without hiring a web team. Pay $149 per launch, then $25/month for hosting, SSL, and updates.
         </p>
       </section>
 
@@ -43,19 +43,19 @@ export default function PricingPage() {
         <div className="max-w-2xl mx-auto">
           <Card className="border-primary/50 bg-white/5 shadow-[0_0_50px_-10px_rgba(6,160,199,0.3)]">
             <CardHeader className="text-center pb-8">
-              <CardTitle className="text-3xl text-primary mb-4">Custom Website</CardTitle>
+              <CardTitle className="text-3xl text-primary mb-4">Partner website fulfillment</CardTitle>
               <div className="flex flex-col items-center justify-center gap-3">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-6xl font-bold text-foreground">$99</span>
+                  <span className="text-6xl font-bold text-foreground">$149</span>
                   <span className="text-2xl text-gray-400">upfront</span>
                 </div>
                 <div className="text-lg text-muted-foreground font-medium">then</div>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-foreground">$20</span>
+                  <span className="text-4xl font-bold text-foreground">$25</span>
                   <span className="text-xl text-gray-400">/month</span>
                 </div>
               </div>
-              <p className="text-muted-foreground mt-4">Everything Included</p>
+              <p className="text-muted-foreground mt-4">Everything you need to deliver confidently</p>
             </CardHeader>
             <CardContent className="space-y-4 px-8 pb-8">
               <div className="grid gap-4 md:grid-cols-2">
@@ -67,7 +67,7 @@ export default function PricingPage() {
                 ))}
               </div>
               <Button size="lg" className="w-full h-14 mt-8 text-lg" asChild>
-                <Link href="/contact">Get Started for $99</Link>
+                <Link href="/contact">Become a partner</Link>
               </Button>
             </CardContent>
           </Card>
@@ -79,8 +79,8 @@ export default function PricingPage() {
         <div className="container">
           <div className="grid gap-8 md:grid-cols-4 text-center">
             {[
-              { title: "$99 Upfront", desc: "Pay when your site launches" },
-              { title: "$20/Month After", desc: "For hosting, SSL & updates" },
+{ title: "$149 Per Launch", desc: "Pay when the site launches" },
+          { title: "$25/Month After", desc: "For hosting, SSL & updates" },
               { title: "Cancel Anytime", desc: "Month-to-month, no contracts" },
               { title: "Fast Delivery", desc: "Most sites ready in 1-5 days" },
             ].map((item, i) => (
@@ -95,9 +95,9 @@ export default function PricingPage() {
 
       {/* Final CTA */}
       <section className="container py-20 text-center">
-        <h2 className="text-3xl font-bold mb-6">Ready to launch your site?</h2>
+        <h2 className="text-3xl font-bold mb-6">Ready to expand your offer?</h2>
         <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Get a fully custom, modern website. Pay $99 when it launches, then $20/month for hosting and updates.
+          Offer a premium web presence under your brand while we handle the build, launch, hosting, and ongoing updates.
         </p>
         <Button size="lg" className="h-14 px-10 text-lg" asChild>
           <Link href="/contact">Get Started Today</Link>

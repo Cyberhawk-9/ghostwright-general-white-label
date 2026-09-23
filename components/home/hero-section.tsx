@@ -63,8 +63,8 @@ export function HeroSection() {
         <div className="relative z-10 flex h-full items-center justify-center px-4 md:px-6">
           <div className="mx-auto w-full max-w-5xl text-center">
             <h1 className="animate-fade-in-up text-balance text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-              <span className="text-primary">Premium Custom-Coded Websites</span> for Service-Based Businesses{" "}
-              <span className="text-secondary">— Only $99</span>
+<span className="text-primary">Premium websites for your customers</span>{" "}
+          <span className="text-secondary">— fulfilled behind your brand</span>
             </h1>
             <p className="animate-fade-in-up delay-100 mx-auto mt-6 max-w-3xl text-pretty text-base text-gray-300 md:text-lg">
               Get a fully custom website built from scratch — modern, fast, animated, SEO-ready, and tailored to your
@@ -73,7 +73,7 @@ export function HeroSection() {
             <div className="animate-fade-in-up delay-200 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" className="h-12 px-8" asChild>
                 <Link href="/contact">
-                  Get Started for $99 <ArrowRight className="ml-2 h-5 w-5" />
+                  Become a partner <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button

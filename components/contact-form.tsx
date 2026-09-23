@@ -53,11 +53,11 @@ export function ContactForm({ compact = false, partner = false, onSuccess }: Con
       return
     }
     if (!siteReason || siteReason.length < 5) {
-      toast({ title: "Error", description: partner ? "Please tell us about your agency." : "Please describe why you need a site.", variant: "destructive" })
+      toast({ title: "Error", description: partner ? "Please tell us about your agency." : "Please tell us about your agency.", variant: "destructive" })
       return
     }
     if (!businessDescription || businessDescription.length < 10) {
-      toast({ title: "Error", description: partner ? "Please describe the businesses you serve." : "Please describe your business in more detail.", variant: "destructive" })
+      toast({ title: "Error", description: partner ? "Please describe the businesses you serve." : "Please describe the businesses you serve.", variant: "destructive" })
       return
     }
 
@@ -124,13 +124,13 @@ export function ContactForm({ compact = false, partner = false, onSuccess }: Con
           </div>
 
           <div className="space-y-2">
-<label htmlFor="siteReason" className="text-sm font-medium leading-none">{partner ? "Tell us about your agency *" : "Why do you need a new site? *"}</label>
-              <Input id="siteReason" name="siteReason" required placeholder={partner ? "Agency name and what you offer" : undefined} />
+<label htmlFor="siteReason" className="text-sm font-medium leading-none">Tell us about your agency *</label>
+              <Input id="siteReason" name="siteReason" required placeholder="Agency name and what you offer" />
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="businessDescription" className="text-sm font-medium leading-none">{partner ? "What businesses do you serve? *" : "Describe your business *"}</label>
-            <Textarea id="businessDescription" name="businessDescription" className="min-h-[100px]" required placeholder={partner ? "Tell us about your contractor customers and monthly volume" : undefined} />
+            <label htmlFor="businessDescription" className="text-sm font-medium leading-none">What businesses do you serve? *</label>
+            <Textarea id="businessDescription" name="businessDescription" className="min-h-[100px]" required placeholder="Tell us about your contractor customers and monthly volume" />
           </div>
 
           <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>

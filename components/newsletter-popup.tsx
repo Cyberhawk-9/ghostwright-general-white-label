@@ -81,8 +81,8 @@ export function NewsletterPopup() {
 
         <div className="space-y-6">
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-primary">Let's Connect</h3>
-            <p className="text-muted-foreground mt-2">Tell us about your project and we'll get back to you.</p>
+            <h3 className="text-2xl font-bold text-primary">Become a Partner</h3>
+            <p className="text-muted-foreground mt-2">Tell us about your agency and the businesses you serve.</p>
           </div>
 
           <ContactForm compact onSuccess={handleSuccess} />

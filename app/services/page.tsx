@@ -68,7 +68,7 @@ export default function ServicesPage() {
           </p>
           <div className="flex justify-center gap-4">
             <Button size="lg" asChild>
-              <Link href="/contact">Get Started for $99</Link>
+              <Link href="/contact">Become a partner</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link href="/portfolio">View Our Work</Link>
@@ -103,10 +103,10 @@ export default function ServicesPage() {
           <div className="rounded-3xl bg-gradient-to-r from-primary/20 to-secondary/20 p-8 md:p-12 text-center border border-primary/20">
             <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Get a premium, custom-coded website. Pay $99 upon completion, then just $20/month for hosting and updates.
+              Offer a premium, custom-coded website without handling fulfillment. Partner pricing is $149 per launch, then $25/month for hosting and updates.
             </p>
             <Button size="lg" asChild>
-              <Link href="/contact">Get Started for $99</Link>
+              <Link href="/contact">Become a partner</Link>
             </Button>
           </div>
         </section>
