@@ -35,10 +35,10 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="container py-20 text-center">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">
-          Let's Build Your <span className="text-primary">New Website</span>
+          Let&apos;s build your <span className="text-primary">partner offer</span>
         </h1>
         <p className="max-w-2xl mx-auto text-xl text-muted-foreground">
-          Get a fully custom, modern website. Pay $99 when it launches, then $20/month for hosting and updates.
+          Tell us about your agency and the businesses you serve. We&apos;ll show you how to deliver premium websites under your brand.
         </p>
       </section>
 
@@ -73,8 +73,7 @@ export default function ContactPage() {
         <div className="max-w-2xl mx-auto">
           <div className="mb-8 text-center">
             <p className="text-muted-foreground">
-              Have questions? Want to talk through your project? We're here to help. Fill out the form and we'll get
-              back to you quickly.
+              Ready to add website fulfillment to your offer? Fill out the partner form and we&apos;ll get back to you quickly.
             </p>
           </div>
           <ContactForm />

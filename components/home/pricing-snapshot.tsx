@@ -7,8 +7,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 const features = [
-  "$99 upon completion",
-  "$20/month for hosting & updates",
+"$149 per website launch",
+    "$25/month for hosting & updates",
   "No contracts",
   "Cancel anytime",
   "Unlimited service pages",
@@ -33,12 +33,12 @@ export function PricingSnapshot() {
               <CardTitle className="text-2xl text-primary mb-4">Custom Website</CardTitle>
               <div className="flex flex-col items-center justify-center gap-2">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-5xl font-bold text-foreground">$99</span>
-                  <span className="text-xl text-gray-400">upfront</span>
+<span className="text-5xl font-bold text-foreground">$149</span>
+          <span className="text-xl text-gray-400">per launch</span>
                 </div>
                 <div className="text-sm text-muted-foreground">then</div>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-bold text-foreground">$20</span>
+                  <span className="text-3xl font-bold text-foreground">$25</span>
                   <span className="text-lg text-gray-400">/month</span>
                 </div>
               </div>
@@ -51,7 +51,7 @@ export function PricingSnapshot() {
                 </div>
               ))}
               <Button size="lg" className="w-full h-12 mt-6" asChild>
-                <Link href="/contact">Get Started for $99</Link>
+                <Link href="/contact">Become a partner</Link>
               </Button>
             </CardContent>
           </Card>

@@ -26,12 +26,11 @@ export default function ThankYouPage() {
       </div>
 
       <h1 className="mb-6 font-display text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-        Message Received!
+        Partner inquiry received
       </h1>
 
       <p className="mb-10 max-w-md text-xl text-muted-foreground">
-        Thank you for reaching out. We've received your details and will get back to you shortly to discuss your
-        project.
+        Thanks for reaching out. We&apos;ve received your agency details and will be in touch shortly to discuss how Cyberhawk can support your customers.
       </p>
 
       <div className="flex flex-col gap-4 sm:flex-row">

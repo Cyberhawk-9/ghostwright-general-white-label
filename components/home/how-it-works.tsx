@@ -25,8 +25,8 @@ const steps = [
   },
   {
     number: "4",
-    title: "It Goes Live for $99",
-    description: "Pay $99 when your site launches. Then just $20/month for hosting, SSL, support, and ongoing updates.",
+    title: "It goes live under your brand",
+    description: "Launch for $149, then $25/month for hosting, SSL, support, and ongoing updates. You stay focused on your customer.",
     icon: Rocket,
   },
 ]

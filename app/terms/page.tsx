@@ -29,8 +29,8 @@ export default function TermsPage() {
               certificates, and ongoing updates. Payment terms are as follows:
             </p>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-              <li>$99 is due upon completion and approval of your custom website</li>
-              <li>$20/month begins the month after launch for hosting, SSL, and maintenance</li>
+              <li>$149 is due upon completion and approval of each partner website</li>
+              <li>$25/month begins the month after launch for hosting, SSL, and maintenance</li>
               <li>Payments are processed through secure third-party platforms</li>
               <li>Refunds are subject to the platform's refund policy and project completion status</li>
               <li>Additional work beyond the agreed scope will be billed separately</li>
