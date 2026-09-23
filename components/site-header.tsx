@@ -79,7 +79,7 @@ export function SiteHeader() {
             className="ml-4 border-secondary text-secondary hover:bg-secondary hover:text-white transition-all duration-200 bg-transparent"
             asChild
           >
-            <Link href="/partner">Become a Partner</Link>
+            <Link href="/contact">Become a Partner</Link>
           </Button>
         </nav>
 
@@ -108,7 +108,7 @@ export function SiteHeader() {
                 className="mt-4 w-full border-secondary text-secondary hover:bg-secondary hover:text-white transition-all duration-200 bg-transparent"
                 asChild
               >
-                <Link href="/partner">Become a Partner</Link>
+                <Link href="/contact">Become a Partner</Link>
               </Button>
             </nav>
           </SheetContent>
