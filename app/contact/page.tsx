@@ -1,9 +1,10 @@
 "use client"
 
-import { Mail, MessageSquare, Clock } from "lucide-react"
+import { Mail, MessageSquare, Clock, Check, ArrowRight } from "lucide-react"
 
 import { ContactForm } from "@/components/contact-form"
 import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import { IdleReassurancePopup } from "@/components/idle-reassurance-popup"
 
 const contactInfo = [
@@ -42,6 +43,23 @@ export default function ContactPage() {
         </p>
       </section>
 
+      {/* Partner positioning */}
+      <section className="container pb-12">
+        <div className="mx-auto mb-10 max-w-3xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">White-label fulfillment</p>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Add premium websites without adding a web department.</h2>
+          <p className="mt-4 text-lg leading-8 text-muted-foreground">Offer professionally built websites under your own brand. We handle the design, technical setup, launch, and ongoing service behind the scenes.</p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-3">
+          {["Keep the customer relationship", "Set your own retail pricing", "Skip developers and overhead"].map((item) => (
+            <div key={item} className="flex items-center gap-3 rounded-xl border border-border/60 bg-card/40 p-4 text-sm">
+              <Check className="h-5 w-5 shrink-0 text-primary" />
+              <span>{item}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Contact Info Cards */}
       <section className="container pb-12">
         <div className="grid gap-6 md:grid-cols-3">
@@ -76,7 +94,16 @@ export default function ContactPage() {
               Ready to add website fulfillment to your offer? Fill out the partner form and we&apos;ll get back to you quickly.
             </p>
           </div>
-          <ContactForm />
+          <ContactForm partner />
+          <div className="mt-6 flex items-start gap-3 rounded-lg border border-border/50 bg-muted/20 p-4 text-left text-sm text-muted-foreground">
+            <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+            <p>We&apos;ll only use your information to respond to your partner inquiry. No spam, no pressure, and your customer relationships stay yours.</p>
+          </div>
+          <div className="mt-8 text-center">
+            <Button variant="outline" asChild>
+              <a href="mailto:info@cyberhawk.dev">Prefer email? Contact us directly <ArrowRight className="ml-2 h-4 w-4" /></a>
+            </Button>
+          </div>
         </div>
       </section>
     </div>
