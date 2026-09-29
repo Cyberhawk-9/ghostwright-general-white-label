@@ -32,7 +32,7 @@ const steps = [
     description: "Counted from your greenlight.",
   },
   {
-    title: `${OFFER.revisionRounds} rounds of revisions`,
+    title: "Two rounds of revisions",
     description: `Send one consolidated list per round. We deliver each revised version within ${OFFER.revisionTurnaround}. Feedback is due within ${OFFER.feedbackWindow} of each delivery, or that version is treated as approved. Extra rounds are $${OFFER.extraRound} each.`,
   },
   {
@@ -106,7 +106,7 @@ export default function HowItWorksPage() {
 
         <section className="container pb-20">
           <Reveal as="div" className="rounded-3xl bg-gradient-to-r from-primary/20 to-secondary/20 p-8 md:p-12 text-center border border-primary/20">
-            <h2 className="text-3xl font-bold mb-4">Ready to add websites to your offer?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to start your first site?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               First version in {OFFER.firstVersion} from your greenlight.
             </p>
@@ -116,9 +116,14 @@ export default function HowItWorksPage() {
                   Become a Partner <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent" asChild>
-                <Link href="/pricing">See Pricing</Link>
-              </Button>
+            </div>
+            <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:justify-center sm:gap-4 text-sm">
+              <Link href="/pricing" className="text-primary hover:underline">
+                See pricing
+              </Link>
+              <Link href="/faq" className="text-primary hover:underline">
+                See the FAQ
+              </Link>
             </div>
           </Reveal>
         </section>

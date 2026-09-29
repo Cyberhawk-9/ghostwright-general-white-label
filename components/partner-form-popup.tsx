@@ -48,12 +48,11 @@ export function PartnerFormPopup() {
       aria-modal="true"
       aria-label="Become a partner"
       className="popup-overlay fixed inset-0 z-[60] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
-      onClick={() => setOpen(false)}
+      onClick={(event) => {
+        if (event.target === event.currentTarget) setOpen(false)
+      }}
     >
-      <div
-        className="popup-panel relative w-full max-w-lg max-h-[90vh] overflow-y-auto"
-        onClick={(event) => event.stopPropagation()}
-      >
+      <div className="popup-panel relative z-[61] w-full max-w-lg max-h-[90vh] overflow-y-auto">
         <button
           type="button"
           onClick={() => setOpen(false)}
@@ -62,7 +61,7 @@ export function PartnerFormPopup() {
         >
           <X className="h-4 w-4" />
         </button>
-        <PartnerForm compact onSuccess={() => setOpen(false)} />
+        <PartnerForm compact source="popup" onSuccess={() => setOpen(false)} />
       </div>
     </div>
   )

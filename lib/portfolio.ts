@@ -27,7 +27,7 @@ export const PORTFOLIO_SITES: PortfolioSite[] = [
     name: "Roofing Contractor (Sample)",
     type: "Roofing Contractor",
     description: "Premium residential and commercial roofing solutions with expert craftsmanship and reliable service.",
-    url: `https://ramas-roofing.${BRAND.domain}`,
+    url: "https://phoenix-roofer.ghostwrightweb.com",
     color: "#c41e3a",
     label: "Sample build",
   },
