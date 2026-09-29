@@ -54,7 +54,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="w-full max-w-[1400px] mx-auto bg-background px-6 md:px-12">
+    <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12">
       <div className="flex flex-col min-h-screen">
         {/* Hero Section */}
         <section className="container py-20 md:py-28 text-center">

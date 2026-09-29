@@ -20,7 +20,7 @@ export default function ThankYouPage() {
   }
 
   return (
-    <div className="flex min-h-[80vh] flex-col items-center justify-center px-4 text-center bg-background">
+    <div className="flex min-h-[80vh] flex-col items-center justify-center px-4 text-center">
       <div className="mb-8 rounded-full bg-primary/10 p-6 ring-1 ring-primary/20 animate-in zoom-in duration-500">
         <CheckCircle className="h-20 w-20 text-primary" />
       </div>
