@@ -1,97 +1,115 @@
+import { BRAND } from "@/lib/brand"
+
 export default function PrivacyPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <section className="container max-w-7xl mx-auto px-4 py-20 max-w-4xl">
         <h1 className="text-4xl font-bold tracking-tighter mb-6">Privacy Policy</h1>
-        <p className="text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString()}</p>
+        <p className="text-muted-foreground mb-8">Last updated: September 29, 2026</p>
 
         <div className="prose prose-invert max-w-none space-y-8">
           <section>
-            <h2 className="text-2xl font-bold mb-4">Introduction</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              This Privacy Policy describes how we collect, use, and protect your personal information when you visit
-              our website or use our services. We are committed to protecting your privacy and ensuring the security of
-              your personal data.
-            </p>
+            <h2 className="text-2xl font-bold mb-4">Who we are</h2>
+            <p className="text-muted-foreground leading-relaxed">{BRAND.legalName}.</p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Information We Collect</h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              We collect information that you provide directly to us, including:
-            </p>
+            <h2 className="text-2xl font-bold mb-4">Information we collect</h2>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-              <li>Name and email address when you contact us</li>
-              <li>Project details and requirements you share with us</li>
-              <li>Payment information processed through secure third-party services</li>
-              <li>Communications between you and our team</li>
+              <li>
+                Contact form details (name, email, phone, agency name, website, type, volume, message)
+              </li>
+              <li>
+                Intake information for sites we build for a partner&apos;s clients, such as business name, contact
+                details, service information, logos, photos, and licensing or credential statements the client asks
+                us to show
+              </li>
+              <li>
+                Partner billing contacts, while payments are handled by a payment processor and we do not store card
+                numbers
+              </li>
+              <li>Technical data such as IP address, device, browser, and pages visited</li>
+              <li>Live chat messages if you use chat</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">How We Use Your Information</h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">We use the information we collect to:</p>
+            <h2 className="text-2xl font-bold mb-4">How we use it</h2>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-              <li>Provide, maintain, and improve our services</li>
-              <li>Communicate with you about your projects and inquiries</li>
-              <li>Send you updates and marketing communications (with your consent)</li>
-              <li>Process payments and prevent fraud</li>
-              <li>Comply with legal obligations</li>
+              <li>To respond to inquiries</li>
+              <li>To build, host, and maintain sites</li>
+              <li>To invoice partners</li>
+              <li>To secure and improve this site</li>
+              <li>To meet legal obligations</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Information Sharing</h2>
+            <h2 className="text-2xl font-bold mb-4">Client information</h2>
             <p className="text-muted-foreground leading-relaxed">
-              We do not sell, trade, or rent your personal information to third parties. We may share your information
-              with trusted service providers who assist us in operating our website and conducting our business, as long
-              as they agree to keep this information confidential.
+              When we build a site for a partner&apos;s client, we use the information only to build and maintain
+              that site and treat the partner as the client&apos;s point of contact. Partners are responsible for
+              having any consents they need from their clients.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Data Security</h2>
+            <h2 className="text-2xl font-bold mb-4">Sharing</h2>
             <p className="text-muted-foreground leading-relaxed">
-              We implement appropriate technical and organizational measures to protect your personal information
-              against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission
-              over the internet is 100% secure.
+              We do not sell personal information. We share it with service providers for hosting, email, forms,
+              invoicing and payments, chat, and analytics only as needed, and when the law requires.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Your Rights</h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">You have the right to:</p>
-            <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-              <li>Access the personal information we hold about you</li>
-              <li>Request correction of inaccurate information</li>
-              <li>Request deletion of your personal information</li>
-              <li>Opt-out of marketing communications</li>
-              <li>Lodge a complaint with a supervisory authority</li>
-            </ul>
+            <h2 className="text-2xl font-bold mb-4">Retention</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              We keep information as long as needed for these purposes. After a site is cancelled we keep an archive
+              for 90 days, then remove the client&apos;s identifying content from our retained copy, except records
+              we must keep for legal or billing reasons.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Security</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              We use reasonable measures. No method of transmission is 100% secure.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Your choices</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              You can ask to access, correct, or delete your information, or opt out of marketing, through the
+              contact page.
+            </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold mb-4">Cookies</h2>
             <p className="text-muted-foreground leading-relaxed">
-              We use cookies and similar tracking technologies to improve your browsing experience and analyze website
-              traffic. You can control cookies through your browser settings.
+              We use cookies and similar tools for analytics. You can control them in your browser.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Changes to This Policy</h2>
+            <h2 className="text-2xl font-bold mb-4">Children</h2>
             <p className="text-muted-foreground leading-relaxed">
-              We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new
-              policy on this page and updating the "Last updated" date.
+              This site is for businesses and is not directed to children.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+            <h2 className="text-2xl font-bold mb-4">Changes</h2>
             <p className="text-muted-foreground leading-relaxed">
-              If you have any questions about this Privacy Policy or our data practices, please contact us through our
-              contact page or email us directly.
+              We may update this Privacy Policy from time to time. We will notify you of any changes by posting the
+              new policy on this page and updating the &quot;Last updated&quot; date.
             </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Contact</h2>
+            <p className="text-muted-foreground leading-relaxed">Use the contact page.</p>
           </section>
         </div>
       </section>
