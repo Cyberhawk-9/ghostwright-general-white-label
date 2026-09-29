@@ -2,15 +2,18 @@
 
 import * as React from "react"
 import { Calculator, TrendingUp } from "lucide-react"
-import { BRAND } from "@/lib/brand"
 import { OFFER } from "@/lib/offer"
 
 export function PartnerCalculator() {
-  const [retailPrice, setRetailPrice] = React.useState(59)
+  const [retailMonthly, setRetailMonthly] = React.useState(59)
+  const [retailSetup, setRetailSetup] = React.useState(249)
   const [activeSites, setActiveSites] = React.useState(100)
-  const recurringRevenue = retailPrice * activeSites
+
+  const recurringRevenue = retailMonthly * activeSites
   const wholesaleCost = OFFER.monthlyFee * activeSites
   const grossMargin = recurringRevenue - wholesaleCost
+  const setupMargin = retailSetup - OFFER.setupFee
+  const firstYearMargin = setupMargin + 12 * (retailMonthly - OFFER.monthlyFee)
 
   return (
     <div className="rounded-3xl border border-primary/20 bg-card/70 p-6 shadow-[0_0_60px_-20px_rgba(6,160,199,0.35)] md:p-8">
@@ -20,26 +23,34 @@ export function PartnerCalculator() {
             <Calculator className="h-5 w-5" />
           </div>
           <h3 className="text-2xl">Model your wholesale spread</h3>
-          <p className="mt-2 text-sm leading-6 text-muted-foreground">Use your own retail price and customer volume to see the recurring gross margin opportunity.</p>
+          <p className="mt-2 text-sm leading-6 text-muted-foreground">Use your own retail pricing and customer volume to see the margin opportunity.</p>
         </div>
         <TrendingUp className="hidden h-6 w-6 text-secondary sm:block" />
       </div>
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-6 sm:grid-cols-3">
         <label className="space-y-3 text-sm font-medium">
-          <span className="flex justify-between">Your retail monthly price <strong className="text-primary">${retailPrice}</strong></span>
-          <input aria-label="Your retail monthly price" type="range" min="39" max="149" step="1" value={retailPrice} onChange={(event) => setRetailPrice(Number(event.target.value))} className="w-full accent-[#06a0c7]" />
+          <span className="flex justify-between">Your retail monthly price <strong className="text-primary">${retailMonthly}</strong></span>
+          <input aria-label="Your retail monthly price" type="range" min="25" max="149" step="1" value={retailMonthly} onChange={(event) => setRetailMonthly(Number(event.target.value))} className="w-full accent-[#06a0c7]" />
+        </label>
+        <label className="space-y-3 text-sm font-medium">
+          <span className="flex justify-between">Your retail setup price <strong className="text-primary">${retailSetup}</strong></span>
+          <input aria-label="Your retail setup price" type="range" min="149" max="499" step="10" value={retailSetup} onChange={(event) => setRetailSetup(Number(event.target.value))} className="w-full accent-[#06a0c7]" />
         </label>
         <label className="space-y-3 text-sm font-medium">
           <span className="flex justify-between">Active websites <strong className="text-primary">{activeSites}</strong></span>
-          <input aria-label="Active websites" type="range" min="1" max="250" step="1" value={activeSites} onChange={(event) => setActiveSites(Number(event.target.value))} className="w-full accent-[#06a0c7]" />
+          <input aria-label="Active websites" type="range" min="1" max="500" step="1" value={activeSites} onChange={(event) => setActiveSites(Number(event.target.value))} className="w-full accent-[#06a0c7]" />
         </label>
       </div>
-      <div className="mt-8 grid gap-3 sm:grid-cols-3">
+      <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         <Metric label="Retail revenue / month" value={`$${recurringRevenue.toLocaleString()}`} />
         <Metric label="Wholesale cost / month" value={`$${wholesaleCost.toLocaleString()}`} />
-        <Metric label="Recurring gross margin" value={`$${grossMargin.toLocaleString()}`} highlight />
+        <Metric label="Monthly gross margin" value={`$${grossMargin.toLocaleString()}`} highlight />
+        <Metric label="Setup margin per new site" value={`$${setupMargin.toLocaleString()}`} />
+        <Metric label="First-year margin per site" value={`$${firstYearMargin.toLocaleString()}`} />
       </div>
-      <p className="mt-5 text-xs leading-5 text-muted-foreground">Illustrative example only. Actual results depend on your pricing and active customer count. {BRAND.short} wholesale pricing is ${OFFER.monthlyFee} per active website each month.</p>
+      <p className="mt-5 text-xs leading-5 text-muted-foreground">
+        Illustrative example only. Wholesale is ${OFFER.setupFee} setup per site plus ${OFFER.monthlyFee} per active site each month. First-year margin assumes 12 paid months.
+      </p>
     </div>
   )
 }
