@@ -25,8 +25,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold mb-4">Payment Terms</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Payment is $99 upon completion of your website. After launch, you pay $20/month for hosting, SSL
-              certificates, and ongoing updates. Payment terms are as follows:
+              Payment is $149 upon completion of each partner website. After launch, you pay $25/month for hosting,
+              SSL certificates, and ongoing updates. Payment terms are as follows:
             </p>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
               <li>$149 is due upon completion and approval of each partner website</li>
