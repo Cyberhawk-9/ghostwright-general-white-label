@@ -1,9 +1,106 @@
+import type { Metadata } from "next"
+import Link from "next/link"
+
+import { ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { InlineContactForm } from "@/components/inline-contact-form"
+import { BRAND } from "@/lib/brand"
+import { OFFER } from "@/lib/offer"
+
+export const metadata: Metadata = {
+  title: `For Insurance Agencies | ${BRAND.short}`,
+  description: `Offer contractor clients a professional website the moment they're insured, under your brand.`,
+}
+
+const steps = [
+  {
+    title: "You offer the website",
+    description: "Present it as your service, at the price you set.",
+  },
+  {
+    title: "Your client completes a short intake",
+    description: "A form for their trade, branded for you.",
+  },
+  {
+    title: "We build and maintain it under your brand",
+    description: `First version in ${OFFER.firstVersion} from your greenlight. You bill your client and keep the spread.`,
+  },
+]
+
 export default function ForInsuranceAgenciesPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <section className="container max-w-7xl mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold tracking-tighter mb-6">For Insurance Agencies</h1>
-      </section>
+    <div className="w-full">
+      <div className="flex flex-col min-h-screen max-w-7xl mx-auto px-6 md:px-12">
+        <section className="container py-20 md:py-28">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6 text-balance">
+              The moment a new contractor is insured, they need a website.
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Your contractor clients are getting licensed, insured, and ready for work. A professional website is
+              often the next thing they need. With {BRAND.short}, you offer it as your own service without hiring
+              developers.
+            </p>
+          </div>
+        </section>
+
+        <section className="container pb-16">
+          <div className="grid gap-4 sm:grid-cols-3">
+            {steps.map((step, index) => (
+              <Card key={step.title} className="bg-card/50">
+                <CardContent className="p-6">
+                  <span className="text-sm font-bold text-primary">{`0${index + 1}`}</span>
+                  <p className="mt-4 text-sm font-semibold leading-6">{step.title}</p>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{step.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section className="container pb-16">
+          <div className="max-w-3xl mx-auto space-y-12">
+            <div>
+              <h2 className="text-2xl font-bold mb-4">What you keep</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                The client relationship, the retail price, and the margin. Example: at a $249 setup and $59 a
+                month, you keep $100 on setup and $34 a month per site.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold mb-4">What stays with you</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Billing your clients, talking to them, and complying with the rules that apply to your agency,
+                including insurance-department rules on advertising, referral fees, and inducements. We don&apos;t
+                give legal or insurance advice.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="container pb-20">
+          <div className="rounded-3xl bg-gradient-to-r from-primary/20 to-secondary/20 p-8 md:p-12 text-center border border-primary/20">
+            <h2 className="text-3xl font-bold mb-4">Ready to add websites to your offer?</h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              First version in {OFFER.firstVersion} from your greenlight.
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
+              <Button size="lg" asChild>
+                <Link href="/pricing">
+                  See Pricing <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="bg-transparent" asChild>
+                <Link href="/faq">See FAQ</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        <InlineContactForm />
+      </div>
     </div>
   )
 }
