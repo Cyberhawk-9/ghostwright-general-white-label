@@ -61,7 +61,7 @@ export function ValuePillars() {
           </h2>
           <p className="mt-6 max-w-3xl mx-auto text-gray-400 text-base md:text-lg leading-relaxed">
             Every {BRAND.short} site is custom-coded from the ground up. No templates. No drag-and-drop builders. Just
-            premium, modern websites designed to help service-based businesses look professional and win more customers.
+            premium, modern websites designed to help service-based businesses look professional and win more clients.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

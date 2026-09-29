@@ -1,4 +1,14 @@
+import type { Metadata } from "next"
 import { BRAND } from "@/lib/brand"
+
+export const metadata: Metadata = {
+  title: `Privacy Policy | ${BRAND.short}`,
+  description: "How Ghostwright collects, uses, and protects information.",
+  openGraph: {
+    title: `Privacy Policy | ${BRAND.short}`,
+    description: "How Ghostwright collects, uses, and protects information.",
+  },
+}
 
 export default function PrivacyPage() {
   return (

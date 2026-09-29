@@ -9,8 +9,12 @@ import { BRAND } from "@/lib/brand"
 import { OFFER } from "@/lib/offer"
 
 export const metadata: Metadata = {
-  title: `For Insurance Agencies | ${BRAND.short}`,
-  description: `Offer contractor clients a professional website the moment they're insured, under your brand.`,
+  title: `Websites for Your New Contractor Clients | ${BRAND.short}`,
+  description: "Add a white-label website service for the contractors you insure. You sell and bill it; Ghostwright builds and maintains it.",
+  openGraph: {
+    title: `Websites for Your New Contractor Clients | ${BRAND.short}`,
+    description: "Add a white-label website service for the contractors you insure. You sell and bill it; Ghostwright builds and maintains it.",
+  },
 }
 
 const steps = [

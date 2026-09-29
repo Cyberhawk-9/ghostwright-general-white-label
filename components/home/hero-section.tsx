@@ -65,7 +65,7 @@ export function HeroSection() {
         <div className="relative z-10 flex h-full items-center justify-center px-4 md:px-6">
           <div className="mx-auto w-full max-w-5xl text-center">
             <h1 className="animate-fade-in-up text-balance text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-<span className="text-primary">Premium websites for your customers</span>{" "}
+<span className="text-primary">Premium websites for your clients</span>{" "}
           <span className="text-secondary">— fulfilled behind your brand</span>
             </h1>
             <p className="animate-fade-in-up delay-100 mx-auto mt-6 max-w-3xl text-pretty text-base text-gray-300 md:text-lg">

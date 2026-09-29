@@ -28,7 +28,7 @@ export default async function BlogIndex() {
               Ideas that help your business <span className="text-primary">get noticed.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              Clear guidance on websites, search visibility, and turning more visitors into customers.
+              Clear guidance on websites, search visibility, and turning more visitors into clients.
             </p>
           </div>
         </section>

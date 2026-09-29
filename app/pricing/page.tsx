@@ -10,8 +10,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: `Partner Pricing | ${BRAND.name}`,
-  description: "Straightforward wholesale pricing for agencies that want to offer premium websites under their own brand.",
+  title: `Partner Pricing: $149 Setup, $25/Month | ${BRAND.short}`,
+  description: "Pay $149 per site when you greenlight the build, then $25/month per active site once it's live. No long-term contracts.",
+  openGraph: {
+    title: `Partner Pricing: $149 Setup, $25/Month | ${BRAND.short}`,
+    description: "Pay $149 per site when you greenlight the build, then $25/month per active site once it's live. No long-term contracts.",
+  },
 }
 
 const tiles = [

@@ -3,8 +3,12 @@ import { PartnerHome } from "@/components/partner-home"
 import { BRAND } from "@/lib/brand"
 
 export const metadata: Metadata = {
-  title: `White-Label Websites for Contractor-Focused Agencies | ${BRAND.name}`,
-  description: `Add premium websites to your contractor offering without hiring developers. ${BRAND.short} builds, hosts, and maintains everything behind the scenes.`,
+  title: `White-Label Websites for Contractor Agencies | ${BRAND.short}`,
+  description: `Custom-coded websites for your contractor clients, built and maintained under your brand. $149 setup per site, then $25/month.`,
+  openGraph: {
+    title: `White-Label Websites for Contractor Agencies | ${BRAND.short}`,
+    description: `Custom-coded websites for your contractor clients, built and maintained under your brand. $149 setup per site, then $25/month.`,
+  },
 }
 
 const structuredData = {

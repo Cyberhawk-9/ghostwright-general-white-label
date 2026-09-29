@@ -52,7 +52,7 @@ export default function ContactPage() {
           <p className="mt-4 text-lg leading-8 text-muted-foreground">Offer professionally built websites under your own brand. We handle the design, technical setup, launch, and ongoing service behind the scenes.</p>
         </div>
         <div className="grid gap-4 md:grid-cols-3">
-          {["Keep the customer relationship", "Set your own retail pricing", "Skip developers and overhead"].map((item) => (
+          {["Keep the client relationship", "Set your own retail pricing", "Skip developers and overhead"].map((item) => (
             <div key={item} className="flex items-center gap-3 rounded-xl border border-border/60 bg-card/40 p-4 text-sm">
               <Check className="h-5 w-5 shrink-0 text-primary" />
               <span>{item}</span>
@@ -99,7 +99,7 @@ export default function ContactPage() {
           <PartnerForm />
           <div className="mt-6 flex items-start gap-3 rounded-lg border border-border/50 bg-muted/20 p-4 text-left text-sm text-muted-foreground">
             <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-            <p>We&apos;ll only use your information to respond to your partner inquiry. No spam, no pressure, and your customer relationships stay yours.</p>
+            <p>We&apos;ll only use your information to respond to your partner inquiry. No spam, no pressure, and your client relationships stay yours.</p>
           </div>
           <div className="mt-8 text-center">
             <Button variant="outline" asChild>

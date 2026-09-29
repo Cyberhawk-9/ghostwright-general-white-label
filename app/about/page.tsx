@@ -10,8 +10,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: `About ${BRAND.short} | Custom-Coded Websites`,
-  description: `Learn how ${BRAND.short} builds agency-branded, custom-coded websites for contractors.`,
+  title: `About ${BRAND.name}`,
+  description: "Ghostwright is the fulfillment team behind agency-branded contractor websites.",
+  openGraph: {
+    title: `About ${BRAND.name}`,
+    description: "Ghostwright is the fulfillment team behind agency-branded contractor websites.",
+  },
 }
 
 const values = [

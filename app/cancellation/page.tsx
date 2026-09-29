@@ -5,8 +5,12 @@ import { InlineContactForm } from "@/components/inline-contact-form"
 import { BRAND } from "@/lib/brand"
 
 export const metadata: Metadata = {
-  title: `Cancellation & Ownership | ${BRAND.short}`,
-  description: `How cancellation, ownership, and source-code buyouts work for ${BRAND.short} partners.`,
+  title: `Cancellation and Ownership | ${BRAND.short}`,
+  description: "Cancel any site anytime. Clients keep their domain and content, Ghostwright keeps the source code, and a buyout is available.",
+  openGraph: {
+    title: `Cancellation and Ownership | ${BRAND.short}`,
+    description: "Cancel any site anytime. Clients keep their domain and content, Ghostwright keeps the source code, and a buyout is available.",
+  },
 }
 
 export default function CancellationPage() {

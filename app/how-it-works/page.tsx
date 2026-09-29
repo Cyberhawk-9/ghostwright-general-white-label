@@ -9,8 +9,12 @@ import { BRAND } from "@/lib/brand"
 import { OFFER } from "@/lib/offer"
 
 export const metadata: Metadata = {
-  title: `How It Works | ${BRAND.short}`,
-  description: `See exactly how ${BRAND.short} takes a partner-branded intake from greenlight to launch.`,
+  title: `How It Works: From Intake to Launch | ${BRAND.short}`,
+  description: "Intake, setup invoice, first version in 5–7 business days, two revision rounds, launch, and monthly support.",
+  openGraph: {
+    title: `How It Works: From Intake to Launch | ${BRAND.short}`,
+    description: "Intake, setup invoice, first version in 5–7 business days, two revision rounds, launch, and monthly support.",
+  },
 }
 
 const steps = [

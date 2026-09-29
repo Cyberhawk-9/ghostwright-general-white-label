@@ -15,8 +15,12 @@ import { BRAND } from "@/lib/brand"
 import { OFFER } from "@/lib/offer"
 
 export const metadata: Metadata = {
-  title: `Billing & Payments | ${BRAND.short}`,
-  description: `How setup fees, monthly invoices, and late payments work for ${BRAND.short} partners.`,
+  title: `Billing and Payments | ${BRAND.short}`,
+  description: "One bundled invoice on the 1st, due by the 8th. Setup and monthly billing, late fees, unpaid clients, and fee changes.",
+  openGraph: {
+    title: `Billing and Payments | ${BRAND.short}`,
+    description: "One bundled invoice on the 1st, due by the 8th. Setup and monthly billing, late fees, unpaid clients, and fee changes.",
+  },
 }
 
 const invoiceEvents = [
