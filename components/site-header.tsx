@@ -30,7 +30,7 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full border-b border-border bg-black/60 backdrop-blur transition-all duration-300 ${
         isScrolled ? "h-14" : "h-16"
       }`}
     >
@@ -63,7 +63,11 @@ export function SiteHeader() {
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {navigation.map((item) => (
-            <Link key={item.name} href={item.href} className="text-gray-300 transition-colors hover:text-primary">
+            <Link
+              key={item.name}
+              href={item.href}
+              className="nav-link text-gray-300 transition-colors hover:text-white"
+            >
               {item.name}
             </Link>
           ))}

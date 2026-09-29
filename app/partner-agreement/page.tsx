@@ -13,6 +13,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { InlineContactForm } from "@/components/inline-contact-form"
+import { Reveal } from "@/components/reveal"
 import { BRAND } from "@/lib/brand"
 import { OFFER } from "@/lib/offer"
 
@@ -85,7 +86,7 @@ export default function PartnerAgreementPage() {
     <div className="w-full">
       <div className="flex flex-col min-h-screen max-w-7xl mx-auto px-6 md:px-12">
         <section className="container py-20 md:py-28">
-          <div className="max-w-3xl mx-auto text-center">
+          <Reveal as="div" className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">
               Partner Agreement summary
             </h1>
@@ -93,11 +94,11 @@ export default function PartnerAgreementPage() {
               Every partner signs a short Partner Agreement. This page summarizes the key terms. The signed
               agreement controls.
             </p>
-          </div>
+          </Reveal>
         </section>
 
         <section className="container pb-16">
-          <div className="max-w-3xl mx-auto">
+          <Reveal as="div" className="max-w-3xl mx-auto">
             <Card className="bg-card/50">
               <CardContent className="p-0">
                 <Table>
@@ -118,17 +119,17 @@ export default function PartnerAgreementPage() {
                 </Table>
               </CardContent>
             </Card>
-          </div>
+          </Reveal>
         </section>
 
         <section className="container pb-20">
-          <div className="max-w-3xl mx-auto text-center">
+          <Reveal as="div" className="max-w-3xl mx-auto text-center">
             <Button size="lg" asChild>
               <Link href="/contact">
                 Request the Partner Agreement <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-          </div>
+          </Reveal>
         </section>
 
         <InlineContactForm />

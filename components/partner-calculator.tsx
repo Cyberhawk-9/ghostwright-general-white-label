@@ -4,6 +4,45 @@ import * as React from "react"
 import { Calculator, TrendingUp } from "lucide-react"
 import { OFFER } from "@/lib/offer"
 
+/** Animates a numeric value toward `target` over 400ms whenever it changes. */
+function useCountUp(target: number, durationMs = 400) {
+  const [value, setValue] = React.useState(target)
+  const fromRef = React.useRef(target)
+
+  React.useEffect(() => {
+    if (typeof window === "undefined") return
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    if (prefersReducedMotion) {
+      setValue(target)
+      fromRef.current = target
+      return
+    }
+
+    const from = fromRef.current
+    if (from === target) return
+
+    let frame: number
+    const start = performance.now()
+
+    const tick = (now: number) => {
+      const progress = Math.min((now - start) / durationMs, 1)
+      const eased = 1 - (1 - progress) * (1 - progress)
+      setValue(Math.round(from + (target - from) * eased))
+      if (progress < 1) {
+        frame = requestAnimationFrame(tick)
+      } else {
+        fromRef.current = target
+      }
+    }
+
+    frame = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(frame)
+  }, [target, durationMs])
+
+  return value
+}
+
 export function PartnerCalculator() {
   const [retailMonthly, setRetailMonthly] = React.useState(59)
   const [retailSetup, setRetailSetup] = React.useState(249)
@@ -42,11 +81,11 @@ export function PartnerCalculator() {
         </label>
       </div>
       <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-        <Metric label="Retail revenue / month" value={`$${recurringRevenue.toLocaleString()}`} />
-        <Metric label="Wholesale cost / month" value={`$${wholesaleCost.toLocaleString()}`} />
-        <Metric label="Monthly gross margin" value={`$${grossMargin.toLocaleString()}`} highlight />
-        <Metric label="Setup margin per new site" value={`$${setupMargin.toLocaleString()}`} />
-        <Metric label="First-year margin per site" value={`$${firstYearMargin.toLocaleString()}`} />
+        <Metric label="Retail revenue / month" value={recurringRevenue} />
+        <Metric label="Wholesale cost / month" value={wholesaleCost} />
+        <Metric label="Monthly gross margin" value={grossMargin} highlight />
+        <Metric label="Setup margin per new site" value={setupMargin} />
+        <Metric label="First-year margin per site" value={firstYearMargin} />
       </div>
       <p className="mt-5 text-xs leading-5 text-muted-foreground">
         Illustrative example only. Wholesale is ${OFFER.setupFee} setup per site plus ${OFFER.monthlyFee} per active site each month. First-year margin assumes 12 paid months.
@@ -55,8 +94,9 @@ export function PartnerCalculator() {
   )
 }
 
-function Metric({ label, value, highlight = false }: { label: string; value: string; highlight?: boolean }) {
-  return <div className={`rounded-2xl border p-4 ${highlight ? "border-secondary/40 bg-secondary/10" : "border-border/70 bg-background/50"}`}><p className="text-xs text-muted-foreground">{label}</p><p className={`mt-2 text-2xl font-display font-bold ${highlight ? "text-secondary" : "text-foreground"}`}>{value}</p></div>
+function Metric({ label, value, highlight = false }: { label: string; value: number; highlight?: boolean }) {
+  const animated = useCountUp(value)
+  return <div className={`rounded-2xl border p-4 ${highlight ? "border-secondary/40 bg-secondary/10" : "border-border/70 bg-background/50"}`}><p className="text-xs text-muted-foreground">{label}</p><p className={`mt-2 text-2xl font-display font-bold ${highlight ? "text-secondary" : "text-foreground"}`}>${animated.toLocaleString()}</p></div>
 }
 
 export default PartnerCalculator
