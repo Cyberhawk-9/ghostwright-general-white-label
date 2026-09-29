@@ -20,7 +20,7 @@ const footerLinks = {
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border/40 bg-background">
+    <footer className="border-t border-border/40 bg-background/40">
       <div className="container max-w-7xl mx-auto px-4 py-12 md:px-6 md:py-16 lg:py-20">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
           <div className="col-span-2 md:col-span-1">

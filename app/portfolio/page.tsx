@@ -66,7 +66,7 @@ export default function PortfolioPage() {
   const cardAnimations = [card1Animation, card2Animation, card3Animation, card4Animation]
 
   return (
-    <div className="w-full bg-background">
+    <div className="w-full">
       <div className="flex flex-col min-h-screen max-w-7xl mx-auto px-6 md:px-12">
         {/* Hero */}
         <section className="container py-20 text-center">
