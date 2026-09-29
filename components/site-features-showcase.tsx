@@ -36,7 +36,7 @@ export function SiteFeaturesShowcase() {
   const cardRefs = [card0, card1, card2, card3]
 
   return (
-    <section ref={sectionRef} className="w-full py-20 md:py-28 bg-muted/30">
+    <section ref={sectionRef} className="section-glow section-tint w-full py-20 md:py-28">
       <div className="container max-w-7xl mx-auto px-4 md:px-6">
         <div className={`text-center mb-12 animate-on-scroll ${sectionVisible ? "visible" : ""}`}>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
@@ -58,9 +58,9 @@ export function SiteFeaturesShowcase() {
                 className={`animate-on-scroll ${cardVisible ? "visible" : ""}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <Card className="group border-border/50 bg-card/50 transition-all hover:border-primary/50 hover:shadow-[0_0_30px_-10px_rgba(6,160,199,0.3)] h-full">
+                <Card className="group h-full">
                   <CardContent className="p-6 text-center">
-                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-transform group-hover:scale-110">
+                    <div className="icon-tile mx-auto mb-4">
                       <feature.icon className="h-6 w-6" />
                     </div>
                     <h3 className="text-lg font-bold mb-2 text-primary">{feature.title}</h3>

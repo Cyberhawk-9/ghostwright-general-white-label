@@ -38,7 +38,7 @@ export default async function BlogIndex() {
           ) : (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {posts.map((post) => (
-                <article key={post.slug} className="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-all duration-300 hover:border-primary hover:shadow-[0_0_30px_-10px_rgba(6,160,199,0.3)]">
+                <article key={post.slug} className="card-surface group overflow-hidden">
                   <Link href={`/blog/${post.slug}`} className="block">
                     <Image src={post.image_url} alt={post.title} width={1600} height={900} className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     <div className="p-6">

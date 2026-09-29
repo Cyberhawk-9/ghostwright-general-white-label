@@ -71,7 +71,7 @@ export default function PricingPage() {
       {/* Checklist */}
       <section className="container pb-20">
         <div className="max-w-2xl mx-auto">
-          <Card className="border-primary/50 bg-white/5 shadow-[0_0_50px_-10px_rgba(6,160,199,0.3)]">
+          <Card className="border-primary/40 shadow-[0_0_50px_-10px_rgba(23,158,199,0.3)]">
             <CardHeader className="text-center pb-8">
               <CardTitle className="text-3xl text-primary mb-4">What&apos;s included</CardTitle>
             </CardHeader>

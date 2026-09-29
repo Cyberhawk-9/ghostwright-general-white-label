@@ -9,10 +9,10 @@ export function CTASection() {
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation()
 
   return (
-    <section ref={sectionRef} className="w-full py-20 md:py-28">
+    <section ref={sectionRef} className="section-glow w-full py-20 md:py-28">
       <div className="container max-w-7xl mx-auto px-4 md:px-6">
         <div
-          className={`relative overflow-hidden rounded-3xl bg-background px-6 py-16 text-center md:px-12 md:py-24 border border-primary/20 transition-all duration-300 hover:scale-[1.02] hover:brightness-110 hover:border-primary animate-scale-in ${sectionVisible ? "visible" : ""}`}
+          className={`relative overflow-hidden rounded-3xl bg-background px-6 py-16 text-center md:px-12 md:py-24 border border-primary/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_32px_rgba(23,158,199,0.18)] hover:border-primary animate-scale-in ${sectionVisible ? "visible" : ""}`}
         >
           <div className="relative z-10 mx-auto max-w-3xl">
             <h2 className="mb-6 text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">

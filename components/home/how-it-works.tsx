@@ -40,7 +40,7 @@ export function HowItWorksSection() {
   const stepAnimations = [step0, step1, step2, step3]
 
   return (
-    <section ref={sectionRef} className="w-full py-20 md:py-28 bg-black border-t border-white/10">
+    <section ref={sectionRef} className="section-glow w-full py-20 md:py-28 bg-black border-t border-white/10">
       <div className="container max-w-7xl mx-auto px-4 md:px-6">
         <div className={`mb-16 text-center animate-on-scroll ${sectionVisible ? "visible" : ""}`}>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">How It Works</h2>

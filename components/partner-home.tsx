@@ -36,7 +36,7 @@ const partnerOwns = ["The client relationship", "The retail price", "Client bill
 export function PartnerHome() {
   return <div className="overflow-hidden">
     <section className="relative isolate border-b border-border/50">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_75%_20%,rgba(6,160,199,0.16),transparent_34%),radial-gradient(circle_at_20%_70%,rgba(180,27,227,0.10),transparent_30%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_75%_20%,rgba(23,158,199,0.16),transparent_34%),radial-gradient(circle_at_20%_70%,rgba(186,0,226,0.10),transparent_30%)]" />
       <div className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-20 md:px-12 md:pb-32 md:pt-28 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
         <div>
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary"><Sparkles className="h-3.5 w-3.5" /> White-label fulfillment</div>

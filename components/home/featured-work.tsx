@@ -2,7 +2,7 @@ import { BRAND } from "@/lib/brand"
 
 export function FeaturedWork() {
   return (
-    <section className="w-full bg-black py-20 md:py-28 border-t border-white/10">
+    <section className="section-glow w-full bg-black py-20 md:py-28 border-t border-white/10">
       <div className="container max-w-7xl mx-auto px-4 md:px-6">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">Sample Design</h2>

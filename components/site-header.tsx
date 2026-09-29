@@ -70,7 +70,7 @@ export function SiteHeader() {
           <Button
             size="sm"
             variant="outline"
-            className="ml-4 border-secondary text-secondary hover:bg-secondary hover:text-white transition-all duration-200 bg-transparent"
+            className="ml-4 border-secondary text-secondary hover:bg-[rgba(186,0,226,0.12)] hover:shadow-[0_0_24px_rgba(186,0,226,0.35)] active:scale-[0.98] transition-all duration-200 bg-transparent"
             asChild
           >
             <Link href="/contact">Become a Partner</Link>
@@ -99,7 +99,7 @@ export function SiteHeader() {
               ))}
               <Button
                 variant="outline"
-                className="mt-4 w-full border-secondary text-secondary hover:bg-secondary hover:text-white transition-all duration-200 bg-transparent"
+                className="mt-4 w-full border-secondary text-secondary hover:bg-[rgba(186,0,226,0.12)] hover:shadow-[0_0_24px_rgba(186,0,226,0.35)] active:scale-[0.98] transition-all duration-200 bg-transparent"
                 asChild
               >
                 <Link href="/contact">Become a Partner</Link>
