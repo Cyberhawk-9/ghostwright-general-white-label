@@ -6,7 +6,6 @@ import "./globals.css"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
-import { NewsletterPopup } from "@/components/newsletter-popup"
 import { BRAND } from "@/lib/brand"
 
 const inter = Inter({
@@ -88,7 +87,6 @@ export default function RootLayout({
           <main className="flex-1 w-full flex flex-col">{children}</main>
           <SiteFooter />
         </div>
-        <NewsletterPopup />
         <Analytics />
         <script
           dangerouslySetInnerHTML={{
