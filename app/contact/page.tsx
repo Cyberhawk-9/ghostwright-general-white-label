@@ -2,7 +2,7 @@
 
 import { Mail, MessageSquare, Clock, Check, ArrowRight } from "lucide-react"
 
-import { ContactForm } from "@/components/contact-form"
+import { PartnerForm } from "@/components/partner-form"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { IdleReassurancePopup } from "@/components/idle-reassurance-popup"
@@ -87,15 +87,16 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Form */}
+      {/* Partner Form */}
       <section className="container pb-20">
         <div className="max-w-2xl mx-auto">
           <div className="mb-8 text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to add websites to your offer?</h2>
             <p className="text-muted-foreground">
-              Ready to add website fulfillment to your offer? Fill out the partner form and we&apos;ll get back to you quickly.
+              Fill out the partner form and we&apos;ll get back to you quickly.
             </p>
           </div>
-          <ContactForm partner />
+          <PartnerForm />
           <div className="mt-6 flex items-start gap-3 rounded-lg border border-border/50 bg-muted/20 p-4 text-left text-sm text-muted-foreground">
             <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
             <p>We&apos;ll only use your information to respond to your partner inquiry. No spam, no pressure, and your customer relationships stay yours.</p>
