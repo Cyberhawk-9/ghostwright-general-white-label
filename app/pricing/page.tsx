@@ -1,29 +1,38 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { ArrowRight, Check } from "lucide-react"
 import { BRAND } from "@/lib/brand"
 import { OFFER } from "@/lib/offer"
+import { InlineContactForm } from "@/components/inline-contact-form"
+import { PartnerCalculator } from "@/components/partner-calculator"
+
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export const metadata: Metadata = {
   title: `Partner Pricing | ${BRAND.name}`,
   description: "Straightforward wholesale pricing for agencies that want to offer premium websites under their own brand.",
 }
-import { Check } from "lucide-react"
-import { InlineContactForm } from "@/components/inline-contact-form"
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+const tiles = [
+  { title: `$${OFFER.setupFee} Setup`, desc: "Per site. Invoiced when the intake arrives. Work starts once it's paid." },
+  { title: `$${OFFER.monthlyFee}/Month`, desc: "Per active site. Starts on the 1st of the month after go-live. The launch month is free." },
+  { title: "No Long-Term Contracts", desc: "Cancel any site anytime. It goes offline at the end of that month." },
+  { title: `${OFFER.firstVersion}`, desc: "To the first version, from your greenlight." },
+]
 
-const features = [
-  `$${OFFER.setupFee} one-time per website`,
-  `$${OFFER.monthlyFee}/month per active website`,
-  "No long-term contracts",
-  "Cancel anytime",
-  "Hosting + SSL included",
-  "Edits and updates included",
-  "100% custom coded",
-  "Modern design + animations",
-  "SEO-ready site structure",
-  "Fast turnaround time",
+const checklist = [
+  `$${OFFER.setupFee} setup per site`,
+  `$${OFFER.monthlyFee}/month per active site`,
+  "A dedicated page for each major service, with related smaller services grouped on the same page",
+  "Hosting and SSL included",
+  "Two rounds of revisions during the build",
+  "Content edits within 2 business days after launch",
+  "New service pages, features, integrations, and redesigns are quoted separately",
+  "Designed and coded from scratch, never a template",
+  "Modern design and animations",
+  "SEO-ready structure",
+  "No long-term contracts. Cancel anytime.",
 ]
 
 export default function PricingPage() {
@@ -32,35 +41,39 @@ export default function PricingPage() {
       {/* Hero */}
       <section className="container py-20 text-center">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-8">
-          <span className="text-primary">Simple wholesale pricing</span>
+          <span className="text-primary">Simple partner pricing</span>
         </h1>
         <p className="mt-8 text-xl text-muted-foreground max-w-2xl mx-auto">
-          Give your clients polished websites without hiring a web team. Pay ${OFFER.setupFee} per launch, then ${OFFER.monthlyFee}/month for hosting, SSL, and updates.
+          Pay ${OFFER.setupFee} when you greenlight each build, then ${OFFER.monthlyFee}/month per active site once it&apos;s live. You set the retail price and keep the spread.
         </p>
       </section>
 
-      {/* Pricing Card */}
+      {/* Tiles */}
+      <section className="container pb-8">
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+          {tiles.map((tile) => (
+            <Card key={tile.title} className="border-primary/50 bg-white/5">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl text-primary">{tile.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground">{tile.desc}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Checklist */}
       <section className="container pb-20">
         <div className="max-w-2xl mx-auto">
           <Card className="border-primary/50 bg-white/5 shadow-[0_0_50px_-10px_rgba(6,160,199,0.3)]">
             <CardHeader className="text-center pb-8">
-              <CardTitle className="text-3xl text-primary mb-4">Partner website fulfillment</CardTitle>
-              <div className="flex flex-col items-center justify-center gap-3">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-6xl font-bold text-foreground">${OFFER.setupFee}</span>
-                  <span className="text-2xl text-gray-400">one-time</span>
-                </div>
-                <div className="text-lg text-muted-foreground font-medium">then</div>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-foreground">${OFFER.monthlyFee}</span>
-                  <span className="text-xl text-gray-400">/month</span>
-                </div>
-              </div>
-              <p className="text-muted-foreground mt-4">Everything you need to deliver confidently</p>
+              <CardTitle className="text-3xl text-primary mb-4">What&apos;s included</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 px-8 pb-8">
               <div className="grid gap-4 md:grid-cols-2">
-                {features.map((feature, index) => (
+                {checklist.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                     <span className="text-gray-300">{feature}</span>
@@ -75,34 +88,23 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Trust Section */}
-      <section className="bg-muted/30 py-20">
-        <div className="container">
-          <div className="grid gap-8 md:grid-cols-4 text-center">
-            {[
-{ title: `$${OFFER.setupFee} Per Launch`, desc: "One-time setup fee" },
-          { title: `$${OFFER.monthlyFee}/Month After`, desc: "For hosting, SSL & updates" },
-              { title: "Cancel Anytime", desc: "Month-to-month, no long-term contracts" },
-              { title: "Fast Delivery", desc: `Most sites ready in ${OFFER.firstVersion}` },
-            ].map((item, i) => (
-              <div key={i} className="p-4">
-                <h3 className="text-lg font-bold mb-2 text-primary">{item.title}</h3>
-                <p className="text-muted-foreground">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Link card to /billing */}
+      <section className="container pb-20">
+        <Link href="/billing" className="block max-w-2xl mx-auto">
+          <Card className="border-primary/50 bg-white/5 transition-colors hover:border-primary">
+            <CardContent className="flex items-center justify-between px-8 py-6">
+              <span className="text-lg font-medium text-foreground">See exactly how billing works</span>
+              <ArrowRight className="h-5 w-5 text-primary" />
+            </CardContent>
+          </Card>
+        </Link>
       </section>
 
-      {/* Final CTA */}
-      <section className="container py-20 text-center">
-        <h2 className="text-3xl font-bold mb-6">Ready to expand your offer?</h2>
-        <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Offer a premium web presence under your brand while we handle the build, launch, hosting, and ongoing updates.
-        </p>
-        <Button size="lg" className="h-14 px-10 text-lg" asChild>
-          <Link href="/contact">Become a Partner</Link>
-        </Button>
+      {/* Calculator */}
+      <section className="container pb-20">
+        <div className="max-w-4xl mx-auto">
+          <PartnerCalculator />
+        </div>
       </section>
 
       <InlineContactForm />
