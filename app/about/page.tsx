@@ -18,9 +18,9 @@ const values = [
     icon: Award,
   },
   {
-    title: "Fair Pricing",
+    title: "Fair Wholesale Pricing",
     description:
-      "No $3,000–$15,000 upfront fees. Pay just $99 upon completion, then $20/month for hosting and updates.",
+      "No $3,000–$15,000 build fees to pass on. Partner websites are $149 per launch, then $25/month for hosting and updates.",
     icon: DollarSign,
   },
   {
@@ -43,20 +43,21 @@ export default function AboutPage() {
         <section className="container py-20 md:py-28">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">
-              A Better Way to Build Websites for <span className="text-primary">Service-Based Businesses</span>
+              A Better Way for Agencies to Deliver <span className="text-primary">Premium Websites</span>
             </h1>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mt-8">
               <p>
-                Cyberhawk was created for one purpose: to give service-based businesses access to premium, high-quality
-                websites without the massive upfront cost. Most agencies charge thousands just to start. We don't.
+                Cyberhawk was created for one purpose: to let agencies and consultants add premium, custom-coded
+                websites to their offer without hiring developers or building an internal web department.
               </p>
               <p>
-                We believe small businesses deserve the same level of design, polish, and technology as the big brands —
-                at a price they can actually afford.
+                We handle the design, build, launch, hosting, and ongoing updates behind the scenes — under your
+                brand — so your customers get the same level of design and technology as the big agencies charge
+                thousands for.
               </p>
             </div>
             <Button size="lg" className="mt-10" asChild>
-              <Link href="/contact">Get Your Custom Site Started for $99</Link>
+              <Link href="/contact">Become a partner</Link>
             </Button>
             <Button size="lg" variant="outline" className="mt-10 ml-4 bg-transparent" asChild>
               <Link href="/portfolio">View Our Portfolio</Link>
@@ -89,8 +90,8 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tighter mb-6 text-primary">Our Mission</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              To make professional, custom-built websites accessible to every service-based business in America —
-              regardless of budget.
+              To help agencies and consultants deliver professional, custom-built websites to every service-based
+              business they serve — without adding fulfillment overhead to their own team.
             </p>
           </div>
         </section>
@@ -98,12 +99,13 @@ export default function AboutPage() {
         {/* CTA */}
         <section className="container pb-20">
           <div className="rounded-3xl bg-gradient-to-r from-primary/20 to-secondary/20 p-8 md:p-12 text-center border border-primary/20">
-            <h2 className="text-3xl font-bold mb-4">Ready to upgrade your online presence?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to expand what you offer?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Get a premium, custom-coded site. Pay $99 when it launches, then $20/month for hosting and updates.
+              Add premium, custom-coded websites to your services. Partner pricing is $149 per launch, then
+              $25/month for hosting and updates.
             </p>
             <Button size="lg" asChild>
-              <Link href="/contact">Get Started for $99</Link>
+              <Link href="/contact">Become a partner</Link>
             </Button>
           </div>
         </section>
