@@ -1,9 +1,72 @@
+import type { Metadata } from "next"
+import Link from "next/link"
+
+import { InlineContactForm } from "@/components/inline-contact-form"
+import { BRAND } from "@/lib/brand"
+
+export const metadata: Metadata = {
+  title: `Cancellation & Ownership | ${BRAND.short}`,
+  description: `How cancellation, ownership, and source-code buyouts work for ${BRAND.short} partners.`,
+}
+
 export default function CancellationPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <section className="container max-w-7xl mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold tracking-tighter mb-6">Cancellation & Ownership</h1>
-      </section>
+    <div className="w-full">
+      <div className="flex flex-col min-h-screen max-w-7xl mx-auto px-6 md:px-12">
+        <section className="container py-20 md:py-28">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">
+              Cancellation and ownership
+            </h1>
+          </div>
+        </section>
+
+        <section className="container pb-20">
+          <div className="max-w-3xl mx-auto space-y-12">
+            <div>
+              <h2 className="text-2xl font-bold mb-4">Cancel any site anytime</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Send written notice. Cancellation takes effect at the end of that calendar month. The site stays
+                online through that day, then goes offline. It isn&apos;t invoiced for later months. The current
+                month has already been invoiced and isn&apos;t refunded. Setup fees aren&apos;t refunded.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold mb-4">What your client keeps</h2>
+              <p className="text-muted-foreground leading-relaxed">Their domain and their own content.</p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold mb-4">What {BRAND.short} keeps</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                The source code. After cancellation we keep a full archive for 90 days, then remove your
+                client&apos;s identifying content from our retained copy.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold mb-4">Buying the source code</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                A source-code buyout is available at any time. Pricing is set out in your{" "}
+                <Link href="/partner-agreement" className="text-primary hover:underline">
+                  Partner Agreement
+                </Link>
+                .
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold mb-4">Ending the partnership</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                You can end the Partner Agreement on 30 days&apos; written notice.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <InlineContactForm />
+      </div>
     </div>
   )
 }
