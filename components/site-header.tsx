@@ -9,10 +9,10 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { BRAND } from "@/lib/brand"
 
 const navigation = [
-  { name: "How It Works", href: "/#how-it-works" },
-  { name: "White Label", href: "/#white-label" },
-  { name: "Portfolio", href: "/portfolio" },
+  { name: "How It Works", href: "/how-it-works" },
   { name: "Pricing", href: "/pricing" },
+  { name: "For Insurance Agencies", href: "/for-insurance-agencies" },
+  { name: "Portfolio", href: "/portfolio" },
   { name: "FAQ", href: "/faq" },
 ]
 

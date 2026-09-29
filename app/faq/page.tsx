@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import { ContactForm } from "@/components/contact-form"
 import { InlineContactForm } from "@/components/inline-contact-form"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { BRAND } from "@/lib/brand"
@@ -39,14 +38,6 @@ export default function FAQPage() {
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-      </section>
-
-      <section className="bg-muted/30 py-20">
-        <div className="container max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Want to talk through your agency?</h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">Tell us what you offer and who you serve. We&apos;ll explain how {BRAND.short} can fit behind your brand.</p>
-          <div className="max-w-2xl mx-auto text-left"><ContactForm partner /></div>
         </div>
       </section>
 

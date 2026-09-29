@@ -2,20 +2,23 @@ import Link from "next/link"
 import { BRAND } from "@/lib/brand"
 
 const footerLinks = {
-  product: [
-    { name: "Services", href: "/services" },
+  offer: [
+    { name: "How It Works", href: "/how-it-works" },
     { name: "Pricing", href: "/pricing" },
+    { name: "For Insurance Agencies", href: "/for-insurance-agencies" },
     { name: "Portfolio", href: "/portfolio" },
-  ],
-  company: [
+    { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-    { name: "FAQ", href: "/faq" },
   ],
-  legal: [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
+  policies: [
+    { name: "Billing & Payments", href: "/billing" },
+    { name: "Support & Edits", href: "/support" },
+    { name: "Cancellation & Ownership", href: "/cancellation" },
+    { name: "Partner Agreement", href: "/partner-agreement" },
+    { name: "Terms", href: "/terms" },
+    { name: "Privacy", href: "/privacy" },
   ],
+  contact: [{ name: "Become a Partner", href: "/contact" }],
 }
 
 export function SiteFooter() {
@@ -36,9 +39,9 @@ export function SiteFooter() {
             <p className="mt-4 text-sm text-muted-foreground">{BRAND.tagline}</p>
           </div>
           <div>
-            <h3 className="mb-4 text-sm font-semibold text-foreground">Product</h3>
+            <h3 className="mb-4 text-sm font-semibold text-foreground">Offer</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              {footerLinks.product.map((link) => (
+              {footerLinks.offer.map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="hover:text-primary transition-colors">
                     {link.name}
@@ -48,9 +51,9 @@ export function SiteFooter() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-sm font-semibold text-foreground">Company</h3>
+            <h3 className="mb-4 text-sm font-semibold text-foreground">Policies</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              {footerLinks.company.map((link) => (
+              {footerLinks.policies.map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="hover:text-primary transition-colors">
                     {link.name}
@@ -60,15 +63,20 @@ export function SiteFooter() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-sm font-semibold text-foreground">Legal</h3>
+            <h3 className="mb-4 text-sm font-semibold text-foreground">Contact</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              {footerLinks.legal.map((link) => (
+              {footerLinks.contact.map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="hover:text-primary transition-colors">
                     {link.name}
                   </Link>
                 </li>
               ))}
+              <li>
+                <a href={`mailto:${BRAND.contactEmail}`} className="hover:text-primary transition-colors">
+                  {BRAND.contactEmail}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
