@@ -11,28 +11,28 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
   title: `About ${BRAND.short} | Custom-Coded Websites`,
-  description: `Learn how ${BRAND.short} builds high-quality custom-coded websites for service-based businesses.`,
+  description: `Learn how ${BRAND.short} builds agency-branded, custom-coded websites for contractors.`,
 }
 
 const values = [
   {
-    title: "Quality First",
-    description: "Every website is custom-coded from the ground up — never templated. Premium design for every client.",
+    title: "Built from scratch",
+    description: "Every site starts from zero. No templates, page builders, or reused starter code.",
     icon: Award,
   },
   {
-    title: "Fair Wholesale Pricing",
-    description: `Partner websites are $${OFFER.setupFee} per launch, then $${OFFER.monthlyFee}/month for hosting and updates.`,
+    title: "Fair partner pricing",
+    description: `$${OFFER.setupFee} setup per site, then $${OFFER.monthlyFee}/month per active site. You set the retail price and keep the spread.`,
     icon: DollarSign,
   },
   {
-    title: "Speed & Simplicity",
-    description: "We handle everything so you can focus on your work. Fast turnaround, zero hassle.",
+    title: "Speed and simplicity",
+    description: `Send us the intake and greenlight the build. The first version arrives in ${OFFER.firstVersion}.`,
     icon: Zap,
   },
   {
-    title: "Long-Term Support",
-    description: "We keep your website updated, secure, and looking great for as long as you need us.",
+    title: "Long-term support",
+    description: "We keep every site updated, secure, and online.",
     icon: Target,
   },
 ]
@@ -45,17 +45,13 @@ export default function AboutPage() {
         <section className="container py-20 md:py-28">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">
-              A Better Way for Agencies to Deliver <span className="text-primary">Premium Websites</span>
+              Built for agencies that <span className="text-primary">serve contractors</span>
             </h1>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mt-8">
               <p>
-                {BRAND.short} was created for one purpose: to let agencies and consultants add premium, custom-coded
-                websites to their offer without hiring developers or building an internal web department.
-              </p>
-              <p>
-                We handle the design, build, launch, hosting, and ongoing updates behind the scenes — under your
-                brand — so your customers get the same level of design and technology as the big agencies charge
-                thousands for.
+                A ghostwriter writes under someone else&apos;s name. We build websites the same way. {BRAND.short} is
+                the fulfillment team behind agency-branded websites for contractors. You sell and own the client
+                relationship. We design, build, host, and maintain the site behind the scenes.
               </p>
             </div>
             <Button size="lg" className="mt-10" asChild>
@@ -92,8 +88,8 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tighter mb-6 text-primary">Our Mission</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              To help agencies and consultants deliver professional, custom-built websites to every service-based
-              business they serve — without adding fulfillment overhead to their own team.
+              To help agencies that serve contractors add premium websites to their offer without building a web
+              department.
             </p>
           </div>
         </section>
@@ -103,8 +99,8 @@ export default function AboutPage() {
           <div className="rounded-3xl bg-gradient-to-r from-primary/20 to-secondary/20 p-8 md:p-12 text-center border border-primary/20">
             <h2 className="text-3xl font-bold mb-4">Ready to expand what you offer?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Add premium, custom-coded websites to your services. Partner pricing is ${OFFER.setupFee} per launch, then
-              ${OFFER.monthlyFee}/month for hosting and updates.
+              Add premium, custom-coded websites to your offer. Partner pricing is ${OFFER.setupFee} setup per site, then
+              ${OFFER.monthlyFee}/month per active site.
             </p>
             <Button size="lg" asChild>
               <Link href="/contact">Become a Partner</Link>
