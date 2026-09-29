@@ -184,7 +184,7 @@ export function PartnerForm({ compact = false, onSuccess }: PartnerFormProps) {
 
           <div className="space-y-2">
             <label htmlFor="businessDescription" className="text-sm font-medium leading-none">What businesses do you serve? *</label>
-            <Textarea id="businessDescription" name="businessDescription" className="min-h-[100px]" required placeholder="Tell us about your contractor customers" />
+            <Textarea id="businessDescription" name="businessDescription" className="min-h-[100px]" required placeholder="Tell us about your contractor clients" />
           </div>
 
           <div className="space-y-2">

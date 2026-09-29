@@ -10,8 +10,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: `Website Services for Contractors | ${BRAND.name}`,
-  description: `Explore ${BRAND.short}'s custom-coded website design, SEO architecture, mobile-first design, and maintenance services for contractor websites.`,
+  title: `What We Build for Your Contractor Clients | ${BRAND.short}`,
+  description: "Custom-coded, SEO-ready, mobile-first websites for roofers, remodelers, septic, HVAC, and other trades, built behind your brand.",
+  openGraph: {
+    title: `What We Build for Your Contractor Clients | ${BRAND.short}`,
+    description: "Custom-coded, SEO-ready, mobile-first websites for roofers, remodelers, septic, HVAC, and other trades, built behind your brand.",
+  },
 }
 
 const services = [

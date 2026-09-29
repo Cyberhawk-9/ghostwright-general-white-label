@@ -6,8 +6,12 @@ import { BRAND } from "@/lib/brand"
 import { OFFER } from "@/lib/offer"
 
 export const metadata: Metadata = {
-  title: `Support & Edits | ${BRAND.short}`,
-  description: `What's included with every active site, how content edits work, and what's quoted separately.`,
+  title: `Support and Content Edits | ${BRAND.short}`,
+  description: "Content edits within 2 business days, plus hosting, SSL, and technical support for every active site.",
+  openGraph: {
+    title: `Support and Content Edits | ${BRAND.short}`,
+    description: "Content edits within 2 business days, plus hosting, SSL, and technical support for every active site.",
+  },
 }
 
 export default function SupportPage() {

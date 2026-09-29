@@ -17,8 +17,12 @@ import { BRAND } from "@/lib/brand"
 import { OFFER } from "@/lib/offer"
 
 export const metadata: Metadata = {
-  title: `Partner Agreement | ${BRAND.short}`,
-  description: `A summary of the key terms in the ${BRAND.short} Partner Agreement.`,
+  title: `Partner Agreement Summary | ${BRAND.short}`,
+  description: "Key terms at a glance: fees, timelines, revisions, billing, ownership, cancellation, and buyout.",
+  openGraph: {
+    title: `Partner Agreement Summary | ${BRAND.short}`,
+    description: "Key terms at a glance: fees, timelines, revisions, billing, ownership, cancellation, and buyout.",
+  },
 }
 
 const terms = [

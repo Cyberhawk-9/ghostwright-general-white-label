@@ -130,7 +130,7 @@ export function ContactForm({ compact = false, partner = false, onSuccess }: Con
 
           <div className="space-y-2">
             <label htmlFor="businessDescription" className="text-sm font-medium leading-none">What businesses do you serve? *</label>
-            <Textarea id="businessDescription" name="businessDescription" className="min-h-[100px]" required placeholder="Tell us about your contractor customers and monthly volume" />
+            <Textarea id="businessDescription" name="businessDescription" className="min-h-[100px]" required placeholder="Tell us about your contractor clients and monthly volume" />
           </div>
 
           <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>

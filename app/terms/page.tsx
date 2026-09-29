@@ -1,4 +1,14 @@
+import type { Metadata } from "next"
 import { BRAND } from "@/lib/brand"
+
+export const metadata: Metadata = {
+  title: `Terms of Use | ${BRAND.short}`,
+  description: "Terms for using the Ghostwright website.",
+  openGraph: {
+    title: `Terms of Use | ${BRAND.short}`,
+    description: "Terms for using the Ghostwright website.",
+  },
+}
 
 export default function TermsPage() {
   return (

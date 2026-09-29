@@ -5,8 +5,12 @@ import { BRAND } from "@/lib/brand"
 import { FAQ } from "@/lib/faq"
 
 export const metadata: Metadata = {
-  title: `Partner FAQ | ${BRAND.name}`,
-  description: `Answers for agencies exploring ${BRAND.short}'s white-label website fulfillment partnership.`,
+  title: `Partner FAQ | ${BRAND.short}`,
+  description: "Answers on pricing, revisions, billing, ownership, cancellation, and more.",
+  openGraph: {
+    title: `Partner FAQ | ${BRAND.short}`,
+    description: "Answers on pricing, revisions, billing, ownership, cancellation, and more.",
+  },
 }
 
 const faqs = FAQ
@@ -17,7 +21,7 @@ export default function FAQPage() {
       <section className="container max-w-7xl mx-auto px-4 py-20 text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Partner FAQ</p>
         <h1 className="mt-4 text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">Questions about the <span className="text-primary">partnership?</span></h1>
-        <p className="max-w-2xl mx-auto text-xl text-muted-foreground mt-8">Here&apos;s how {BRAND.short} helps agencies deliver a better web presence to their customers.</p>
+        <p className="max-w-2xl mx-auto text-xl text-muted-foreground mt-8">Here&apos;s how {BRAND.short} helps agencies deliver a better web presence to their clients.</p>
       </section>
 
       <section className="container max-w-7xl mx-auto px-4 pb-20">

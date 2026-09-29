@@ -23,7 +23,7 @@ export function PartnerCalculator() {
             <Calculator className="h-5 w-5" />
           </div>
           <h3 className="text-2xl">Model your wholesale spread</h3>
-          <p className="mt-2 text-sm leading-6 text-muted-foreground">Use your own retail pricing and customer volume to see the margin opportunity.</p>
+          <p className="mt-2 text-sm leading-6 text-muted-foreground">Use your own retail pricing and site volume to see the margin opportunity.</p>
         </div>
         <TrendingUp className="hidden h-6 w-6 text-secondary sm:block" />
       </div>
