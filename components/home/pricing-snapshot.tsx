@@ -5,13 +5,13 @@ import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+import { OFFER } from "@/lib/offer"
 
 const features = [
-"$149 per website launch",
-    "$25/month for hosting & updates",
-  "No contracts",
+`$${OFFER.setupFee} per website launch`,
+    `$${OFFER.monthlyFee}/month for hosting & updates`,
+  "No long-term contracts",
   "Cancel anytime",
-  "Unlimited service pages",
   "Hosting + SSL included",
   "Edits and updates included",
   "100% custom coded",
@@ -33,12 +33,12 @@ export function PricingSnapshot() {
               <CardTitle className="text-2xl text-primary mb-4">Custom Website</CardTitle>
               <div className="flex flex-col items-center justify-center gap-2">
                 <div className="flex items-baseline gap-2">
-<span className="text-5xl font-bold text-foreground">$149</span>
+<span className="text-5xl font-bold text-foreground">${OFFER.setupFee}</span>
           <span className="text-xl text-gray-400">per launch</span>
                 </div>
                 <div className="text-sm text-muted-foreground">then</div>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-bold text-foreground">$25</span>
+                  <span className="text-3xl font-bold text-foreground">${OFFER.monthlyFee}</span>
                   <span className="text-lg text-gray-400">/month</span>
                 </div>
               </div>

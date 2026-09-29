@@ -1,15 +1,18 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 
-export const metadata: Metadata = {
-  title: "Website Services for Service Businesses | Cyberhawk",
-  description: "Explore Cyberhawk's custom-coded website design, SEO architecture, mobile-first design, and maintenance services.",
-}
 import { Code, Zap, Smartphone, Search, Globe, Headphones } from "lucide-react"
 import { InlineContactForm } from "@/components/inline-contact-form"
+import { BRAND } from "@/lib/brand"
+import { OFFER } from "@/lib/offer"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+
+export const metadata: Metadata = {
+  title: `Website Services for Service Businesses | ${BRAND.name}`,
+  description: `Explore ${BRAND.short}'s custom-coded website design, SEO architecture, mobile-first design, and maintenance services.`,
+}
 
 const services = [
   {
@@ -62,16 +65,16 @@ export default function ServicesPage() {
             Website Services Built for <span className="text-primary">Service-Based Businesses</span>
           </h1>
           <p className="max-w-3xl mx-auto text-xl text-muted-foreground mb-10 leading-relaxed mt-8">
-            Cyberhawk builds websites from scratch — custom-coded, fast, modern, and optimized to bring you more leads.
+            {BRAND.short} builds websites from scratch — custom-coded, fast, modern, and optimized to bring you more leads.
             Whether you're a consultant, photographer, fitness trainer, cleaning service, medical practice, or any service provider, your website will be
             fully tailored to your services and built to convert.
           </p>
           <div className="flex justify-center gap-4">
             <Button size="lg" asChild>
-              <Link href="/contact">Become a partner</Link>
+              <Link href="/contact">Become a Partner</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link href="/portfolio">View Our Work</Link>
+              <Link href="/portfolio">See the Work</Link>
             </Button>
           </div>
         </section>
@@ -103,10 +106,10 @@ export default function ServicesPage() {
           <div className="rounded-3xl bg-gradient-to-r from-primary/20 to-secondary/20 p-8 md:p-12 text-center border border-primary/20">
             <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Offer a premium, custom-coded website without handling fulfillment. Partner pricing is $149 per launch, then $25/month for hosting and updates.
+              Offer a premium, custom-coded website without handling fulfillment. Partner pricing is ${OFFER.setupFee} per launch, then ${OFFER.monthlyFee}/month for hosting and updates.
             </p>
             <Button size="lg" asChild>
-              <Link href="/contact">Become a partner</Link>
+              <Link href="/contact">Become a Partner</Link>
             </Button>
           </div>
         </section>

@@ -7,6 +7,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { NewsletterPopup } from "@/components/newsletter-popup"
+import { BRAND } from "@/lib/brand"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,10 +20,9 @@ const sora = Sora({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cyberhawk.dev"),
-  title: "Cyberhawk | White-Label Website Fulfillment",
-  description:
-    "Add premium websites to your contractor offering without hiring developers. Cyberhawk builds, hosts, and maintains everything behind the scenes.",
+  metadataBase: new URL(BRAND.url),
+  title: `${BRAND.name} | White-Label Website Fulfillment`,
+  description: `Add premium websites to your contractor offering without hiring developers. ${BRAND.short} builds, hosts, and maintains everything behind the scenes.`,
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -32,7 +32,6 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
     other: [{ rel: "manifest", url: "/site.webmanifest" }],
   },
-    generator: 'v0.app'
 }
 
 export default function RootLayout({

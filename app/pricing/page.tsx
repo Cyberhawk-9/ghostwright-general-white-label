@@ -1,8 +1,10 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { BRAND } from "@/lib/brand"
+import { OFFER } from "@/lib/offer"
 
 export const metadata: Metadata = {
-  title: "Partner Pricing | Cyberhawk",
+  title: `Partner Pricing | ${BRAND.name}`,
   description: "Straightforward wholesale pricing for agencies that want to offer premium websites under their own brand.",
 }
 import { Check } from "lucide-react"
@@ -12,11 +14,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const features = [
-  "$149 one-time per website",
-  "$25/month per active website",
-  "No contracts",
+  `$${OFFER.setupFee} one-time per website`,
+  `$${OFFER.monthlyFee}/month per active website`,
+  "No long-term contracts",
   "Cancel anytime",
-  "Unlimited service pages",
   "Hosting + SSL included",
   "Edits and updates included",
   "100% custom coded",
@@ -34,7 +35,7 @@ export default function PricingPage() {
           <span className="text-primary">Simple wholesale pricing</span>
         </h1>
         <p className="mt-8 text-xl text-muted-foreground max-w-2xl mx-auto">
-          Give your clients polished websites without hiring a web team. Pay $149 per launch, then $25/month for hosting, SSL, and updates.
+          Give your clients polished websites without hiring a web team. Pay ${OFFER.setupFee} per launch, then ${OFFER.monthlyFee}/month for hosting, SSL, and updates.
         </p>
       </section>
 
@@ -46,12 +47,12 @@ export default function PricingPage() {
               <CardTitle className="text-3xl text-primary mb-4">Partner website fulfillment</CardTitle>
               <div className="flex flex-col items-center justify-center gap-3">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-6xl font-bold text-foreground">$149</span>
-                  <span className="text-2xl text-gray-400">upfront</span>
+                  <span className="text-6xl font-bold text-foreground">${OFFER.setupFee}</span>
+                  <span className="text-2xl text-gray-400">one-time</span>
                 </div>
                 <div className="text-lg text-muted-foreground font-medium">then</div>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-foreground">$25</span>
+                  <span className="text-4xl font-bold text-foreground">${OFFER.monthlyFee}</span>
                   <span className="text-xl text-gray-400">/month</span>
                 </div>
               </div>
@@ -67,7 +68,7 @@ export default function PricingPage() {
                 ))}
               </div>
               <Button size="lg" className="w-full h-14 mt-8 text-lg" asChild>
-                <Link href="/contact">Become a partner</Link>
+                <Link href="/contact">Become a Partner</Link>
               </Button>
             </CardContent>
           </Card>
@@ -79,10 +80,10 @@ export default function PricingPage() {
         <div className="container">
           <div className="grid gap-8 md:grid-cols-4 text-center">
             {[
-{ title: "$149 Per Launch", desc: "Pay when the site launches" },
-          { title: "$25/Month After", desc: "For hosting, SSL & updates" },
-              { title: "Cancel Anytime", desc: "Month-to-month, no contracts" },
-              { title: "Fast Delivery", desc: "Most sites ready in 1-5 days" },
+{ title: `$${OFFER.setupFee} Per Launch`, desc: "One-time setup fee" },
+          { title: `$${OFFER.monthlyFee}/Month After`, desc: "For hosting, SSL & updates" },
+              { title: "Cancel Anytime", desc: "Month-to-month, no long-term contracts" },
+              { title: "Fast Delivery", desc: `Most sites ready in ${OFFER.firstVersion}` },
             ].map((item, i) => (
               <div key={i} className="p-4">
                 <h3 className="text-lg font-bold mb-2 text-primary">{item.title}</h3>
@@ -100,7 +101,7 @@ export default function PricingPage() {
           Offer a premium web presence under your brand while we handle the build, launch, hosting, and ongoing updates.
         </p>
         <Button size="lg" className="h-14 px-10 text-lg" asChild>
-          <Link href="/contact">Get Started Today</Link>
+          <Link href="/contact">Become a Partner</Link>
         </Button>
       </section>
 

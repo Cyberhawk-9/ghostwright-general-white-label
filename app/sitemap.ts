@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next"
 import { getSeoPosts } from "notfair-nextjs-blog"
+import { BRAND } from "@/lib/brand"
 
-const baseUrl = "https://cyberhawk.dev"
+const baseUrl = BRAND.url
 const staticRoutes = ["/", "/about", "/services", "/pricing", "/portfolio", "/contact", "/faq", "/referrals", "/blog"]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

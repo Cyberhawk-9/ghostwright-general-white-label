@@ -1,15 +1,18 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 
-export const metadata: Metadata = {
-  title: "About Cyberhawk | Custom-Coded Websites",
-  description: "Learn how Cyberhawk builds high-quality custom-coded websites for service-based businesses.",
-}
 import { Target, DollarSign, Zap, Award } from "lucide-react"
 import { InlineContactForm } from "@/components/inline-contact-form"
+import { BRAND } from "@/lib/brand"
+import { OFFER } from "@/lib/offer"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+
+export const metadata: Metadata = {
+  title: `About ${BRAND.short} | Custom-Coded Websites`,
+  description: `Learn how ${BRAND.short} builds high-quality custom-coded websites for service-based businesses.`,
+}
 
 const values = [
   {
@@ -19,8 +22,7 @@ const values = [
   },
   {
     title: "Fair Wholesale Pricing",
-    description:
-      "No $3,000–$15,000 build fees to pass on. Partner websites are $149 per launch, then $25/month for hosting and updates.",
+    description: `Partner websites are $${OFFER.setupFee} per launch, then $${OFFER.monthlyFee}/month for hosting and updates.`,
     icon: DollarSign,
   },
   {
@@ -47,7 +49,7 @@ export default function AboutPage() {
             </h1>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mt-8">
               <p>
-                Cyberhawk was created for one purpose: to let agencies and consultants add premium, custom-coded
+                {BRAND.short} was created for one purpose: to let agencies and consultants add premium, custom-coded
                 websites to their offer without hiring developers or building an internal web department.
               </p>
               <p>
@@ -57,10 +59,10 @@ export default function AboutPage() {
               </p>
             </div>
             <Button size="lg" className="mt-10" asChild>
-              <Link href="/contact">Become a partner</Link>
+              <Link href="/contact">Become a Partner</Link>
             </Button>
             <Button size="lg" variant="outline" className="mt-10 ml-4 bg-transparent" asChild>
-              <Link href="/portfolio">View Our Portfolio</Link>
+              <Link href="/portfolio">See the Work</Link>
             </Button>
           </div>
         </section>
@@ -101,11 +103,11 @@ export default function AboutPage() {
           <div className="rounded-3xl bg-gradient-to-r from-primary/20 to-secondary/20 p-8 md:p-12 text-center border border-primary/20">
             <h2 className="text-3xl font-bold mb-4">Ready to expand what you offer?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Add premium, custom-coded websites to your services. Partner pricing is $149 per launch, then
-              $25/month for hosting and updates.
+              Add premium, custom-coded websites to your services. Partner pricing is ${OFFER.setupFee} per launch, then
+              ${OFFER.monthlyFee}/month for hosting and updates.
             </p>
             <Button size="lg" asChild>
-              <Link href="/contact">Become a partner</Link>
+              <Link href="/contact">Become a Partner</Link>
             </Button>
           </div>
         </section>

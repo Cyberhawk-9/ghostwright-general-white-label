@@ -1,16 +1,18 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 
-export const metadata: Metadata = {
-  title: "Recommended Tools and Discounts | Cyberhawk",
-  description: "Explore tools and services Cyberhawk recommends for building, designing, hosting, and growing a business online.",
-}
 import Image from "next/image"
 import { ExternalLink, Gift } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ContactForm } from "@/components/contact-form" // Import ContactForm
+import { BRAND } from "@/lib/brand"
+
+export const metadata: Metadata = {
+  title: `Recommended Tools and Discounts | ${BRAND.name}`,
+  description: `Explore tools and services ${BRAND.short} recommends for building, designing, hosting, and growing a business online.`,
+}
 
 const referrals = [
   {

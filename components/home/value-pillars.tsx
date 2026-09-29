@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { BRAND } from "@/lib/brand"
 
 const pillars = [
   {
@@ -21,7 +22,7 @@ const pillars = [
   {
     title: "Save Thousands",
     description:
-      "Get the high-end website normally reserved for companies paying $3,000–$15,000 upfront — at a price any business can afford.",
+      "Get the high-end website normally reserved for companies paying $3,000–$15,000 to build — at a price any business can afford.",
     icon: DollarSign,
   },
   {
@@ -59,7 +60,7 @@ export function ValuePillars() {
             Built From Scratch — Just for Your Business
           </h2>
           <p className="mt-6 max-w-3xl mx-auto text-gray-400 text-base md:text-lg leading-relaxed">
-            Every Cyberhawk site is custom-coded from the ground up. No templates. No drag-and-drop builders. Just
+            Every {BRAND.short} site is custom-coded from the ground up. No templates. No drag-and-drop builders. Just
             premium, modern websites designed to help service-based businesses look professional and win more customers.
           </p>
         </div>

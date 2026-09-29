@@ -2,10 +2,11 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { getSeoPosts } from "notfair-nextjs-blog"
+import { BRAND } from "@/lib/brand"
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: "Cyberhawk Blog | Website Growth Insights",
+  title: `${BRAND.short} Blog | Website Growth Insights`,
   description: "Practical website, SEO, and conversion insights for service-based businesses.",
 }
 
@@ -22,7 +23,7 @@ export default async function BlogIndex() {
     <main className="flex-1">
         <section className="border-b border-border/40 bg-gradient-to-b from-primary/10 to-transparent">
           <div className="container mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-28">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">Cyberhawk insights</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">{BRAND.short} insights</p>
             <h1 className="max-w-3xl text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
               Ideas that help your business <span className="text-primary">get noticed.</span>
             </h1>
@@ -42,7 +43,7 @@ export default async function BlogIndex() {
                     <Image src={post.image_url} alt={post.title} width={1600} height={900} className="aspect-video w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     <div className="p-6">
                       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                        {post.reading_time_minutes ? `${post.reading_time_minutes} min read` : "Cyberhawk SEO"}
+                        {post.reading_time_minutes ? `${post.reading_time_minutes} min read` : `${BRAND.short} SEO`}
                       </p>
                       <h2 className="text-xl font-bold leading-tight text-foreground transition-colors group-hover:text-primary">{post.title}</h2>
                       {post.meta_description && <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-muted-foreground">{post.meta_description}</p>}

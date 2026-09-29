@@ -4,6 +4,7 @@ import { getSeoPost } from "notfair-nextjs-blog"
 import { NotFairPostHero } from "notfair-nextjs-blog/react"
 import { sanitizeNotFairArticleHtml } from "@/src/lib/notfair-article"
 import styles from "../notfair-article.module.css"
+import { BRAND } from "@/lib/brand"
 
 export const revalidate = 3600
 
@@ -17,8 +18,8 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
   } catch {
     post = null
   }
-  if (!post) return { title: "Article not found | Cyberhawk" }
-  return { title: `${post.title} | Cyberhawk`, description: post.meta_description ?? undefined, openGraph: { title: post.title, description: post.meta_description ?? undefined, images: [post.image_url] } }
+  if (!post) return { title: `Article not found | ${BRAND.short}` }
+  return { title: `${post.title} | ${BRAND.short}`, description: post.meta_description ?? undefined, openGraph: { title: post.title, description: post.meta_description ?? undefined, images: [post.image_url] } }
 }
 
 export default async function BlogPost({ params }: BlogPostProps) {

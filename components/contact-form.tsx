@@ -140,7 +140,7 @@ export function ContactForm({ compact = false, partner = false, onSuccess }: Con
                 Sending...
               </>
             ) : (
-              partner ? "Request Partner Info" : "Send Message"
+              "Request Partner Info"
             )}
           </Button>
         </form>
