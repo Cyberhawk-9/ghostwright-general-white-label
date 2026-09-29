@@ -3,45 +3,12 @@
 import * as React from "react"
 import { X, ExternalLink } from "lucide-react"
 import { InlineContactForm } from "@/components/inline-contact-form"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-import { BRAND } from "@/lib/brand"
+import { PORTFOLIO_SITES } from "@/lib/portfolio"
 
-const portfolioSites = [
-  {
-    id: "lone-star-septic",
-    name: "Lone Star Septic",
-    type: "Septic Services",
-    description:
-      "Expert septic tank pumping, maintenance, and repair services for residential and commercial properties.",
-    url: `https://lone-star.${BRAND.domain}`,
-    color: "#2c5f2d",
-  },
-  {
-    id: "ramas-roofing",
-    name: "Rama's Roofing",
-    type: "Roofing Contractor",
-    description: "Premium residential and commercial roofing solutions with expert craftsmanship and reliable service.",
-    url: `https://ramas-roofing.${BRAND.domain}`,
-    color: "#c41e3a",
-  },
-  {
-    id: "elite-roofing",
-    name: "Elite Roofing",
-    type: "Roofing Contractor",
-    description: "Professional roofing services specializing in residential and commercial projects.",
-    url: `https://eliteroofing.${BRAND.domain}`,
-    color: "#8B4513",
-  },
-  {
-    id: "custom-remodeling-atl",
-    name: "Custom Remodeling ATL",
-    type: "Remodeling Contractor",
-    description: "Expert home remodeling and renovation services in Atlanta, specializing in kitchens, bathrooms, and whole-home transformations.",
-    url: "https://customremodelingatl.com",
-    color: "#D4A574",
-  },
-]
+const portfolioSites = PORTFOLIO_SITES
 
 export default function PortfolioPage() {
   const titleAnimation = useScrollAnimation()
@@ -81,8 +48,7 @@ export default function PortfolioPage() {
             ref={subtitleAnimation.ref as React.RefObject<HTMLParagraphElement>}
             className={`max-w-2xl mx-auto text-xl text-muted-foreground mt-8 animate-fade-in ${subtitleAnimation.isVisible ? "visible" : ""}`}
           >
-            Explore our portfolio of custom-coded websites for service-based businesses. Click any project to preview the
-            fully functional site.
+            Explore sites we&apos;ve built for contractors. Click any project to preview the live site.
           </p>
         </section>
 
@@ -118,7 +84,10 @@ export default function PortfolioPage() {
                     </div>
                   </div>
                   <div className="space-y-3">
-                    <h3 className="font-semibold text-lg">{site.name}</h3>
+                    <div className="flex items-center gap-2">
+                      <h3 className="font-semibold text-lg">{site.name}</h3>
+                      <Badge variant={site.label === "Live client site" ? "default" : "secondary"}>{site.label}</Badge>
+                    </div>
                     <p className="text-sm text-muted-foreground">{site.type}</p>
                     <p className="text-sm text-muted-foreground">{site.description}</p>
                     <div className="flex gap-2">

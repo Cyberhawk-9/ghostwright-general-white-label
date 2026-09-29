@@ -10,8 +10,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export const metadata: Metadata = {
-  title: `Website Services for Service Businesses | ${BRAND.name}`,
-  description: `Explore ${BRAND.short}'s custom-coded website design, SEO architecture, mobile-first design, and maintenance services.`,
+  title: `Website Services for Contractors | ${BRAND.name}`,
+  description: `Explore ${BRAND.short}'s custom-coded website design, SEO architecture, mobile-first design, and maintenance services for contractor websites.`,
 }
 
 const services = [
@@ -23,8 +23,9 @@ const services = [
     link: "/services/website-design",
   },
   {
-    title: "Service Business Website Packages",
-    description: "Purpose-built layouts for consultants, photographers, fitness trainers, cleaning services, medical practices, and more.",
+    title: "Contractor Website Builds",
+    description:
+      "Purpose-built layouts for roofing, remodeling, septic, plumbing, HVAC, electrical, and landscaping. A dedicated page for each major service, with related smaller services grouped on the same page.",
     icon: Globe,
     link: "/services/service-business-websites",
   },
@@ -62,12 +63,11 @@ export default function ServicesPage() {
         {/* Hero Section */}
         <section className="container py-20 md:py-28 text-center">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">
-            Website Services Built for <span className="text-primary">Service-Based Businesses</span>
+            What we build for your <span className="text-primary">contractor clients</span>
           </h1>
           <p className="max-w-3xl mx-auto text-xl text-muted-foreground mb-10 leading-relaxed mt-8">
-            {BRAND.short} builds websites from scratch — custom-coded, fast, modern, and optimized to bring you more leads.
-            Whether you're a consultant, photographer, fitness trainer, cleaning service, medical practice, or any service provider, your website will be
-            fully tailored to your services and built to convert.
+            {BRAND.short} builds websites from scratch — custom-coded, fast, modern, and optimized to bring in more leads
+            for roofing, remodeling, septic, plumbing, HVAC, electrical, and landscaping contractors.
           </p>
           <div className="flex justify-center gap-4">
             <Button size="lg" asChild>
@@ -106,7 +106,7 @@ export default function ServicesPage() {
           <div className="rounded-3xl bg-gradient-to-r from-primary/20 to-secondary/20 p-8 md:p-12 text-center border border-primary/20">
             <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Offer a premium, custom-coded website without handling fulfillment. Partner pricing is ${OFFER.setupFee} per launch, then ${OFFER.monthlyFee}/month for hosting and updates.
+              Offer a custom-coded website without handling fulfillment. Partner pricing is ${OFFER.setupFee} setup per site, then ${OFFER.monthlyFee}/month per active site.
             </p>
             <Button size="lg" asChild>
               <Link href="/contact">Become a Partner</Link>
