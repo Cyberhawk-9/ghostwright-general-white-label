@@ -21,14 +21,14 @@ export function PricingSnapshot() {
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation()
 
   return (
-    <section ref={sectionRef} className="w-full py-20 md:py-28">
+    <section ref={sectionRef} className="section-glow section-tint w-full py-20 md:py-28">
       <div className="container max-w-7xl mx-auto px-4 md:px-6">
         <div className={`mb-12 text-center animate-on-scroll ${sectionVisible ? "visible" : ""}`}>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">Simple Pricing</h2>
         </div>
 
         <div className={`max-w-md mx-auto animate-scale-in ${sectionVisible ? "visible" : ""}`}>
-          <Card className="border-primary/50 bg-white/5">
+          <Card className="border-primary/40">
             <CardHeader className="text-center pb-8">
               <CardTitle className="text-2xl text-primary mb-4">Custom Website</CardTitle>
               <div className="flex flex-col items-center justify-center gap-2">

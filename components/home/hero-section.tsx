@@ -81,7 +81,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="h-12 px-8 border-primary/30 text-primary hover:bg-primary/10 hover:border-primary transition-all duration-300 bg-transparent"
+                className="h-12 px-8 border-primary/30 text-primary hover:bg-primary/10 hover:border-primary hover:shadow-[0_0_24px_rgba(23,158,199,0.35)] transition-all duration-300 bg-transparent"
                 onClick={openModal}
               >
                 See A Sample Of Our Work <ExternalLink className="ml-2 h-5 w-5" />

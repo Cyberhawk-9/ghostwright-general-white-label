@@ -11,6 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { InlineContactForm } from "@/components/inline-contact-form"
+import { Reveal } from "@/components/reveal"
 import { BRAND } from "@/lib/brand"
 import { OFFER } from "@/lib/offer"
 
@@ -51,16 +52,16 @@ export default function BillingPage() {
     <div className="w-full">
       <div className="flex flex-col min-h-screen max-w-7xl mx-auto px-6 md:px-12">
         <section className="container py-20 md:py-28">
-          <div className="max-w-3xl mx-auto text-center">
+          <Reveal as="div" className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">
               Billing and payments
             </h1>
-          </div>
+          </Reveal>
         </section>
 
         <section className="container pb-16">
           <div className="max-w-3xl mx-auto space-y-12">
-            <div>
+            <Reveal as="div">
               <h2 className="text-2xl font-bold mb-4">What you pay</h2>
               <ul className="space-y-3 text-muted-foreground leading-relaxed">
                 <li>
@@ -69,9 +70,9 @@ export default function BillingPage() {
                 </li>
                 <li>Monthly: ${OFFER.monthlyFee} per active site.</li>
               </ul>
-            </div>
+            </Reveal>
 
-            <div>
+            <Reveal as="div">
               <h2 className="text-2xl font-bold mb-4">When you&apos;re invoiced</h2>
               <Card className="bg-card/50">
                 <CardContent className="p-0">
@@ -93,9 +94,9 @@ export default function BillingPage() {
                   </Table>
                 </CardContent>
               </Card>
-            </div>
+            </Reveal>
 
-            <div>
+            <Reveal as="div">
               <h2 className="text-2xl font-bold mb-4">Late payments</h2>
               <p className="text-muted-foreground leading-relaxed">
                 If an invoice is not paid by the {OFFER.lateAfterDay}, a flat ${OFFER.lateFee} late fee applies per
@@ -103,9 +104,9 @@ export default function BillingPage() {
                 written notice. Five days after that notice, we may suspend the sites on that invoice until it is
                 paid. At {OFFER.cancelDays} days unpaid, those sites are treated as cancelled.
               </p>
-            </div>
+            </Reveal>
 
-            <div>
+            <Reveal as="div">
               <h2 className="text-2xl font-bold mb-4">If your client doesn&apos;t pay you</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Tell us in writing, before the invoice due date, which site is unpaid. We remove that site&apos;s
@@ -114,22 +115,22 @@ export default function BillingPage() {
                 schedule. If your client pays you before cancellation, you pay the removed fees and we restore the
                 site.
               </p>
-            </div>
+            </Reveal>
 
-            <div>
+            <Reveal as="div">
               <h2 className="text-2xl font-bold mb-4">Fee changes</h2>
               <p className="text-muted-foreground leading-relaxed">
                 We give {OFFER.feeChangeNoticeDays} days&apos; written notice before changing the monthly fee. Setup
                 fees for sites you&apos;ve already greenlit don&apos;t change.
               </p>
-            </div>
+            </Reveal>
 
-            <div>
+            <Reveal as="div">
               <h2 className="text-2xl font-bold mb-4">Taxes</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Fees exclude taxes. If we are required to collect any, you pay them.
               </p>
-            </div>
+            </Reveal>
 
             <p className="text-sm text-muted-foreground">
               Full terms are in your{" "}

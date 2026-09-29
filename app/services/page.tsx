@@ -8,6 +8,7 @@ import { OFFER } from "@/lib/offer"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Reveal } from "@/components/reveal"
 
 export const metadata: Metadata = {
   title: `What We Build for Your Contractor Clients | ${BRAND.short}`,
@@ -66,21 +67,23 @@ export default function ServicesPage() {
       <div className="flex flex-col min-h-screen">
         {/* Hero Section */}
         <section className="container py-20 md:py-28 text-center">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">
-            What we build for your <span className="text-primary">contractor clients</span>
-          </h1>
-          <p className="max-w-3xl mx-auto text-xl text-muted-foreground mb-10 leading-relaxed mt-8">
-            {BRAND.short} builds websites from scratch — custom-coded, fast, modern, and optimized to bring in more leads
-            for roofing, remodeling, septic, plumbing, HVAC, electrical, and landscaping contractors.
-          </p>
-          <div className="flex justify-center gap-4">
-            <Button size="lg" asChild>
-              <Link href="/contact">Become a Partner</Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="/portfolio">See the Work</Link>
-            </Button>
-          </div>
+          <Reveal as="div">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">
+              What we build for your <span className="text-primary">contractor clients</span>
+            </h1>
+            <p className="max-w-3xl mx-auto text-xl text-muted-foreground mb-10 leading-relaxed mt-8">
+              {BRAND.short} builds websites from scratch — custom-coded, fast, modern, and optimized to bring in more leads
+              for roofing, remodeling, septic, plumbing, HVAC, electrical, and landscaping contractors.
+            </p>
+            <div className="flex justify-center gap-4">
+              <Button size="lg" asChild>
+                <Link href="/contact">Become a Partner</Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <Link href="/portfolio">See the Work</Link>
+              </Button>
+            </div>
+          </Reveal>
         </section>
 
         {/* Services Grid */}
@@ -88,18 +91,17 @@ export default function ServicesPage() {
           <div className="container">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {services.map((service, index) => (
-                <Card
-                  key={index}
-                  className="group border-border/50 bg-card/50 transition-all hover:border-primary/50 hover:shadow-[0_0_30px_-10px_rgba(6,160,199,0.3)]"
-                >
-                  <CardContent className="p-6">
-                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                      <service.icon className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-primary">{service.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-                  </CardContent>
-                </Card>
+                <Reveal as="div" key={index} index={index}>
+                  <Card className="group">
+                    <CardContent className="p-6">
+                      <div className="icon-tile mb-4">
+                        <service.icon className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-xl font-bold mb-3 text-primary">{service.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                    </CardContent>
+                  </Card>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -107,7 +109,7 @@ export default function ServicesPage() {
 
         {/* CTA */}
         <section className="container py-20">
-          <div className="rounded-3xl bg-gradient-to-r from-primary/20 to-secondary/20 p-8 md:p-12 text-center border border-primary/20">
+          <Reveal as="div" className="rounded-3xl bg-gradient-to-r from-primary/20 to-secondary/20 p-8 md:p-12 text-center border border-primary/20">
             <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Offer a custom-coded website without handling fulfillment. Partner pricing is ${OFFER.setupFee} setup per site, then ${OFFER.monthlyFee}/month per active site.
@@ -115,7 +117,7 @@ export default function ServicesPage() {
             <Button size="lg" asChild>
               <Link href="/contact">Become a Partner</Link>
             </Button>
-          </div>
+          </Reveal>
         </section>
 
         {/* Inline Contact Form */}

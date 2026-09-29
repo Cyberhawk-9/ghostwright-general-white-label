@@ -53,7 +53,7 @@ export function ValuePillars() {
   const cardAnimations = [card0, card1, card2, card3, card4, card5]
 
   return (
-    <section ref={sectionRef} className="w-full py-20 md:py-28">
+    <section ref={sectionRef} className="section-glow section-tint w-full py-20 md:py-28">
       <div className="container max-w-7xl mx-auto px-4 md:px-6">
         <div className={`mb-12 text-center animate-on-scroll ${sectionVisible ? "visible" : ""}`}>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
@@ -74,10 +74,9 @@ export function ValuePillars() {
                 className={`animate-on-scroll ${cardVisible ? "visible" : ""}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <Card className="group relative overflow-hidden border-white/10 bg-white/5 transition-all duration-300 hover:border-primary hover:shadow-[0_0_30px_-10px_rgba(6,160,199,0.3)] h-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                <Card className="group h-full">
                   <CardContent className="p-6">
-                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <div className="icon-tile mb-4">
                       <pillar.icon className="h-6 w-6" />
                     </div>
                     <h3 className="text-xl font-bold text-primary mb-3">{pillar.title}</h3>

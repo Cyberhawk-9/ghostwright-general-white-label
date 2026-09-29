@@ -5,6 +5,7 @@ import { BRAND } from "@/lib/brand"
 import { OFFER } from "@/lib/offer"
 import { InlineContactForm } from "@/components/inline-contact-form"
 import { PartnerCalculator } from "@/components/partner-calculator"
+import { Reveal } from "@/components/reveal"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -44,34 +45,38 @@ export default function PricingPage() {
     <div className="flex flex-col min-h-screen max-w-7xl mx-auto px-4">
       {/* Hero */}
       <section className="container py-20 text-center">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-8">
-          <span className="text-primary">Simple partner pricing</span>
-        </h1>
-        <p className="mt-8 text-xl text-muted-foreground max-w-2xl mx-auto">
-          Pay ${OFFER.setupFee} when you greenlight each build, then ${OFFER.monthlyFee}/month per active site once it&apos;s live. You set the retail price and keep the spread.
-        </p>
+        <Reveal as="div">
+          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-8">
+            <span className="text-primary">Simple partner pricing</span>
+          </h1>
+          <p className="mt-8 text-xl text-muted-foreground max-w-2xl mx-auto">
+            Pay ${OFFER.setupFee} when you greenlight each build, then ${OFFER.monthlyFee}/month per active site once it&apos;s live. You set the retail price and keep the spread.
+          </p>
+        </Reveal>
       </section>
 
       {/* Tiles */}
       <section className="container pb-8">
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
-          {tiles.map((tile) => (
-            <Card key={tile.title} className="border-primary/50 bg-white/5">
-              <CardHeader className="text-center">
-                <CardTitle className="text-2xl text-primary">{tile.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-muted-foreground">{tile.desc}</p>
-              </CardContent>
-            </Card>
+          {tiles.map((tile, index) => (
+            <Reveal as="div" key={tile.title} index={index}>
+              <Card className="border-primary/50 bg-white/5">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl text-primary">{tile.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-muted-foreground">{tile.desc}</p>
+                </CardContent>
+              </Card>
+            </Reveal>
           ))}
         </div>
       </section>
 
       {/* Checklist */}
       <section className="container pb-20">
-        <div className="max-w-2xl mx-auto">
-          <Card className="border-primary/50 bg-white/5 shadow-[0_0_50px_-10px_rgba(6,160,199,0.3)]">
+        <Reveal as="div" className="max-w-2xl mx-auto">
+          <Card className="border-primary/40 shadow-[0_0_50px_-10px_rgba(23,158,199,0.3)]">
             <CardHeader className="text-center pb-8">
               <CardTitle className="text-3xl text-primary mb-4">What&apos;s included</CardTitle>
             </CardHeader>
@@ -89,26 +94,28 @@ export default function PricingPage() {
               </Button>
             </CardContent>
           </Card>
-        </div>
+        </Reveal>
       </section>
 
       {/* Link card to /billing */}
       <section className="container pb-20">
-        <Link href="/billing" className="block max-w-2xl mx-auto">
-          <Card className="border-primary/50 bg-white/5 transition-colors hover:border-primary">
-            <CardContent className="flex items-center justify-between px-8 py-6">
-              <span className="text-lg font-medium text-foreground">See exactly how billing works</span>
-              <ArrowRight className="h-5 w-5 text-primary" />
-            </CardContent>
-          </Card>
-        </Link>
+        <Reveal as="div" className="max-w-2xl mx-auto">
+          <Link href="/billing" className="block">
+            <Card className="border-primary/50 bg-white/5 transition-colors hover:border-primary">
+              <CardContent className="flex items-center justify-between px-8 py-6">
+                <span className="text-lg font-medium text-foreground">See exactly how billing works</span>
+                <ArrowRight className="h-5 w-5 text-primary" />
+              </CardContent>
+            </Card>
+          </Link>
+        </Reveal>
       </section>
 
       {/* Calculator */}
       <section className="container pb-20">
-        <div className="max-w-4xl mx-auto">
+        <Reveal as="div" className="max-w-4xl mx-auto">
           <PartnerCalculator />
-        </div>
+        </Reveal>
       </section>
 
       <InlineContactForm />

@@ -8,6 +8,7 @@ import { OFFER } from "@/lib/offer"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Reveal } from "@/components/reveal"
 
 export const metadata: Metadata = {
   title: `About ${BRAND.name}`,
@@ -47,7 +48,7 @@ export default function AboutPage() {
       <div className="flex flex-col min-h-screen">
         {/* Hero */}
         <section className="container py-20 md:py-28">
-          <div className="max-w-4xl mx-auto text-center">
+          <Reveal as="div" className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">
               Built for agencies that <span className="text-primary">serve contractors</span>
             </h1>
@@ -64,24 +65,28 @@ export default function AboutPage() {
             <Button size="lg" variant="outline" className="mt-10 ml-4 bg-transparent" asChild>
               <Link href="/portfolio">See the Work</Link>
             </Button>
-          </div>
+          </Reveal>
         </section>
 
         {/* Philosophy */}
         <section className="bg-muted/30 py-20">
           <div className="container">
-            <h2 className="text-3xl font-bold tracking-tighter text-center mb-12 text-primary">Our Philosophy</h2>
+            <Reveal as="h2" className="text-3xl font-bold tracking-tighter text-center mb-12 text-primary">
+              Our Philosophy
+            </Reveal>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {values.map((value, index) => (
-                <Card key={index} className="border-border/50 bg-card/50">
-                  <CardContent className="p-6 text-center">
-                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                      <value.icon className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{value.description}</p>
-                  </CardContent>
-                </Card>
+                <Reveal as="div" key={index} index={index}>
+                  <Card className="border-border/50 bg-card/50">
+                    <CardContent className="p-6 text-center">
+                      <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <value.icon className="h-6 w-6" />
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">{value.title}</h3>
+                      <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                    </CardContent>
+                  </Card>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -89,18 +94,18 @@ export default function AboutPage() {
 
         {/* Mission */}
         <section className="container py-20 md:py-28">
-          <div className="max-w-3xl mx-auto text-center">
+          <Reveal as="div" className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tighter mb-6 text-primary">Our Mission</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
               To help agencies that serve contractors add premium websites to their offer without building a web
               department.
             </p>
-          </div>
+          </Reveal>
         </section>
 
         {/* CTA */}
         <section className="container pb-20">
-          <div className="rounded-3xl bg-gradient-to-r from-primary/20 to-secondary/20 p-8 md:p-12 text-center border border-primary/20">
+          <Reveal as="div" className="rounded-3xl bg-gradient-to-r from-primary/20 to-secondary/20 p-8 md:p-12 text-center border border-primary/20">
             <h2 className="text-3xl font-bold mb-4">Ready to expand what you offer?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Add premium, custom-coded websites to your offer. Partner pricing is ${OFFER.setupFee} setup per site, then
@@ -109,7 +114,7 @@ export default function AboutPage() {
             <Button size="lg" asChild>
               <Link href="/contact">Become a Partner</Link>
             </Button>
-          </div>
+          </Reveal>
         </section>
 
         {/* Contact Form */}

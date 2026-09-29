@@ -32,7 +32,7 @@ export function ProcessSection() {
   const stepRefs = [step0, step1, step2]
 
   return (
-    <section ref={sectionRef} className="w-full py-20 md:py-28">
+    <section ref={sectionRef} className="section-glow w-full py-20 md:py-28">
       <div className="container max-w-7xl mx-auto px-4 md:px-6">
         <div className={`mb-16 text-center animate-on-scroll ${sectionVisible ? "visible" : ""}`}>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">How We Work</h2>
@@ -51,7 +51,7 @@ export function ProcessSection() {
                 className={`relative flex flex-col items-center text-center group animate-scale-in ${stepVisible ? "visible" : ""}`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <div className="relative z-10 mb-6 flex h-24 w-24 items-center justify-center bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_30px_-5px_rgba(6,160,199,0.5)]">
+                <div className="relative z-10 mb-6 flex h-24 w-24 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_30px_-5px_rgba(23,158,199,0.5)]">
                   <step.icon className="h-10 w-10" />
                 </div>
                 <h3 className="mb-4 text-xl font-bold text-primary">{step.title}</h3>

@@ -4,36 +4,47 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* Brand tokens (source of truth) */
+  --bg: #000000;
+  --surface: #090c0c;
+  --surface-2: #131516;
+  --surface-tint: #00080b;
+  --border-hover: #179ec7;
+  --hero-card-border: #0d303a;
+  --cyan: #179ec7;
+  --magenta: #ba00e2;
+  --text: #f5f5f7;
+  --text-muted: #a1a8b3;
+  --gradient-brand: linear-gradient(90deg, #179ec7 0%, #7580d1 50%, #ba00e2 100%);
+
   /* Default to dark theme values as requested */
-  --background: #000000;
-  --foreground: #f5f7fa;
+  --background: var(--bg);
+  --foreground: var(--text);
 
-  --card: #0a0a0a;
-  --card-foreground: #f5f7fa;
+  --card: var(--surface);
+  --card-foreground: var(--text);
 
-  --popover: #000000;
-  --popover-foreground: #f5f7fa;
+  --popover: var(--bg);
+  --popover-foreground: var(--text);
 
-  /* Updated primary to exact light blue from design */
-  --primary: #06a0c7;
+  --primary: var(--cyan);
   --primary-foreground: #ffffff;
 
-  /* Updated secondary to exact purple/magenta from design */
-  --secondary: #b41be3;
+  --secondary: var(--magenta);
   --secondary-foreground: #ffffff;
 
-  --muted: #1a1a1a;
-  --muted-foreground: #b8c0cc;
+  --muted: var(--surface-2);
+  --muted-foreground: var(--text-muted);
 
-  --accent: #1a1a1a;
-  --accent-foreground: #f5f7fa;
+  --accent: var(--surface-2);
+  --accent-foreground: var(--text);
 
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
 
-  --border: #1f2937;
-  --input: #1f2937;
-  --ring: #06a0c7;
+  --border: #14181f;
+  --input: #14181f;
+  --ring: var(--cyan);
 
   --radius: 0.75rem;
 
@@ -54,33 +65,33 @@
 }
 
 .dark {
-  --background: #000000;
-  --foreground: #f5f7fa;
-  --card: #0a0a0a;
-  --card-foreground: #f5f7fa;
-  --popover: #000000;
-  --popover-foreground: #f5f7fa;
-  --primary: #06a0c7;
+  --background: var(--bg);
+  --foreground: var(--text);
+  --card: var(--surface);
+  --card-foreground: var(--text);
+  --popover: var(--bg);
+  --popover-foreground: var(--text);
+  --primary: var(--cyan);
   --primary-foreground: #ffffff;
-  --secondary: #b41be3;
+  --secondary: var(--magenta);
   --secondary-foreground: #ffffff;
-  --muted: #1a1a1a;
-  --muted-foreground: #b8c0cc;
-  --accent: #1a1a1a;
-  --accent-foreground: #f5f7fa;
+  --muted: var(--surface-2);
+  --muted-foreground: var(--text-muted);
+  --accent: var(--surface-2);
+  --accent-foreground: var(--text);
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #1f2937;
-  --input: #1f2937;
-  --ring: #06a0c7;
-  --sidebar: #0a0a0a;
-  --sidebar-foreground: #f5f7fa;
-  --sidebar-primary: #06a0c7;
+  --border: #14181f;
+  --input: #14181f;
+  --ring: var(--cyan);
+  --sidebar: var(--surface);
+  --sidebar-foreground: var(--text);
+  --sidebar-primary: var(--cyan);
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #1a1a1a;
-  --sidebar-accent-foreground: #f5f7fa;
-  --sidebar-border: #1f2937;
-  --sidebar-ring: #06a0c7;
+  --sidebar-accent: var(--surface-2);
+  --sidebar-accent-foreground: var(--text);
+  --sidebar-border: #14181f;
+  --sidebar-ring: var(--cyan);
 }
 
 @theme inline {
@@ -141,10 +152,10 @@
     z-index: -1;
     pointer-events: none;
     background:
-      radial-gradient(circle at 80% 8%, rgba(6, 160, 199, 0.12), transparent 38%),
-      radial-gradient(circle at 12% 55%, rgba(180, 27, 227, 0.08), transparent 34%),
-      radial-gradient(circle at 70% 95%, rgba(6, 160, 199, 0.07), transparent 36%),
-      linear-gradient(180deg, rgba(6, 160, 199, 0.03), rgba(180, 27, 227, 0.03));
+      radial-gradient(circle at 80% 8%, rgba(23, 158, 199, 0.12), transparent 38%),
+      radial-gradient(circle at 12% 55%, rgba(186, 0, 226, 0.08), transparent 34%),
+      radial-gradient(circle at 70% 95%, rgba(23, 158, 199, 0.07), transparent 36%),
+      linear-gradient(180deg, rgba(23, 158, 199, 0.03), rgba(186, 0, 226, 0.03));
   }
   h1,
   h2,
@@ -183,6 +194,85 @@
 
   svg:hover {
     @apply transition-all duration-200 scale-110 brightness-125;
+  }
+
+  /* Arrow icons inside buttons/links nudge forward on hover, matching the hero CTAs */
+  svg.lucide-arrow-right {
+    transition: transform 200ms ease-out;
+  }
+  button:hover svg.lucide-arrow-right,
+  a:hover svg.lucide-arrow-right,
+  [role="button"]:hover svg.lucide-arrow-right {
+    transform: translateX(4px);
+  }
+
+  /* Shared card surface for feature/step/FAQ/pricing/portfolio/calculator cards */
+  .card-surface {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    transition:
+      border-color 300ms ease-out,
+      box-shadow 300ms ease-out,
+      transform 300ms ease-out;
+  }
+  .card-surface::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(23, 158, 199, 0.08), transparent);
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+    pointer-events: none;
+  }
+  .card-surface:hover,
+  .card-surface:focus-within {
+    border-color: var(--border-hover);
+    box-shadow: 0 0 32px rgba(23, 158, 199, 0.18);
+    transform: translateY(-4px);
+  }
+  .card-surface:hover::before,
+  .card-surface:focus-within::before {
+    opacity: 1;
+  }
+
+  /* Icon tile used inside cards; scales up when its card is hovered */
+  .icon-tile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background-color: rgba(23, 158, 199, 0.1);
+    color: var(--cyan);
+    transition: transform 300ms ease-out;
+  }
+  .card-surface:hover .icon-tile,
+  .group:hover .icon-tile {
+    transform: scale(1.1);
+  }
+
+  /* Alternating section background tint, layered with soft brand glows */
+  .section-tint {
+    background-color: var(--surface-tint);
+  }
+  .section-glow {
+    position: relative;
+    isolation: isolate;
+  }
+  .section-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(600px circle at 85% 0%, rgba(23, 158, 199, 0.1), transparent 70%),
+      radial-gradient(500px circle at 10% 100%, rgba(186, 0, 226, 0.08), transparent 70%);
+    filter: blur(48px);
   }
 
   /* Added scroll animation utilities */
@@ -268,5 +358,148 @@
 
   .animate-slide-in-right {
     animation: slide-in-right-to-left 0.6s ease-out forwards;
+  }
+
+  /* Scroll-triggered reveal used by the <Reveal> component. Only transform/opacity animate. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  .reveal.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hero load-in animation, driven by the existing animate-fade-in-up + delay-* classes
+     already present in the hero markup. */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Header nav-link underline: scales from 0 to full width, origin left */
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 100%;
+    background-color: var(--cyan);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-out;
+  }
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  /* Scroll-to-top button */
+  .scroll-top-button {
+    transition:
+      opacity 250ms ease-out,
+      transform 250ms ease-out,
+      box-shadow 250ms ease-out,
+      border-color 200ms ease-out;
+  }
+  .scroll-top-button--hidden {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  .scroll-top-button--visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .scroll-top-button:hover {
+    box-shadow: 0 0 24px rgba(23, 158, 199, 0.4);
+  }
+
+  /* Partner form popup */
+  .popup-overlay {
+    animation: popup-overlay-in 250ms ease-out forwards;
+  }
+  .popup-panel {
+    animation: popup-panel-in 250ms ease-out forwards;
+  }
+  @keyframes popup-overlay-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes popup-panel-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Calculator range-slider thumb: scale on hover */
+  input[type="range"]::-webkit-slider-thumb {
+    transition: transform 200ms ease-out;
+  }
+  input[type="range"]:hover::-webkit-slider-thumb {
+    transform: scale(1.2);
+  }
+  input[type="range"]::-moz-range-thumb {
+    transition: transform 200ms ease-out;
+  }
+  input[type="range"]:hover::-moz-range-thumb {
+    transform: scale(1.2);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-fade-in-up {
+    opacity: 0;
+    animation: fade-in-up 600ms ease-out forwards;
+  }
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .reveal {
+    transition:
+      opacity 600ms ease-out,
+      transform 600ms ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.reveal-visible,
+  .animate-fade-in-up {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .scroll-top-button--hidden {
+    opacity: 0 !important;
+  }
+  .popup-overlay,
+  .popup-panel {
+    animation: none !important;
   }
 }
