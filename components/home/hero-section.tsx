@@ -5,6 +5,8 @@ import Link from "next/link"
 import { ArrowRight, X, ExternalLink } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { BRAND } from "@/lib/brand"
+import { OFFER } from "@/lib/offer"
 
 const heroImages = [
   "/01_homepage_hero_landscaper_trimming_hedges.png",
@@ -68,7 +70,7 @@ export function HeroSection() {
             </h1>
             <p className="animate-fade-in-up delay-100 mx-auto mt-6 max-w-3xl text-pretty text-base text-gray-300 md:text-lg">
               Get a fully custom website built from scratch — modern, fast, animated, SEO-ready, and tailored to your
-              business. Pay $99 upon completion, then just $20/month for hosting, SSL, and updates.
+              business. Pay ${OFFER.setupFee} upon completion, then just ${OFFER.monthlyFee}/month for hosting, SSL, and updates.
             </p>
             <div className="animate-fade-in-up delay-200 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" className="h-12 px-8" asChild>
@@ -86,7 +88,7 @@ export function HeroSection() {
               </Button>
             </div>
             <p className="animate-fade-in-up delay-300 mt-4 text-sm text-gray-400">
-              $99 upon completion, then $20/month for hosting & updates.
+              ${OFFER.setupFee} upon completion, then ${OFFER.monthlyFee}/month for hosting & updates.
             </p>
           </div>
         </div>
@@ -106,7 +108,7 @@ export function HeroSection() {
               </div>
               <div className="flex items-center gap-2">
                 <Button variant="ghost" size="sm" asChild className="gap-2">
-                  <a href="https://eliteroofing.cyberhawk.dev" target="_blank" rel="noopener noreferrer">
+                  <a href={`https://eliteroofing.${BRAND.domain}`} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4" />
                     Open in New Tab
                   </a>
@@ -125,7 +127,7 @@ export function HeroSection() {
             {/* iFrame */}
             <div className="flex-1 overflow-hidden">
               <iframe
-                src="https://eliteroofing.cyberhawk.dev"
+                src={`https://eliteroofing.${BRAND.domain}`}
                 className="w-full h-full border-0"
                 title="Elite Roofing"
                 sandbox="allow-same-origin allow-scripts allow-popups allow-forms"

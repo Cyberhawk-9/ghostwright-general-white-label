@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import { BRAND } from "@/lib/brand"
 
 const footerLinks = {
   product: [
@@ -25,23 +25,15 @@ export function SiteFooter() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center space-x-2">
-              <Image
-                src="/Cyberhawk-Logo.png"
-                alt="Cyberhawk"
-                width={32}
-                height={32}
-                className="h-8 w-8 object-contain"
-              />
               <div className="flex flex-col">
                 <span className="font-display text-xl font-bold tracking-tighter leading-none">
-                  Cyberhawk<span className="text-primary">.</span>
+                  {BRAND.short}
+                  <span className="text-primary">.</span>
                 </span>
-                <span className="text-xs text-muted-foreground">Web Design</span>
+                <span className="text-xs text-muted-foreground">Web Development</span>
               </div>
             </Link>
-            <p className="mt-4 text-sm text-muted-foreground">
-              Premium, conversion-first websites designed and launched fast.
-            </p>
+            <p className="mt-4 text-sm text-muted-foreground">{BRAND.tagline}</p>
           </div>
           <div>
             <h3 className="mb-4 text-sm font-semibold text-foreground">Product</h3>
@@ -82,7 +74,7 @@ export function SiteFooter() {
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/40 pt-8 md:flex-row">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Cyberhawk. All rights reserved.
+            &copy; {BRAND.year} {BRAND.name}. All rights reserved.
           </p>
         </div>
       </div>

@@ -5,6 +5,7 @@ import { X, ExternalLink } from "lucide-react"
 import { InlineContactForm } from "@/components/inline-contact-form"
 import { Button } from "@/components/ui/button"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+import { BRAND } from "@/lib/brand"
 
 const portfolioSites = [
   {
@@ -13,7 +14,7 @@ const portfolioSites = [
     type: "Septic Services",
     description:
       "Expert septic tank pumping, maintenance, and repair services for residential and commercial properties.",
-    url: "https://lone-star.cyberhawk.dev",
+    url: `https://lone-star.${BRAND.domain}`,
     color: "#2c5f2d",
   },
   {
@@ -21,7 +22,7 @@ const portfolioSites = [
     name: "Rama's Roofing",
     type: "Roofing Contractor",
     description: "Premium residential and commercial roofing solutions with expert craftsmanship and reliable service.",
-    url: "https://ramas-roofing.cyberhawk.dev",
+    url: `https://ramas-roofing.${BRAND.domain}`,
     color: "#c41e3a",
   },
   {
@@ -29,7 +30,7 @@ const portfolioSites = [
     name: "Elite Roofing",
     type: "Roofing Contractor",
     description: "Professional roofing services specializing in residential and commercial projects.",
-    url: "https://eliteroofing.cyberhawk.dev",
+    url: `https://eliteroofing.${BRAND.domain}`,
     color: "#8B4513",
   },
   {

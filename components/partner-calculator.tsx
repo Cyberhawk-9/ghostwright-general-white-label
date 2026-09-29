@@ -2,12 +2,14 @@
 
 import * as React from "react"
 import { Calculator, TrendingUp } from "lucide-react"
+import { BRAND } from "@/lib/brand"
+import { OFFER } from "@/lib/offer"
 
 export function PartnerCalculator() {
   const [retailPrice, setRetailPrice] = React.useState(59)
   const [activeSites, setActiveSites] = React.useState(100)
   const recurringRevenue = retailPrice * activeSites
-  const wholesaleCost = 25 * activeSites
+  const wholesaleCost = OFFER.monthlyFee * activeSites
   const grossMargin = recurringRevenue - wholesaleCost
 
   return (
@@ -37,7 +39,7 @@ export function PartnerCalculator() {
         <Metric label="Wholesale cost / month" value={`$${wholesaleCost.toLocaleString()}`} />
         <Metric label="Recurring gross margin" value={`$${grossMargin.toLocaleString()}`} highlight />
       </div>
-      <p className="mt-5 text-xs leading-5 text-muted-foreground">Illustrative example only. Actual results depend on your pricing and active customer count. Cyberhawk wholesale pricing is $25 per active website each month.</p>
+      <p className="mt-5 text-xs leading-5 text-muted-foreground">Illustrative example only. Actual results depend on your pricing and active customer count. {BRAND.short} wholesale pricing is ${OFFER.monthlyFee} per active website each month.</p>
     </div>
   )
 }

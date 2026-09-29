@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { CheckCircle, Home, X } from "lucide-react" // Added icons
+import { BRAND } from "@/lib/brand"
 
 export default function ThankYouPage() {
   const handleClose = () => {
@@ -30,7 +31,7 @@ export default function ThankYouPage() {
       </h1>
 
       <p className="mb-10 max-w-md text-xl text-muted-foreground">
-        Thanks for reaching out. We&apos;ve received your agency details and will be in touch shortly to discuss how Cyberhawk can support your customers.
+        Thanks for reaching out. We&apos;ve received your agency details and will be in touch shortly to discuss how {BRAND.short} can support your customers.
       </p>
 
       <div className="flex flex-col gap-4 sm:flex-row">

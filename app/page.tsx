@@ -1,16 +1,17 @@
 import type { Metadata } from "next"
 import { PartnerHome } from "@/components/partner-home"
+import { BRAND } from "@/lib/brand"
 
 export const metadata: Metadata = {
-  title: "White-Label Websites for Contractor-Focused Agencies | Cyberhawk",
-  description: "Add premium websites to your contractor offering without hiring developers. Cyberhawk builds, hosts, and maintains everything behind the scenes.",
+  title: `White-Label Websites for Contractor-Focused Agencies | ${BRAND.name}`,
+  description: `Add premium websites to your contractor offering without hiring developers. ${BRAND.short} builds, hosts, and maintains everything behind the scenes.`,
 }
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Cyberhawk",
-  url: "https://cyberhawk.dev/",
+  name: BRAND.name,
+  url: `${BRAND.url}/`,
   description: "White-label website fulfillment for contractor-focused agencies.",
 }
 

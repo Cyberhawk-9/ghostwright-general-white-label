@@ -6,6 +6,7 @@ import { ContactForm } from "@/components/contact-form"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { IdleReassurancePopup } from "@/components/idle-reassurance-popup"
+import { BRAND } from "@/lib/brand"
 
 const contactInfo = [
   {
@@ -13,7 +14,7 @@ const contactInfo = [
     title: "Email",
     description: "Response within 24 hours",
     detail: "We respond to all inquiries quickly",
-    email: "info@cyberhawk.dev",
+    email: BRAND.contactEmail,
   },
   {
     icon: MessageSquare,
@@ -101,7 +102,7 @@ export default function ContactPage() {
           </div>
           <div className="mt-8 text-center">
             <Button variant="outline" asChild>
-              <a href="mailto:info@cyberhawk.dev">Prefer email? Contact us directly <ArrowRight className="ml-2 h-4 w-4" /></a>
+              <a href={`mailto:${BRAND.contactEmail}`}>Prefer email? Contact us directly <ArrowRight className="ml-2 h-4 w-4" /></a>
             </Button>
           </div>
         </div>
