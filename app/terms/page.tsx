@@ -16,7 +16,7 @@ export default function TermsPage() {
     <div className="flex flex-col min-h-screen">
       <section className="container max-w-7xl mx-auto px-4 py-20 max-w-4xl">
         <Reveal as="div">
-          <h1 className="text-4xl font-bold tracking-tighter mb-6">Terms of Service</h1>
+          <h1 className="text-4xl font-bold tracking-tighter mb-6">Terms of Use</h1>
           <p className="text-muted-foreground mb-8">Last updated: September 29, 2026</p>
         </Reveal>
 

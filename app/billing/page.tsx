@@ -31,7 +31,7 @@ const invoiceEvents = [
   },
   {
     event: "Setup fee paid",
-    result: `Work starts and your ${OFFER.firstVersion} clock starts.`,
+    result: "Work starts and your 5–7 business day clock starts.",
   },
   {
     event: "Go-live",

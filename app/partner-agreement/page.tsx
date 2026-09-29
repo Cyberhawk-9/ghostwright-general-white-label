@@ -41,7 +41,7 @@ const terms = [
   },
   {
     topic: "Revisions",
-    summary: `${OFFER.revisionRounds} rounds, ${OFFER.revisionTurnaround} turnaround, $${OFFER.extraRound} per extra round.`,
+    summary: "Two rounds, 3-business-day turnaround, $75 per extra round.",
   },
   {
     topic: "Edits",

@@ -13,8 +13,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    description: "Response within 24 hours",
-    detail: "We respond to all inquiries quickly",
+    description: "Response within 48 hours",
+    detail: "We reply to every partner inquiry by email.",
     email: BRAND.contactEmail,
   },
   {
@@ -26,8 +26,8 @@ const contactInfo = [
   {
     icon: Clock,
     title: "Availability",
-    description: "Mon-Fri, 9AM-6PM PST",
-    detail: "Weekend inquiries welcome",
+    description: "Mon–Fri, 9AM–5PM Arizona time",
+    detail: "Arizona time is MST year-round, with no daylight saving.",
   },
 ]
 

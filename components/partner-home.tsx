@@ -68,7 +68,7 @@ export function PartnerHome() {
 
     <section className="mx-auto max-w-7xl px-6 py-24 md:px-12 md:py-32"><div className="mx-auto max-w-3xl"><Reveal as="div"><p className="text-center text-sm font-semibold uppercase tracking-[0.2em] text-secondary">Partner FAQ</p><h2 className="mt-4 text-center text-4xl sm:text-5xl">The details, clearly.</h2></Reveal><Reveal as="div" delay={80}><Accordion type="single" collapsible className="mt-12 w-full">{FAQ.slice(0, 4).map((faq, index) => <AccordionItem key={faq.question} value={`faq-${index}`}><AccordionTrigger className="text-left text-lg text-primary hover:text-primary/80">{faq.question}</AccordionTrigger><AccordionContent className="text-base leading-relaxed text-muted-foreground">{faq.answer}</AccordionContent></AccordionItem>)}</Accordion></Reveal><div className="mt-8 text-center"><Button variant="outline" asChild><Link href="/faq">View all FAQs <ArrowRight className="ml-2 h-4 w-4" /></Link></Button></div></div></section>
 
-    <section className="mx-auto max-w-7xl px-6 pb-24 md:px-12 md:pb-32"><Reveal as="div"><PartnerForm /></Reveal></section>
+    <section className="mx-auto max-w-7xl px-6 pb-24 md:px-12 md:pb-32"><Reveal as="div"><h2 className="mb-8 text-center text-3xl font-bold">Ready to add websites to your offer?</h2><PartnerForm /></Reveal></section>
   </div>
 }
 
