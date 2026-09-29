@@ -42,7 +42,6 @@ export default function PrivacyPage() {
                 numbers
               </li>
               <li>Technical data such as IP address, device, browser, and pages visited</li>
-              <li>Live chat messages if you use chat</li>
             </ul>
           </Reveal>
 
@@ -70,7 +69,7 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-bold mb-4">Sharing</h2>
             <p className="text-muted-foreground leading-relaxed">
               We do not sell personal information. We share it with service providers for hosting, email, forms,
-              invoicing and payments, chat, and analytics only as needed, and when the law requires.
+              invoicing and payments, and analytics only as needed, and when the law requires.
             </p>
           </Reveal>
 
