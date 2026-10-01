@@ -26,7 +26,7 @@ const steps = [
   },
   {
     title: "Your client completes a short intake",
-    description: "A form for their trade, branded for you.",
+    description: "A short form for their trade, on a subdomain of your website. About 10 minutes.",
   },
   {
     title: "We build and maintain it under your brand",

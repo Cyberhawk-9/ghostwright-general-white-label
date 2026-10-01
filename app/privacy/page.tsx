@@ -39,6 +39,7 @@ export default function PrivacyPage() {
                 us to show
               </li>
               <li>Email messages with a partner&apos;s client, if the partner chooses the web-team option</li>
+              <li>Business details, files, and answers a client submits through an intake form on a partner&apos;s website</li>
               <li>
                 Partner billing contacts, while payments are handled by a payment processor and we do not store card
                 numbers
@@ -81,7 +82,8 @@ export default function PrivacyPage() {
             <p className="text-muted-foreground leading-relaxed">
               We keep information as long as needed for these purposes. After a site is cancelled we keep an archive
               for 90 days, then remove the client&apos;s identifying content from our retained copy, except records
-              we must keep for legal or billing reasons.
+              we must keep for legal or billing reasons. Files uploaded through an intake form are stored privately
+              and deleted about 90 days after launch.
             </p>
           </Reveal>
 

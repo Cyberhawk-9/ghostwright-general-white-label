@@ -26,6 +26,22 @@ export const FAQ: FaqItem[] = [
       "The client owns it and registers it in their own account. We give you the exact DNS records and steps for your team to walk them through.",
   },
   {
+    question: "How does my client's intake form work?",
+    answer:
+      "You send your client one link to a short form for their trade, on a subdomain of your website. It adapts to their answers, takes about 10 minutes, and sends everything to us.",
+    link: { label: "intake form", href: "/intake" },
+  },
+  {
+    question: "What does the intake ask for?",
+    answer:
+      "Business and contact details, service area, licenses and insurance, services, logo and photos, reviews, how customers reach them, domain and email setup, and timing. It never asks for passwords or payment details.",
+  },
+  {
+    question: "How do I set up the intake on my domain?",
+    answer:
+      "Add one DNS record for a subdomain such as start.youragency.com. We add it on our side and test it.",
+  },
+  {
     question: "Is there a minimum volume requirement?",
     answer:
       "No minimum. The program fits best for agencies onboarding new contractors every month.",
@@ -43,7 +59,7 @@ export const FAQ: FaqItem[] = [
   {
     question: "Can the websites be presented under our brand?",
     answer:
-      "Yes. You set the retail price, bill your client, and own the relationship. Your client completes an intake form for their trade, branded for you.",
+      "Yes. You set the retail price, bill your client, and own the relationship. Your client completes an intake form for their trade, on a subdomain of your website.",
   },
   {
     question: "What do you handle?",
