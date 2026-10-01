@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { BRAND } from "@/lib/brand"
 
 const navigation = [
   { name: "How It Works", href: "/how-it-works" },
@@ -40,24 +40,15 @@ export function SiteHeader() {
         }`}
       >
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="flex flex-col">
-              <span
-                className={`font-display font-bold tracking-tighter transition-all duration-300 leading-none ${
-                  isScrolled ? "text-lg" : "text-xl"
-                }`}
-              >
-                {BRAND.short}
-                <span className="text-primary">.</span>
-              </span>
-              <span
-                className={`text-xs text-muted-foreground transition-all duration-300 ${
-                  isScrolled ? "text-[10px]" : "text-xs"
-                }`}
-              >
-                Web Development
-              </span>
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/ghostwright-header-dark.png"
+              alt="Ghostwright Web Development"
+              width={221}
+              height={40}
+              priority
+              className={`w-auto transition-all duration-300 ${isScrolled ? "h-8" : "h-8 sm:h-10"}`}
+            />
           </Link>
         </div>
 
