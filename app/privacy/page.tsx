@@ -38,6 +38,7 @@ export default function PrivacyPage() {
                 details, service information, logos, photos, and licensing or credential statements the client asks
                 us to show
               </li>
+              <li>Email messages with a partner&apos;s client, if the partner chooses the web-team option</li>
               <li>
                 Partner billing contacts, while payments are handled by a payment processor and we do not store card
                 numbers
@@ -61,9 +62,9 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-bold mb-4">Client information</h2>
             <p className="text-muted-foreground leading-relaxed">
               When we build a site for a partner&apos;s client, we use the information only to build and maintain
-              that site and treat the partner as the client&apos;s point of contact, unless the partner asks us to work
-              with their client directly as the partner&apos;s web team. Partners are responsible for
-              having any consents they need from their clients.
+              that site. By default the partner is the client&apos;s point of contact. If the partner chooses the
+              web-team option, we also communicate with the client by email about their site, from an address on the
+              partner&apos;s domain. Partners are responsible for having any consents they need from their clients.
             </p>
           </Reveal>
 

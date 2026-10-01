@@ -46,7 +46,7 @@ export default function SupportPage() {
                 We complete them within {OFFER.editTurnaround} after receiving your request.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Requests come from your authorized contacts, not your clients.
+                Requests come from your authorized contacts. With the web-team option, your client can send them to your team&apos;s address.
               </p>
             </Reveal>
 
