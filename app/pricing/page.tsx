@@ -38,6 +38,7 @@ const checklist = [
   "Designed and coded from scratch, never a template",
   "Modern design and animations",
   "SEO-ready structure",
+  "Choose how hands-on you want to be, at no extra cost",
   "No long-term contracts. Cancel anytime.",
 ]
 

@@ -61,7 +61,8 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-bold mb-4">Client information</h2>
             <p className="text-muted-foreground leading-relaxed">
               When we build a site for a partner&apos;s client, we use the information only to build and maintain
-              that site and treat the partner as the client&apos;s point of contact. Partners are responsible for
+              that site and treat the partner as the client&apos;s point of contact, unless the partner asks us to work
+              with their client directly as the partner&apos;s web team. Partners are responsible for
               having any consents they need from their clients.
             </p>
           </Reveal>

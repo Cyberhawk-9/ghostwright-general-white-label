@@ -7,7 +7,7 @@ export const FAQ: FaqItem[] = [
   {
     question: "Will my client know Ghostwright is involved?",
     answer:
-      "No. We work behind the scenes under your brand. We never solicit, contact, or upsell your clients.",
+      "No. We work under your brand. By default we never contact your clients. If you'd rather, we can work with them directly as your web team, from an email address on your domain, so they only ever see your name. We never solicit or upsell your clients.",
   },
   {
     question: "Who owns the domain?",

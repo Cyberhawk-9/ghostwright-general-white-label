@@ -62,7 +62,7 @@ const terms = [
   },
   {
     topic: "Non-solicitation",
-    summary: "We don't solicit, contact, or upsell your clients, during the agreement and for 12 months after.",
+    summary: "We don't solicit, market to, or upsell your clients, during the agreement and for 12 months after.",
   },
   {
     topic: "Cancellation",

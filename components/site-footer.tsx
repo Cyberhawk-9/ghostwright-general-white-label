@@ -5,6 +5,7 @@ import { BRAND } from "@/lib/brand"
 const footerLinks = {
   offer: [
     { name: "How It Works", href: "/how-it-works" },
+    { name: "Ways to Work", href: "/ways-to-work" },
     { name: "Pricing", href: "/pricing" },
     { name: "For Insurance Agencies", href: "/for-insurance-agencies" },
     { name: "Portfolio", href: "/portfolio" },
