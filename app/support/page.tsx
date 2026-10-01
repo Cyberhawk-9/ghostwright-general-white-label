@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: `Support and Content Edits | ${BRAND.short}`,
   description: "Content edits within 2 business days, plus hosting, SSL, and technical support for every active site.",
   openGraph: {
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `Support and Content Edits | ${BRAND.short}`,
     description: "Content edits within 2 business days, plus hosting, SSL, and technical support for every active site.",
   },

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: `About ${BRAND.name}`,
   description: "Ghostwright is the fulfillment team behind agency-branded contractor websites.",
   openGraph: {
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `About ${BRAND.name}`,
     description: "Ghostwright is the fulfillment team behind agency-branded contractor websites.",
   },

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: `Terms of Use | ${BRAND.short}`,
   description: "Terms for using the Ghostwright website.",
   openGraph: {
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `Terms of Use | ${BRAND.short}`,
     description: "Terms for using the Ghostwright website.",
   },

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: `What We Build for Your Contractor Clients | ${BRAND.short}`,
   description: "Custom-coded, SEO-ready, mobile-first websites for roofers, remodelers, septic, HVAC, and other trades, built behind your brand.",
   openGraph: {
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `What We Build for Your Contractor Clients | ${BRAND.short}`,
     description: "Custom-coded, SEO-ready, mobile-first websites for roofers, remodelers, septic, HVAC, and other trades, built behind your brand.",
   },

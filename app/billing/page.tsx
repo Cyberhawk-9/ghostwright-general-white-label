@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: `Billing and Payments | ${BRAND.short}`,
   description: "One bundled invoice on the 1st, due by the 8th. Setup and monthly billing, late fees, unpaid clients, and fee changes.",
   openGraph: {
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `Billing and Payments | ${BRAND.short}`,
     description: "One bundled invoice on the 1st, due by the 8th. Setup and monthly billing, late fees, unpaid clients, and fee changes.",
   },

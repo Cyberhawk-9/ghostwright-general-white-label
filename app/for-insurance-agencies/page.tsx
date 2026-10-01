@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: `Websites for Your New Contractor Clients | ${BRAND.short}`,
   description: "Add a white-label website service for the contractors you insure. You sell and bill it; Ghostwright builds and maintains it.",
   openGraph: {
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `Websites for Your New Contractor Clients | ${BRAND.short}`,
     description: "Add a white-label website service for the contractors you insure. You sell and bill it; Ghostwright builds and maintains it.",
   },
