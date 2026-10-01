@@ -29,6 +29,11 @@ export const metadata: Metadata = {
 
 const terms = [
   {
+    topic: "Intake form",
+    summary:
+      "A form for your client's trade, on a subdomain of your website. Sending a client to it is your order. You have 2 business days to flag one you didn't authorize.",
+  },
+  {
     topic: "Setup fee",
     summary: `$${OFFER.setupFee} per site, invoiced when the intake arrives, non-refundable once work begins.`,
   },

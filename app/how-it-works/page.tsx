@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const steps = [
   {
     title: "Your client completes the intake",
-    description: "A short form for their trade, branded for you.",
+    description: "A short form for their trade, on a subdomain of your website. About 10 minutes.",
   },
   {
     title: "We invoice the setup fee",
@@ -75,6 +75,11 @@ export default function HowItWorksPage() {
                 </span>
                 <p className="mt-6 text-sm font-semibold leading-6">{step.title}</p>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">{step.description}</p>
+                {index === 0 && (
+                  <Link href="/intake" className="mt-2 inline-block text-sm text-primary hover:underline">
+                    See the intake form
+                  </Link>
+                )}
               </Reveal>
             ))}
           </ol>
