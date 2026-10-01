@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { BRAND } from "@/lib/brand"
 
 const footerLinks = {
@@ -27,14 +28,14 @@ export function SiteFooter() {
       <div className="container max-w-7xl mx-auto px-4 py-12 md:px-6 md:py-16 lg:py-20">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="flex flex-col">
-                <span className="font-display text-xl font-bold tracking-tighter leading-none">
-                  {BRAND.short}
-                  <span className="text-primary">.</span>
-                </span>
-                <span className="text-xs text-muted-foreground">Web Development</span>
-              </div>
+            <Link href="/" className="inline-flex items-center">
+              <Image
+                src="/ghostwright-lockup-dark.png"
+                alt="Ghostwright Web Development"
+                width={220}
+                height={64}
+                className="h-auto w-[220px]"
+              />
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">{BRAND.tagline}</p>
           </div>
