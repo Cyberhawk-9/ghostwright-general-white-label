@@ -34,7 +34,7 @@ const steps = [
   },
   {
     title: "Two rounds of revisions",
-    description: `Send one consolidated list per round. We deliver each revised version within ${OFFER.revisionTurnaround}. Feedback is due within ${OFFER.feedbackWindow} of each delivery, or that version is treated as approved. Extra rounds are $${OFFER.extraRound} each.`,
+    description: `Send one consolidated list per round. We deliver each revised version within ${OFFER.revisionTurnaround}. Feedback is due within ${OFFER.feedbackWindow} of each delivery, or that version is treated as approved. Extra rounds are $${OFFER.extraRound} each. With the web-team option, your client can send feedback straight to your team's address.`,
   },
   {
     title: "Approval and launch",
@@ -78,6 +78,12 @@ export default function HowItWorksPage() {
               </Reveal>
             ))}
           </ol>
+          <p className="mt-6 text-sm leading-6 text-muted-foreground">
+            Want us to work with your clients directly, as your web team?{" "}
+            <Link href="/ways-to-work" className="text-primary hover:underline">
+              See the options.
+            </Link>
+          </p>
         </section>
 
         <section className="container pb-20">

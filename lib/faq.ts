@@ -1,13 +1,24 @@
 export interface FaqItem {
   question: string
   answer: string
+  link?: { label: string; href: string }
 }
 
 export const FAQ: FaqItem[] = [
   {
     question: "Will my client know Ghostwright is involved?",
     answer:
-      "No. We work under your brand. By default we never contact your clients. If you'd rather, we can work with them directly as your web team, from an email address on your domain, so they only ever see your name. We never solicit or upsell your clients.",
+      "No. In every option, your clients only ever see your name. By default we never contact them, and we never solicit or upsell them.",
+  },
+  {
+    question: "Do I have to be the go-between with my clients?",
+    answer:
+      "By default, yes: you are our only contact. If you'd rather not be, we can work directly with your client as your web team, from an email address on your domain. They only ever see your name. See Ways to Work.",
+    link: { label: "Ways to Work", href: "/ways-to-work" },
+  },
+  {
+    question: "Does working with my clients directly cost extra?",
+    answer: "No. Pricing is the same either way.",
   },
   {
     question: "Who owns the domain?",
@@ -52,12 +63,12 @@ export const FAQ: FaqItem[] = [
   {
     question: "How do revisions work?",
     answer:
-      "Each site includes two rounds. You send one consolidated list per round, and we deliver each revised version within 3 business days. Feedback is due within 5 business days of each delivery, or that version is treated as approved. Additional rounds are $75 each. New pages, features, and redesigns are quoted separately.",
+      "Each site includes two rounds. You send one consolidated list per round, and we deliver each revised version within 3 business days. Feedback is due within 5 business days of each delivery, or that version is treated as approved. Additional rounds are $75 each. New pages, features, and redesigns are quoted separately. If you choose the web-team option, your client can send the list to your team's address and we work from it.",
   },
   {
     question: "Can we request edits after launch?",
     answer:
-      "Yes. Content edits (text, images, hours, service areas, contact info) are completed within 2 business days of your request. Requests come from you, not your client. New major service pages, features, integrations, and redesigns are quoted separately.",
+      "Yes. Content edits (text, images, hours, service areas, contact info) are completed within 2 business days of your request. Requests come from you, or from your client if you chose the web-team option. New major service pages, features, integrations, and redesigns are quoted separately.",
   },
   {
     question: "What if my client doesn't pay me?",

@@ -62,7 +62,12 @@ const terms = [
   },
   {
     topic: "Non-solicitation",
-    summary: "We don't solicit, market to, or upsell your clients, during the agreement and for 12 months after.",
+    summary: "We never solicit, market to, or upsell your clients, during the agreement and for 12 months after.",
+  },
+  {
+    topic: "Communication options",
+    summary:
+      "Fully white-label (default), or we work with your clients directly as your web team from an email address on your domain. Change any time by written notice.",
   },
   {
     topic: "Cancellation",

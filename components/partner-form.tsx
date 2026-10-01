@@ -22,6 +22,12 @@ const AGENCY_TYPES = [
 
 const MONTHLY_VOLUMES = ["1–5", "6–20", "21–50", "50+"]
 
+const COMMUNICATION_PREFERENCES = [
+  "Fully white-label: you are our only contact",
+  "As your web team: use an email address on my domain",
+  "Not sure yet",
+]
+
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 const COOLDOWN_KEY = "gw_last_submit"
@@ -55,7 +61,7 @@ function normalizeWebsiteUrl(value: string): string | null {
 
 type FormErrors = Partial<
   Record<
-    "name" | "email" | "agency_name" | "agency_url" | "agency_type" | "businesses_served" | "monthly_volume" | "message",
+    "name" | "email" | "agency_name" | "agency_url" | "agency_type" | "businesses_served" | "monthly_volume" | "communication_preference" | "message",
     string
   >
 >
@@ -75,6 +81,7 @@ export function PartnerForm({ compact = false, source = "page", onSuccess }: Par
   const [isSubmitting, setIsSubmitting] = React.useState(false)
   const [agencyType, setAgencyType] = React.useState("")
   const [monthlyVolume, setMonthlyVolume] = React.useState("")
+  const [communicationPreference, setCommunicationPreference] = React.useState("")
   const [errors, setErrors] = React.useState<FormErrors>({})
   const [status, setStatus] = React.useState<FormStatus>(null)
 
@@ -122,6 +129,8 @@ export function PartnerForm({ compact = false, source = "page", onSuccess }: Par
 
     if (!monthlyVolume) nextErrors.monthly_volume = "Please select a range."
 
+    if (!communicationPreference) nextErrors.communication_preference = "Please select an option."
+
     if (message.length > MAX_LENGTHS.message) nextErrors.message = `Please keep this under ${MAX_LENGTHS.message} characters.`
 
     setErrors(nextErrors)
@@ -157,6 +166,7 @@ export function PartnerForm({ compact = false, source = "page", onSuccess }: Par
           agency_type: agencyType,
           businesses_served: businessesServed,
           monthly_volume: monthlyVolume,
+          communication_preference: communicationPreference,
           message: message || "Not provided",
           page_url: window.location.href,
           submitted_at: `${new Intl.DateTimeFormat("en-US", {
@@ -344,6 +354,36 @@ export function PartnerForm({ compact = false, source = "page", onSuccess }: Par
               <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             </div>
             {errors.monthly_volume && <p className="text-sm text-destructive">{errors.monthly_volume}</p>}
+          </div>
+
+          <div className="space-y-2">
+            <label htmlFor={`${uid}-communication-preference`} className="text-sm font-medium leading-none">
+              How hands-on do you want to be? *
+            </label>
+            <div className="relative">
+              <select
+                id={`${uid}-communication-preference`}
+                name="communication_preference"
+                required
+                value={communicationPreference}
+                onChange={(e) => setCommunicationPreference(e.target.value)}
+                aria-invalid={Boolean(errors.communication_preference) || undefined}
+                className={selectClassName}
+              >
+                <option value="" disabled>
+                  Select an option
+                </option>
+                {COMMUNICATION_PREFERENCES.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+            </div>
+            {errors.communication_preference && (
+              <p className="text-sm text-destructive">{errors.communication_preference}</p>
+            )}
           </div>
 
           <div className="space-y-2">

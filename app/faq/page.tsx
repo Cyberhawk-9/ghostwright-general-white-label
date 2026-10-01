@@ -4,6 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Reveal } from "@/components/reveal"
 import { BRAND } from "@/lib/brand"
 import { FAQ } from "@/lib/faq"
+import { FaqAnswer } from "@/components/faq-answer"
 
 export const metadata: Metadata = {
   title: `Partner FAQ | ${BRAND.short}`,
@@ -35,7 +36,7 @@ export default function FAQPage() {
               <Reveal as="li" key={index} index={index} className="list-none">
                 <AccordionItem value={`faq-${index}`}>
                   <AccordionTrigger className="text-left text-lg text-primary hover:text-primary/80">{faq.question}</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-base leading-relaxed">{faq.answer}</AccordionContent>
+                  <AccordionContent className="text-muted-foreground text-base leading-relaxed"><FaqAnswer faq={faq} /></AccordionContent>
                 </AccordionItem>
               </Reveal>
             ))}
