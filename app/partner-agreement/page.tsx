@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: `Partner Agreement Summary | ${BRAND.short}`,
   description: "Key terms at a glance: fees, timelines, revisions, billing, ownership, cancellation, and buyout.",
   openGraph: {
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `Partner Agreement Summary | ${BRAND.short}`,
     description: "Key terms at a glance: fees, timelines, revisions, billing, ownership, cancellation, and buyout.",
   },

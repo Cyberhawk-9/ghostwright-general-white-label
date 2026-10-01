@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     "free website for small business",
   ],
   openGraph: {
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `Get a Free Custom Website — Only $${OFFER.monthlyFee}/Month | ${BRAND.name}`,
     description: `Professional, custom-coded website built free for your service business. Only $${OFFER.monthlyFee}/month for hosting, updates, and support.`,
     type: "website",

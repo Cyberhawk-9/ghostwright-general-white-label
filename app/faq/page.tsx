@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: `Partner FAQ | ${BRAND.short}`,
   description: "Answers on pricing, revisions, billing, ownership, cancellation, and more.",
   openGraph: {
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `Partner FAQ | ${BRAND.short}`,
     description: "Answers on pricing, revisions, billing, ownership, cancellation, and more.",
   },

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: `Privacy Policy | ${BRAND.short}`,
   description: "How Ghostwright collects, uses, and protects information.",
   openGraph: {
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `Privacy Policy | ${BRAND.short}`,
     description: "How Ghostwright collects, uses, and protects information.",
   },

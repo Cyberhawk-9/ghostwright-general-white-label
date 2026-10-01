@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: `How It Works: From Intake to Launch | ${BRAND.short}`,
   description: "Intake, setup invoice, first version in 5–7 business days, two revision rounds, launch, and monthly support.",
   openGraph: {
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `How It Works: From Intake to Launch | ${BRAND.short}`,
     description: "Intake, setup invoice, first version in 5–7 business days, two revision rounds, launch, and monthly support.",
   },
