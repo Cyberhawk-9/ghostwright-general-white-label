@@ -204,8 +204,8 @@ export function PartnerForm({ compact = false, source = "page", onSuccess }: Par
   }
 
   return (
-    <Card className="border-border/50">
-      <CardContent className={compact ? "p-6" : "p-6 md:p-8"}>
+    <Card className={compact ? "border-primary/20 bg-background/55 shadow-none" : "border-border/50"}>
+      <CardContent className={compact ? "p-5 md:p-6" : "p-6 md:p-8"}>
         <form ref={formRef} onSubmit={handleSubmit} className="space-y-6" noValidate>
           <div className="hidden" aria-hidden="true">
             <input
