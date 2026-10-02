@@ -10,9 +10,11 @@ import { BRAND } from "@/lib/brand"
 import { OFFER } from "@/lib/offer"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/how-it-works/" },
   title: `How It Works: From Intake to Launch | ${BRAND.short}`,
   description: "Intake, setup invoice, first version in 5–7 business days, two revision rounds, launch, and monthly support.",
   openGraph: {
+    url: "/how-it-works/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `How It Works: From Intake to Launch | ${BRAND.short}`,
     description: "Intake, setup invoice, first version in 5–7 business days, two revision rounds, launch, and monthly support.",
@@ -27,7 +29,7 @@ const steps = [
   },
   {
     title: "Your client completes the intake",
-    description: "A short form for their trade, on a subdomain of your website. About 10 minutes.",
+    description: "A short form for their type of business, on a subdomain of your website. About 10 minutes.",
   },
   {
     title: "We invoice the setup fee",

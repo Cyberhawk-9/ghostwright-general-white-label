@@ -13,9 +13,11 @@ const description =
   "Stay fully white-label, or let us work with your clients directly as your web team. Choose how hands-on you want to be, at the same price."
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ways-to-work/" },
   title,
   description,
   openGraph: {
+    url: "/ways-to-work/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title,
     description,

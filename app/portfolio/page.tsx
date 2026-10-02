@@ -48,7 +48,7 @@ export default function PortfolioPage() {
             ref={subtitleAnimation.ref as React.RefObject<HTMLParagraphElement>}
             className={`max-w-2xl mx-auto text-xl text-muted-foreground mt-8 animate-fade-in ${subtitleAnimation.isVisible ? "visible" : ""}`}
           >
-            Explore sites we&apos;ve built for contractors. Click any project to preview the live site.
+            Explore sites we&apos;ve built for small businesses. Click any project to preview the live site.
           </p>
         </section>
 

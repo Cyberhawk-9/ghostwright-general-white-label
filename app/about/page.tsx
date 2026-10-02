@@ -11,12 +11,14 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Reveal } from "@/components/reveal"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about/" },
   title: `About ${BRAND.name}`,
-  description: "Ghostwright is the fulfillment team behind agency-branded contractor websites.",
+  description: "Ghostwright is the fulfillment team behind agency-branded websites for small businesses.",
   openGraph: {
+    url: "/about/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `About ${BRAND.name}`,
-    description: "Ghostwright is the fulfillment team behind agency-branded contractor websites.",
+    description: "Ghostwright is the fulfillment team behind agency-branded websites for small businesses.",
   },
 }
 
@@ -51,12 +53,12 @@ export default function AboutPage() {
         <section className="container py-20 md:py-28">
           <Reveal as="div" className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">
-              Built for agencies that <span className="text-primary">serve contractors</span>
+              Built for agencies that <span className="text-primary">serve small businesses</span>
             </h1>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mt-8">
               <p>
                 A ghostwriter writes under someone else&apos;s name. We build websites the same way. {BRAND.short} is
-                the fulfillment team behind agency-branded websites for contractors. You sell and own the client
+                the fulfillment team behind agency-branded websites for small businesses. You sell and own the client
                 relationship. We design, build, host, and maintain the site behind the scenes.
               </p>
             </div>
@@ -98,7 +100,7 @@ export default function AboutPage() {
           <Reveal as="div" className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tighter mb-6 text-primary">Our Mission</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              To help agencies that serve contractors add premium websites to their offer without building a web
+              To help agencies that serve small businesses add premium websites to their offer without building a web
               department.
             </p>
           </Reveal>

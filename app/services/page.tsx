@@ -11,12 +11,14 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Reveal } from "@/components/reveal"
 
 export const metadata: Metadata = {
-  title: `What We Build for Your Contractor Clients | ${BRAND.short}`,
-  description: "Custom-coded, SEO-ready, mobile-first websites for roofers, remodelers, septic, HVAC, and other trades, built behind your brand.",
+  alternates: { canonical: "/services/" },
+  title: `What We Build for Your Clients | ${BRAND.short}`,
+  description: "Custom-coded, SEO-ready, mobile-first websites for service businesses, built and maintained behind your brand.",
   openGraph: {
+    url: "/services/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
-    title: `What We Build for Your Contractor Clients | ${BRAND.short}`,
-    description: "Custom-coded, SEO-ready, mobile-first websites for roofers, remodelers, septic, HVAC, and other trades, built behind your brand.",
+    title: `What We Build for Your Clients | ${BRAND.short}`,
+    description: "Custom-coded, SEO-ready, mobile-first websites for service businesses, built and maintained behind your brand.",
   },
 }
 
@@ -29,9 +31,9 @@ const services = [
     link: "/services/website-design",
   },
   {
-    title: "Contractor Website Builds",
+    title: "Service Business Website Builds",
     description:
-      "Purpose-built layouts for roofing, remodeling, septic, plumbing, HVAC, electrical, and landscaping. A dedicated page for each major service, with related smaller services grouped on the same page.",
+      "Purpose-built layouts for roofing, remodeling, septic, plumbing, HVAC, electrical, landscaping, and other local service businesses.",
     icon: Globe,
     link: "/services/service-business-websites",
   },
@@ -70,11 +72,11 @@ export default function ServicesPage() {
         <section className="container py-20 md:py-28 text-center">
           <Reveal as="div">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-6">
-              What we build for your <span className="text-primary">contractor clients</span>
+              What we build for your <span className="text-primary">clients</span>
             </h1>
             <p className="max-w-3xl mx-auto text-xl text-muted-foreground mb-10 leading-relaxed mt-8">
               {BRAND.short} builds websites from scratch — custom-coded, fast, modern, and optimized to bring in more leads
-              for roofing, remodeling, septic, plumbing, HVAC, electrical, and landscaping contractors.
+              for roofing, remodeling, septic, plumbing, HVAC, electrical, landscaping, and other local service businesses.
             </p>
             <div className="flex justify-center gap-4">
               <Button size="lg" asChild>

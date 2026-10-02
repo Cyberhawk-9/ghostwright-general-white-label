@@ -18,10 +18,12 @@ import { BRAND } from "@/lib/brand"
 import { OFFER } from "@/lib/offer"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/partner-service-agreement/" },
   title: `Partner Service Agreement | ${BRAND.short}`,
   description:
     "Read, sign, and return the Partner Service Agreement to get started. We start work and turn on your intake form once we have your signed copy.",
   openGraph: {
+    url: "/partner-service-agreement/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `Partner Service Agreement | ${BRAND.short}`,
     description:

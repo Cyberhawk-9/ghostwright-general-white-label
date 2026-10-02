@@ -7,8 +7,10 @@ import { BRAND } from "@/lib/brand"
 export const revalidate = 3600
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/" },
   title: `${BRAND.short} Blog | Website Growth Insights`,
   description: "Practical website, SEO, and conversion insights for service-based businesses.",
+  openGraph: { url: "/blog/" },
 }
 
 export default async function BlogIndex() {

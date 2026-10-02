@@ -34,7 +34,7 @@ export const FAQ: FaqItem[] = [
   {
     question: "How does my client's intake form work?",
     answer:
-      "You send your client one link to a short form for their trade, on a subdomain of your website. It adapts to their answers, takes about 10 minutes, and sends everything to us.",
+      "You send your client one link to a short form for their type of business, on a subdomain of your website. It adapts to their answers, takes about 10 minutes, and sends everything to us.",
     link: { label: "intake form", href: "/intake" },
   },
   {
@@ -50,7 +50,7 @@ export const FAQ: FaqItem[] = [
   {
     question: "Is there a minimum volume requirement?",
     answer:
-      "No minimum. The program fits best for agencies onboarding new contractors every month.",
+      "No minimum. The program fits best for agencies onboarding new clients every month.",
   },
   {
     question: "What does the monthly fee include?",
@@ -60,12 +60,12 @@ export const FAQ: FaqItem[] = [
   {
     question: "Who is the partnership for?",
     answer:
-      "Agencies that onboard new contractors, such as insurance, business-setup, lead-generation, and marketing agencies, and want to add websites without a web team.",
+      "Agencies and firms that serve small businesses, such as marketing agencies, web and IT firms, business-formation services, accounting and bookkeeping firms, insurance agencies, and consultants, and want to add websites without a web team.",
   },
   {
     question: "Can the websites be presented under our brand?",
     answer:
-      "Yes. You set the retail price, bill your client, and own the relationship. Your client completes an intake form for their trade, on a subdomain of your website.",
+      "Yes. You set the retail price, bill your client, and own the relationship. Your client completes an intake form for their type of business, on a subdomain of your website.",
   },
   {
     question: "What do you handle?",

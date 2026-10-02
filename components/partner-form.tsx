@@ -13,10 +13,13 @@ import { BRAND } from "@/lib/brand"
 import { cn } from "@/lib/utils"
 
 const AGENCY_TYPES = [
+  "Marketing or advertising agency",
+  "Web or IT firm",
+  "Business formation or registered agent",
+  "Accounting or bookkeeping",
   "Insurance agency",
-  "Business setup or formation",
-  "Lead generation",
-  "Marketing agency",
+  "Consultant or coach",
+  "Payroll, HR, or staffing",
   "Other",
 ]
 
@@ -322,7 +325,7 @@ export function PartnerForm({ compact = false, source = "page", onSuccess }: Par
               className="min-h-[100px]"
               required
               maxLength={MAX_LENGTHS.businessesServed}
-              placeholder="Tell us about your contractor clients"
+              placeholder="Tell us about your clients"
               aria-invalid={Boolean(errors.businesses_served) || undefined}
             />
             {errors.businesses_served && <p className="text-sm text-destructive">{errors.businesses_served}</p>}

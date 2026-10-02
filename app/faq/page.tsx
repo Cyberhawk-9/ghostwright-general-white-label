@@ -7,9 +7,11 @@ import { FAQ } from "@/lib/faq"
 import { FaqAnswer } from "@/components/faq-answer"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/faq/" },
   title: `Partner FAQ | ${BRAND.short}`,
   description: "Answers on pricing, revisions, billing, ownership, cancellation, and more.",
   openGraph: {
+    url: "/faq/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `Partner FAQ | ${BRAND.short}`,
     description: "Answers on pricing, revisions, billing, ownership, cancellation, and more.",

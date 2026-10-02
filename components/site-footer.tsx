@@ -8,7 +8,7 @@ const footerLinks = {
     { name: "The Intake Form", href: "/intake" },
     { name: "Ways to Work", href: "/ways-to-work" },
     { name: "Pricing", href: "/pricing" },
-    { name: "For Insurance Agencies", href: "/for-insurance-agencies" },
+    { name: "Who It's For", href: "/who-its-for" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
@@ -40,6 +40,11 @@ export function SiteFooter() {
               />
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">{BRAND.tagline}</p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              <a href="https://ghostwrightweb.com" rel="noopener" className="underline underline-offset-4 hover:text-primary transition-colors">
+                Serving contractors or insurance agencies? See ghostwrightweb.com.
+              </a>
+            </p>
           </div>
           <div>
             <h3 className="mb-4 text-sm font-semibold text-foreground">Offer</h3>

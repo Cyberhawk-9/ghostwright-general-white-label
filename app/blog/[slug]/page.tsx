@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
     post = null
   }
   if (!post) return { title: `Article not found | ${BRAND.short}` }
-  return { title: `${post.title} | ${BRAND.short}`, description: post.meta_description ?? undefined, openGraph: { title: post.title, description: post.meta_description ?? undefined, images: [post.image_url] } }
+  return { title: `${post.title} | ${BRAND.short}`, description: post.meta_description ?? undefined, alternates: { canonical: `/blog/${slug}/` }, openGraph: { url: `/blog/${slug}/`, title: post.title, description: post.meta_description ?? undefined, images: [post.image_url] } }
 }
 
 export default async function BlogPost({ params }: BlogPostProps) {
