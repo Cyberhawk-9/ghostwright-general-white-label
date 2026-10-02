@@ -55,8 +55,8 @@ export default function CancellationPage() {
               <h2 className="text-2xl font-bold mb-4">Buying the source code</h2>
               <p className="text-muted-foreground leading-relaxed">
                 A source-code buyout is available at any time. Pricing is set out in your{" "}
-                <Link href="/partner-agreement" className="text-primary hover:underline">
-                  Partner Agreement
+                <Link href="/partner-service-agreement" className="text-primary hover:underline">
+                  Partner Service Agreement
                 </Link>
                 .
               </p>
@@ -65,7 +65,7 @@ export default function CancellationPage() {
             <Reveal as="div">
               <h2 className="text-2xl font-bold mb-4">Ending the partnership</h2>
               <p className="text-muted-foreground leading-relaxed">
-                You can end the Partner Agreement on 30 days&apos; written notice.
+                You can end the Partner Service Agreement on 30 days&apos; written notice.
               </p>
             </Reveal>
           </div>

@@ -135,8 +135,8 @@ export default function BillingPage() {
 
             <p className="text-sm text-muted-foreground">
               Full terms are in your{" "}
-              <Link href="/partner-agreement" className="text-primary hover:underline">
-                Partner Agreement
+              <Link href="/partner-service-agreement" className="text-primary hover:underline">
+                Partner Service Agreement
               </Link>
               .
             </p>

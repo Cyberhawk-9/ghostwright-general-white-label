@@ -17,7 +17,7 @@ const footerLinks = {
     { name: "Billing & Payments", href: "/billing" },
     { name: "Support & Edits", href: "/support" },
     { name: "Cancellation & Ownership", href: "/cancellation" },
-    { name: "Partner Agreement", href: "/partner-agreement" },
+    { name: "Partner Service Agreement", href: "/partner-service-agreement" },
     { name: "Terms", href: "/terms" },
     { name: "Privacy", href: "/privacy" },
   ],

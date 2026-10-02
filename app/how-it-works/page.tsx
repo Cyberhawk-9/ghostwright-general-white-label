@@ -21,6 +21,11 @@ export const metadata: Metadata = {
 
 const steps = [
   {
+    title: "Sign once",
+    description:
+      "Download, sign, and return the Partner Service Agreement. After that, every client is just an intake link.",
+  },
+  {
     title: "Your client completes the intake",
     description: "A short form for their trade, on a subdomain of your website. About 10 minutes.",
   },
@@ -81,6 +86,11 @@ export default function HowItWorksPage() {
           <p className="mt-6 text-sm font-semibold leading-6 text-primary">{step.title}</p>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">{step.description}</p>
                 {index === 0 && (
+                  <Link href="/partner-service-agreement" className="mt-2 inline-block text-sm text-primary hover:underline">
+                    See the agreement
+                  </Link>
+                )}
+                {index === 1 && (
                   <Link href="/intake" className="mt-2 inline-block text-sm text-primary hover:underline">
                     See the intake form
                   </Link>

@@ -3,7 +3,19 @@ import { getSeoPosts } from "notfair-nextjs-blog"
 import { BRAND } from "@/lib/brand"
 
 const baseUrl = BRAND.url
-const staticRoutes = ["/", "/about", "/services", "/pricing", "/portfolio", "/contact", "/faq", "/referrals", "/blog", "/intake"]
+const staticRoutes = [
+  "/",
+  "/about",
+  "/services",
+  "/pricing",
+  "/portfolio",
+  "/contact",
+  "/faq",
+  "/referrals",
+  "/blog",
+  "/intake",
+  "/partner-service-agreement",
+]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   let posts: Array<{ slug: string; updated_at?: string }> = []
