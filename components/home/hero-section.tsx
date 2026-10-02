@@ -108,7 +108,7 @@ export function HeroSection() {
               </div>
               <div className="flex items-center gap-2">
                 <Button variant="ghost" size="sm" asChild className="gap-2">
-                  <a href={`https://eliteroofing.${BRAND.domain}`} target="_blank" rel="noopener noreferrer">
+                  <a href={"https://eliteroofing.ghostwrightweb.com"} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4" />
                     Open in New Tab
                   </a>
@@ -127,7 +127,7 @@ export function HeroSection() {
             {/* iFrame */}
             <div className="flex-1 overflow-hidden">
               <iframe
-                src={`https://eliteroofing.${BRAND.domain}`}
+                src={"https://eliteroofing.ghostwrightweb.com"}
                 className="w-full h-full border-0"
                 title="Elite Roofing"
                 sandbox="allow-same-origin allow-scripts allow-popups allow-forms"

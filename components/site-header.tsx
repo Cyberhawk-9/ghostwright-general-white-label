@@ -11,7 +11,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 const navigation = [
   { name: "How It Works", href: "/how-it-works" },
   { name: "Pricing", href: "/pricing" },
-  { name: "For Insurance Agencies", href: "/for-insurance-agencies" },
+  { name: "Who It's For", href: "/who-its-for" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "FAQ", href: "/faq" },
 ]

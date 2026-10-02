@@ -9,6 +9,7 @@ import { ScrollToTop } from "@/components/scroll-to-top"
 import { ScrollToTopButton } from "@/components/scroll-to-top-button"
 import { PartnerFormPopup } from "@/components/partner-form-popup"
 import { BRAND } from "@/lib/brand"
+import { ROBOTS_METADATA } from "@/lib/indexing"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +24,8 @@ const sora = Sora({
 export const metadata: Metadata = {
   metadataBase: new URL(BRAND.url),
   title: `${BRAND.name} | White-Label Website Fulfillment`,
-  description: `Add premium websites to your contractor offering without hiring developers. ${BRAND.short} builds, hosts, and maintains everything behind the scenes.`,
+  description: `Add premium websites to your client offering without hiring developers. ${BRAND.short} builds, hosts, and maintains everything behind the scenes.`,
+  robots: ROBOTS_METADATA,
   icons: {
     icon: [
       { url: "/favicon.ico?v=2", sizes: "any" },

@@ -6,9 +6,11 @@ import { Reveal } from "@/components/reveal"
 import { BRAND } from "@/lib/brand"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/cancellation/" },
   title: `Cancellation and Ownership | ${BRAND.short}`,
   description: "Cancel any site anytime. Clients keep their domain and content, Ghostwright keeps the source code, and a buyout is available.",
   openGraph: {
+    url: "/cancellation/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `Cancellation and Ownership | ${BRAND.short}`,
     description: "Cancel any site anytime. Clients keep their domain and content, Ghostwright keeps the source code, and a buyout is available.",

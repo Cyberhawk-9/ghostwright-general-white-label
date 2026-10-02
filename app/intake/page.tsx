@@ -15,9 +15,11 @@ const description =
   "A neutral, adaptive intake form on your own subdomain. Your client answers in about 10 minutes, and we get everything we need to start the build."
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/intake/" },
   title,
   description,
   openGraph: {
+    url: "/intake/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title,
     description,
@@ -154,7 +156,7 @@ export default function IntakePage() {
         <section className="container pb-20">
           <Reveal as="div" className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-3">Built for eight trades</h2>
-            <p className="text-muted-foreground mb-8">Each trade has its own questions on top of the basics.</p>
+            <p className="text-muted-foreground mb-8">Each trade has its own questions on top of the basics. Any other service business uses a general intake.</p>
             <div className="flex flex-wrap justify-center gap-3">
               {trades.map((trade) => (
                 <span

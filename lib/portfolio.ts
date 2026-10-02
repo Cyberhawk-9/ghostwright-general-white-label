@@ -18,7 +18,7 @@ export const PORTFOLIO_SITES: PortfolioSite[] = [
     type: "Septic Services",
     description:
       "Expert septic tank pumping, maintenance, and repair services for residential and commercial properties.",
-    url: `https://lone-star.${BRAND.domain}`,
+    url: "https://lone-star.ghostwrightweb.com",
     color: "#2c5f2d",
     label: "Sample build",
   },
@@ -36,7 +36,7 @@ export const PORTFOLIO_SITES: PortfolioSite[] = [
     name: "Elite Roofing",
     type: "Roofing Contractor",
     description: "Professional roofing services specializing in residential and commercial projects.",
-    url: `https://eliteroofing.${BRAND.domain}`,
+    url: "https://eliteroofing.ghostwrightweb.com",
     color: "#8B4513",
     label: "Sample build",
   },

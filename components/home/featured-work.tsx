@@ -14,7 +14,7 @@ export function FeaturedWork() {
         <div className="mx-auto max-w-5xl overflow-hidden rounded-xl border-2 border-white/10 bg-white shadow-lg">
           <div className="aspect-[16/10] overflow-hidden">
             <iframe
-              src={`https://ramas-roofing.${BRAND.domain}`}
+              src={"https://ramas-roofing.ghostwrightweb.com"}
               className="h-full w-full border-0"
               title="Rama&apos;s Roofing website preview"
               loading="lazy"
