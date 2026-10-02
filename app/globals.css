@@ -487,6 +487,25 @@
   }
 }
 
+/* Brand color belongs on standalone page and section headings, not card titles. */
+main h1 {
+  background: linear-gradient(100deg, var(--cyan) 5%, var(--magenta) 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+main section h2:is(.text-2xl, .text-3xl, .text-4xl, .text-5xl) {
+  color: var(--cyan);
+}
+
+main section:nth-of-type(3n) h2:is(.text-3xl, .text-4xl, .text-5xl) {
+  background: linear-gradient(100deg, var(--cyan), var(--magenta));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .reveal.reveal-visible,

@@ -69,11 +69,16 @@ export default function HowItWorksPage() {
         <section className="container pb-16">
           <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, index) => (
-              <Reveal as="li" key={step.title} index={index} className="relative rounded-2xl border border-border/70 bg-card p-5 list-none">
-                <span className="text-sm font-bold text-primary">
-                  {index + 1}
-                </span>
-                <p className="mt-6 text-sm font-semibold leading-6">{step.title}</p>
+          <Reveal
+            as="li"
+            key={step.title}
+            index={index}
+            className="group relative list-none rounded-2xl border border-primary/40 bg-primary/[0.06] p-5 shadow-[0_12px_40px_-26px_rgba(23,158,199,0.9)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-primary/80 hover:bg-primary/[0.1] hover:shadow-[0_0_36px_rgba(23,158,199,0.28)]"
+          >
+          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-sm font-bold text-primary transition-all duration-300 group-hover:scale-110 group-hover:border-primary group-hover:bg-primary/20 group-hover:shadow-[0_0_24px_rgba(23,158,199,0.35)]">
+          {index + 1}
+          </span>
+          <p className="mt-6 text-sm font-semibold leading-6 text-primary">{step.title}</p>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">{step.description}</p>
                 {index === 0 && (
                   <Link href="/intake" className="mt-2 inline-block text-sm text-primary hover:underline">
