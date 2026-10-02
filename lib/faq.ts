@@ -26,6 +26,12 @@ export const FAQ: FaqItem[] = [
       "The client owns it and registers it in their own account. We give you the exact DNS records and steps for your team to walk them through.",
   },
   {
+    question: "How do I get started as a partner?",
+    answer:
+      "Download the Partner Service Agreement, fill it in, sign it, and email it to hello@ghostwrightweb.com. We confirm by email, set up your intake subdomain, and you can start sending clients.",
+    link: { label: "Partner Service Agreement", href: "/partner-service-agreement" },
+  },
+  {
     question: "How does my client's intake form work?",
     answer:
       "You send your client one link to a short form for their trade, on a subdomain of your website. It adapts to their answers, takes about 10 minutes, and sends everything to us.",
@@ -98,7 +104,7 @@ export const FAQ: FaqItem[] = [
   },
   {
     question: "Can we buy the source code?",
-    answer: "Yes, at any time. Pricing is set out in the Partner Agreement.",
+    answer: "Yes, at any time. Pricing is set out in the Partner Service Agreement.",
   },
   {
     question: "Is the setup fee refundable?",

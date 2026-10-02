@@ -14,6 +14,20 @@ const nextConfig = {
     ],
   },
   trailingSlash: true,
+  async redirects() {
+    return [
+      {
+        source: "/partner-agreement",
+        destination: "/partner-service-agreement",
+        permanent: true,
+      },
+      {
+        source: "/partner-agreement/",
+        destination: "/partner-service-agreement",
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default nextConfig

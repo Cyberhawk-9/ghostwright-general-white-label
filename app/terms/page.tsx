@@ -26,7 +26,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold mb-4">About these terms</h2>
             <p className="text-muted-foreground leading-relaxed">
               These terms cover your use of {BRAND.domain}. Website services for partners are governed by a separate
-              signed Partner Agreement. If the two conflict, the Partner Agreement controls.
+              signed Partner Service Agreement. If the two conflict, the Partner Service Agreement controls.
             </p>
           </Reveal>
 
@@ -49,7 +49,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold mb-4">Information on this site</h2>
             <p className="text-muted-foreground leading-relaxed">
               We describe our services and pricing in good faith. Pricing and terms for any site are those in your
-              signed Partner Agreement. We may update this site at any time.
+              signed Partner Service Agreement. We may update this site at any time.
             </p>
           </Reveal>
 
@@ -65,7 +65,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold mb-4">Intellectual property</h2>
             <p className="text-muted-foreground leading-relaxed">
               The content and design of this site belong to us. Sites we build for partners are governed by the
-              Partner Agreement.
+              Partner Service Agreement.
             </p>
           </Reveal>
 

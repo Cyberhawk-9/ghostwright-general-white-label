@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 import { Mail, MessageSquare, Clock, Check, ArrowRight } from "lucide-react"
 
 import { PartnerForm } from "@/components/partner-form"
@@ -99,6 +101,13 @@ export default function ContactPage() {
             <h2 className="text-3xl font-bold mb-4">Ready to add websites to your offer?</h2>
             <p className="text-muted-foreground">
               Fill out the partner form and we&apos;ll get back to you quickly.
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Ready to move forward? Start with the{" "}
+              <Link href="/partner-service-agreement" className="text-primary hover:underline">
+                Partner Service Agreement
+              </Link>
+              .
             </p>
           </div>
           <PartnerForm />
