@@ -20,7 +20,7 @@ export default function PrivacyPage() {
       <section className="container max-w-7xl mx-auto px-4 py-20 max-w-4xl">
         <Reveal as="div">
           <h1 className="text-4xl font-bold tracking-tighter mb-6">Privacy Policy</h1>
-          <p className="text-muted-foreground mb-8">Last updated: September 29, 2026</p>
+          <p className="text-muted-foreground mb-8">Last updated: October 3, 2026</p>
         </Reveal>
 
         <div className="prose prose-invert max-w-none space-y-8">
@@ -42,6 +42,7 @@ export default function PrivacyPage() {
               </li>
               <li>Email messages with a partner&apos;s client, if the partner chooses the web-team option</li>
               <li>Business details, files, and answers a client submits through an intake form on a partner&apos;s website</li>
+              <li>Images and logos a client uploads through an intake form, and the choices they make about editing them</li>
               <li>
                 Partner billing contacts, while payments are handled by a payment processor and we do not store card
                 numbers
@@ -73,17 +74,25 @@ export default function PrivacyPage() {
 
           <Reveal as="section">
             <h2 className="text-2xl font-bold mb-4">Sharing</h2>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               We do not sell personal information. We share it with service providers for hosting, email, forms,
               invoicing and payments, and analytics only as needed, and when the law requires.
+            </p>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              We may use image-editing and image-generation tools, including AI-assisted tools, from third-party
+              providers to prepare images for a website. We send only the images needed.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Contact-form messages on sites we build go through the client&apos;s own EmailJS account and do not pass
+              through our systems.
             </p>
           </Reveal>
 
           <Reveal as="section">
             <h2 className="text-2xl font-bold mb-4">Retention</h2>
             <p className="text-muted-foreground leading-relaxed">
-              We keep information as long as needed for these purposes. After a site is cancelled we keep an archive
-              for 90 days, then remove the client&apos;s identifying content from our retained copy, except records
+              We keep information as long as needed for these purposes. After a site is cancelled we keep a backup
+              for 45 days, then remove the client&apos;s identifying content from our retained copy, except records
               we must keep for legal or billing reasons. Files uploaded through an intake form are stored privately
               and deleted about 90 days after launch.
             </p>

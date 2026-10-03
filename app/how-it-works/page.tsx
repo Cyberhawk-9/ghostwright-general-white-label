@@ -45,7 +45,7 @@ const steps = [
   },
   {
     title: "Approval and launch",
-    description: `Your client connects their domain. We give you the exact DNS steps. If launch is delayed more than ${OFFER.launchDelayDays} days after approval for reasons outside our control, the monthly fee starts on day 15.`,
+    description: `Your client connects their domain. We give you the exact DNS steps. If launch is delayed more than ${OFFER.launchDelayDays} days after approval for reasons outside our control, the monthly fee starts on day 15. Before launch we test every contact form and send you a short launch checklist. Please confirm it within 2 business days.`,
   },
   {
     title: "Monthly service starts",
@@ -53,7 +53,7 @@ const steps = [
   },
   {
     title: "Ongoing edits",
-    description: `Content edits within ${OFFER.editTurnaround}.`,
+    description: `Content edits are usually done in ${OFFER.editTurnaround}.`,
   },
   {
     title: "Cancel anytime",

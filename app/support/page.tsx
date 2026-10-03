@@ -9,12 +9,12 @@ import { OFFER } from "@/lib/offer"
 export const metadata: Metadata = {
   alternates: { canonical: "/support/" },
   title: `Support and Content Edits | ${BRAND.short}`,
-  description: "Content edits within 2 business days, plus hosting, SSL, and technical support for every active site.",
+    description: "Content edits in 2 to 3 business days, plus hosting, SSL, and technical support for every active site.",
   openGraph: {
     url: "/support/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `Support and Content Edits | ${BRAND.short}`,
-    description: "Content edits within 2 business days, plus hosting, SSL, and technical support for every active site.",
+  description: "Content edits in 2 to 3 business days, plus hosting, SSL, and technical support for every active site.",
   },
 }
 
@@ -45,10 +45,22 @@ export default function SupportPage() {
                 Content edits are changes to text, images, hours, service areas, and contact information.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                We complete them within {OFFER.editTurnaround} after receiving your request.
+                Content edits are usually done in {OFFER.editTurnaround}.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Simple tracking tags, like Google Ads, Google Analytics, or a Meta Pixel, are included.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Requests come from your authorized contacts. With the web-team option, your client can send them to your team&apos;s address.
+              </p>
+            </Reveal>
+
+            <Reveal as="div">
+              <h2 className="text-2xl font-bold mb-4">Contact forms</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Every contact form uses EmailJS. Your client owns the EmailJS account, and we help set it up. It has
+                free and paid plans, and your client is responsible for the plan and its limits. If a form stops
+                working, tell us right away.
               </p>
             </Reveal>
 

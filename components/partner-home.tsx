@@ -31,7 +31,7 @@ const handled = [
   "Contact forms",
   "SEO-ready structure and meta tags",
   "A dedicated page for each major service, with related smaller services grouped on the same page",
-  `Content edits within ${OFFER.editTurnaround}`,
+  `Content edits are usually done in ${OFFER.editTurnaround}.`,
 ]
 const partnerOwns = ["The client relationship", "The retail price", "Client billing", "The partner-facing experience"]
 

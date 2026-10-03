@@ -27,7 +27,7 @@ export default function TermsPage() {
           <Reveal as="section">
             <h2 className="text-2xl font-bold mb-4">About these terms</h2>
             <p className="text-muted-foreground leading-relaxed">
-              These terms cover your use of {BRAND.domain}. Website services for partners are governed by a separate
+              These terms apply to Ghostwright&apos;s websites. These terms cover your use of {BRAND.domain}. Website services for partners are governed by a separate
               signed Partner Service Agreement. If the two conflict, the Partner Service Agreement controls.
             </p>
           </Reveal>

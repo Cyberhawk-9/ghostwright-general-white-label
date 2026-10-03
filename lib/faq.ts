@@ -55,7 +55,7 @@ export const FAQ: FaqItem[] = [
   {
     question: "What does the monthly fee include?",
     answer:
-      "Hosting, SSL, infrastructure, technical support, and content edits completed within 2 business days, for each active site.",
+      "Hosting, SSL, infrastructure, technical support, and content edits for each active site. Content edits are usually done in 2 to 3 business days.",
   },
   {
     question: "Who is the partnership for?",
@@ -90,7 +90,17 @@ export const FAQ: FaqItem[] = [
   {
     question: "Can we request edits after launch?",
     answer:
-      "Yes. Content edits (text, images, hours, service areas, contact info) are completed within 2 business days of your request. Requests come from you, or from your client if you chose the web-team option. New major service pages, features, integrations, and redesigns are quoted separately.",
+      "Yes. Content edits (text, images, hours, service areas, contact info) are included. Content edits are usually done in 2 to 3 business days. Requests come from you, or from your client if you chose the web-team option. New major service pages, features, integrations, and redesigns are quoted separately.",
+  },
+  {
+    question: "How do contact forms work?",
+    answer:
+      "Each site's contact form sends messages through an EmailJS account that your client owns, to the address you choose. Messages go straight to your client and never pass through us. We test every form before launch.",
+  },
+  {
+    question: "Do you use AI-generated images?",
+    answer:
+      "Only if your client allows it, and only for backgrounds, textures, and illustrations. Photos your client sends are improved for quality only and still show exactly the same thing. We never use generated images to show their work, team, or reviews.",
   },
   {
     question: "What if my client doesn't pay me?",
@@ -104,7 +114,8 @@ export const FAQ: FaqItem[] = [
   },
   {
     question: "Can we buy the source code?",
-    answer: "Yes, at any time. Pricing is set out in the Partner Service Agreement.",
+    answer:
+      "You can buy a site's source code for $3,000 per site while the site is active. For a cancelled site, you have 30 days from your cancellation notice to complete the buyout. Buying the code doesn't cancel hosting; you cancel separately. Pricing and steps are in your Partner Service Agreement.",
   },
   {
     question: "Is the setup fee refundable?",
