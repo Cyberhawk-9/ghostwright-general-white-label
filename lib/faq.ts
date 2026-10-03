@@ -8,7 +8,7 @@ export const FAQ: FaqItem[] = [
   {
     question: "Will my client know Ghostwright is involved?",
     answer:
-      "No. In every option, your clients only ever see your name. By default we never contact them, and we never solicit or upsell them.",
+      "No. In every option, your clients only ever see your name. By default we never contact them. While we work together, we never solicit, market to, or upsell your clients.",
   },
   {
     question: "Do I have to be the go-between with my clients?",

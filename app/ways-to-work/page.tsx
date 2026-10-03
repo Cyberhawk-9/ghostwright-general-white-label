@@ -42,7 +42,7 @@ const options = [
 const neverChanges = [
   "Your clients only ever see your name.",
   "You bill your client. We bill only you.",
-  "We never solicit, market to, or upsell your clients.",
+  "While we work together, we never solicit, market to, or upsell your clients.",
   "Scope changes and extra charges are quoted to you, not your client.",
   "Timelines stay the same.",
   "You can switch options any time by written notice.",
