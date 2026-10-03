@@ -54,7 +54,7 @@ const terms = [
   {
     topic: "Intake form",
     summary:
-      "A form for your client's trade, on a subdomain of your website. Sending a client to it is your order. You have 2 business days to flag one you didn't authorize.",
+      "A form for your client's business, on a subdomain of your website. Sending a client to it is your order. You have 2 business days to flag one you didn't authorize.",
   },
   {
     topic: "Setup fee",
@@ -74,7 +74,21 @@ const terms = [
   },
   {
     topic: "Edits",
-    summary: `Content edits within ${OFFER.editTurnaround}.`,
+    summary: `Content edits are usually done in ${OFFER.editTurnaround}.`,
+  },
+  {
+    topic: "Defects",
+    summary:
+      "We fix our own errors at no charge. Defects reported within 30 days of go-live are fixed under the agreement.",
+  },
+  {
+    topic: "Contact forms",
+    summary: "Each form uses a free-to-start EmailJS account owned by your client.",
+  },
+  {
+    topic: "Images",
+    summary:
+      "Stock and AI-assisted images only if your client allows them, never to show their work, team, or reviews.",
   },
   {
     topic: "Billing",
@@ -90,7 +104,7 @@ const terms = [
   },
   {
     topic: "Non-solicitation",
-    summary: "We never solicit, market to, or upsell your clients, during the agreement and for 12 months after.",
+    summary: "While the agreement is in effect, we never solicit, market to, or upsell your clients.",
   },
   {
     topic: "Communication options",
@@ -102,8 +116,13 @@ const terms = [
     summary: "Any site, anytime, effective at the end of the month.",
   },
   {
+    topic: "Ending the agreement",
+    summary:
+      "You can end it on 30 days' notice. We can end it on 60 days' notice, and you can buy out any site during that notice period.",
+  },
+  {
     topic: "Buyout",
-    summary: "Available at any time; pricing in the agreement.",
+    summary: "Active site: any time. Cancelled site: within 30 days of your cancellation notice. See the agreement.",
   },
   {
     topic: "Fee changes",

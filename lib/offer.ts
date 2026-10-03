@@ -8,7 +8,7 @@ export const OFFER = {
   firstVersion: "5–7 business days",
   revisionTurnaround: "3 business days",
   feedbackWindow: "5 business days",
-  editTurnaround: "2 business days",
+  editTurnaround: "2 to 3 business days",
   revisionRounds: 2,
   invoiceDay: "1st",
   dueDay: "8th",
@@ -16,7 +16,7 @@ export const OFFER = {
   noticeDays: 30,
   cancelDays: 60,
   suspendNoticeDays: 5,
-  feeChangeNoticeDays: 60,
-  archiveDays: 90,
+  feeChangeNoticeDays: 30,
+  archiveDays: 45,
   launchDelayDays: 14,
 }

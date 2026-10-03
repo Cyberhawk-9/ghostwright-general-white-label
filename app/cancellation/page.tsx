@@ -4,6 +4,7 @@ import Link from "next/link"
 import { InlineContactForm } from "@/components/inline-contact-form"
 import { Reveal } from "@/components/reveal"
 import { BRAND } from "@/lib/brand"
+import { OFFER } from "@/lib/offer"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/cancellation/" },
@@ -48,15 +49,17 @@ export default function CancellationPage() {
             <Reveal as="div">
               <h2 className="text-2xl font-bold mb-4">What {BRAND.short} keeps</h2>
               <p className="text-muted-foreground leading-relaxed">
-                The source code. After cancellation we keep a full archive for 90 days, then remove your
-                client&apos;s identifying content from our retained copy.
+                The source code. After cancellation we keep a backup for {OFFER.archiveDays} days (or until a buyout
+                is delivered), then remove your client&apos;s identifying content from our retained copy.
               </p>
             </Reveal>
 
             <Reveal as="div">
               <h2 className="text-2xl font-bold mb-4">Buying the source code</h2>
               <p className="text-muted-foreground leading-relaxed">
-                A source-code buyout is available at any time. Pricing is set out in your{" "}
+                You can buy a site&apos;s source code for $3,000 per site while the site is active. For a cancelled
+                site, you have 30 days from your cancellation notice to complete the buyout. Buying the code
+                doesn&apos;t cancel hosting; you cancel separately. Pricing and steps are in your{" "}
                 <Link href="/partner-service-agreement" className="text-primary hover:underline">
                   Partner Service Agreement
                 </Link>
