@@ -42,7 +42,7 @@ export function SiteFooter() {
             <p className="mt-4 text-sm text-muted-foreground">{BRAND.tagline}</p>
             <p className="mt-3 text-sm text-muted-foreground">
               <a href="https://ghostwrightweb.com" rel="noopener" className="underline underline-offset-4 hover:text-primary transition-colors">
-                Serving contractors or insurance agencies? See ghostwrightweb.com.
+                Does your company insure contractors? See ghostwrightweb.com.
               </a>
             </p>
           </div>
