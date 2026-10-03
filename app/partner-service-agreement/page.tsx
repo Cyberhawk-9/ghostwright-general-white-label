@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 const steps = [
   {
     title: "Download it",
-    description: "Read it through. It's short, and written in plain language.",
+    description: "Read it through carefully. It's written in plain language.",
   },
   {
     title: "Fill in the blanks",
@@ -180,8 +180,8 @@ export default function PartnerServiceAgreementPage() {
               <Card className="bg-card/50">
                 <CardContent className="p-6">
                   <p className="text-sm leading-6 text-muted-foreground">
-                    Please don&apos;t edit the text. Changes you make before signing have no effect unless we
-                    accept them in writing.
+                    Please don&apos;t edit the text. We check every signed agreement for altered content, and
+                    changes you make before signing have no effect unless we accept them in writing.
                   </p>
                 </CardContent>
               </Card>

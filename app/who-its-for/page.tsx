@@ -40,7 +40,7 @@ const sameForEveryPartner = [
   "You set the price and bill your client.",
   "White-label by default, or we work with your clients as your web team.",
   `$${OFFER.setupFee} setup per site, then $${OFFER.monthlyFee}/month per active site.`,
-  "One short Partner Service Agreement, signed once.",
+  "One Partner Service Agreement, signed once.",
 ]
 
 export default function WhoItsForPage() {
