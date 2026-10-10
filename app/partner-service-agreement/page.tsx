@@ -21,13 +21,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/partner-service-agreement/" },
   title: `Partner Service Agreement | ${BRAND.short}`,
   description:
-    "Read, sign, and return the Partner Service Agreement to get started. We start work and turn on your intake form once we have your signed copy.",
+    "Read, sign, and return Partner Service Agreement version 1.1. We confirm receipt in writing before work begins or your intake form is activated.",
   openGraph: {
     url: "/partner-service-agreement/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Ghostwright Web Development. Websites built under your name." }],
     title: `Partner Service Agreement | ${BRAND.short}`,
     description:
-      "Read, sign, and return the Partner Service Agreement to get started. We start work and turn on your intake form once we have your signed copy.",
+      "Read, sign, and return Partner Service Agreement version 1.1. We confirm receipt in writing before work begins or your intake form is activated.",
   },
 }
 
@@ -54,7 +54,7 @@ const terms = [
   {
     topic: "Intake form",
     summary:
-      "A form for your client's business, on a subdomain of your website. Sending a client to it is your order. You have 2 business days to flag one you didn't authorize.",
+      "A form for your client's business, on a subdomain of your website. Sending a client to it is your order. You have 2 business days after we send its setup invoice to flag one you didn't authorize.",
   },
   {
     topic: "Setup fee",
@@ -62,7 +62,7 @@ const terms = [
   },
   {
     topic: "Monthly fee",
-    summary: `$${OFFER.monthlyFee} per active site, starting the 1st of the month after go-live.`,
+    summary: `$${OFFER.monthlyFee} per active site, starting the 1st of the month after the Billing Start Date: go-live, or day 15 after approval if launch is delayed for reasons outside our control.`,
   },
   {
     topic: "First version",
@@ -83,7 +83,7 @@ const terms = [
   },
   {
     topic: "Contact forms",
-    summary: "Each form uses a free-to-start EmailJS account owned by your client.",
+    summary: "Each form uses your client's EmailJS account. Your client manages its plan, limits, and account details. We fix our code or configuration errors at no charge; if one causes a plan-limit failure, the agreement provides a one-month upgrade credit.",
   },
   {
     topic: "Images",
@@ -118,7 +118,7 @@ const terms = [
   {
     topic: "Ending the agreement",
     summary:
-      "You can end it on 30 days' notice. We can end it on 60 days' notice, and you can buy out any site during that notice period.",
+      "You can end it on 30 days' written notice. We can end it without cause on 60 days' written notice; in that case, you can complete a buyout for any affected site during the notice period and for 30 days after it ends.",
   },
   {
     topic: "Buyout",
@@ -145,16 +145,16 @@ export default function PartnerServiceAgreementPage() {
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Every partner signs our Partner Service Agreement once, before we start. We don&apos;t countersign.
-              When you send back your signed copy, it&apos;s in effect, and we confirm by email.
+              The agreement takes effect when we confirm receipt of your signed copy in writing by email.
             </p>
             <div className="mt-8">
               <Button size="lg" asChild>
                 <a
-                  href="/partner-service-agreement.pdf"
+                  href="/partner-service-agreement.pdf?v=1.1"
                   download
-                  aria-label="Download the Partner Service Agreement PDF"
+                  aria-label="Download the Partner Service Agreement version 1.1 PDF"
                 >
-                  Download the Partner Service Agreement (PDF) <Download className="ml-2 h-4 w-4" />
+                  Download the Partner Service Agreement v1.1 (PDF) <Download className="ml-2 h-4 w-4" />
                 </a>
               </Button>
             </div>
@@ -189,8 +189,8 @@ export default function PartnerServiceAgreementPage() {
               <Card className="bg-card/50">
                 <CardContent className="p-6">
                   <p className="text-sm leading-6 text-muted-foreground">
-                    We don&apos;t start work, and we don&apos;t turn on your intake form, until we have your signed
-                    copy.
+                    We don&apos;t start work, and we don&apos;t turn on your intake form, until we confirm receipt of your signed
+                    copy in writing.
                   </p>
                 </CardContent>
               </Card>
@@ -241,11 +241,11 @@ export default function PartnerServiceAgreementPage() {
           <Reveal as="div" className="max-w-3xl mx-auto text-center">
             <Button size="lg" asChild>
               <a
-                href="/partner-service-agreement.pdf"
+                href="/partner-service-agreement.pdf?v=1.1"
                 download
-                aria-label="Download the Partner Service Agreement PDF"
+                aria-label="Download the Partner Service Agreement version 1.1 PDF"
               >
-                Download the Partner Service Agreement (PDF) <Download className="ml-2 h-4 w-4" />
+                Download the Partner Service Agreement v1.1 (PDF) <Download className="ml-2 h-4 w-4" />
               </a>
             </Button>
           </Reveal>
